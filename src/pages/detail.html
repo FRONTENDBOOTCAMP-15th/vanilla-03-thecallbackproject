@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./../../images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./../../fonts/pretendard/pretendardvariable.css"
+    />
+    <title><!--글 제목--></title>
+    <!--<meta name="title" content="글 제목"> -->
+    <!--<meta name="description" content="글 내용 일부"> -->
+    <!--<meta name="author" content="글쓴이"> -->
+  </head>
+  <body>
+    <!-- header -->
+    <main>
+      <h1 class="sr-only">글 상세 보기</h1>
+      <article class="post">
+        <header class="post-header">
+          <h2 class="post-title">글 제목</h2>
+          <p class="post-author">
+            <span class="author-name">작성자</span>
+            <time>작성일 2025.00.00</time>
+          </p>
+          <p class="post-subtitle">부제</p>
+        </header>
+        <section class="post-content">글 내용</section>
+        <ul class="post-tags">
+          <li>#태그1</li>
+          <li>#태그2</li>
+        </ul>
+      </article>
+      <section class="comments">
+        <h3 class="comment-title">댓글<span aria-label="댓글 7개">7</span></h3>
+        <ul class="comment-list">
+          <li class="comment">
+            <header>
+              <strong class="comment-author">댓글 작성자</strong>
+              <time>Jul 23. 2025</time>
+            </header>
+            <p class="comment-content"></p>
+          </li>
+        </ul>
+        <form class="comment-form">
+          <label for="commentInput" class="sr-only">댓글 입력</label>
+          <textarea
+            id="commentInput"
+            placeholder="댓글을 입력하세요."
+          ></textarea>
+          <button type="submit">등록</button>
+        </form>
+      </section>
+      <aside class="author-box">
+        <h3 class="author-name">Sunny</h3>
+        <p class="author-desc">글쓴이 소개</p>
+        <div class="author-actions">
+          <span class="subscriber-count">구독자수</span>
+          <button class="subscribe-btn">구독</button>
+        </div>
+      </aside>
+    </main>
+    <footer class="post-actions">
+      <button class="like-btn" aria-label="좋아요"><!-- 좋아요 수 --></button>
+      <button class="comment-btn" aria-label="댓글"><!-- 댓글 수 --></button>
+    </footer>
+  </body>
+</html>
