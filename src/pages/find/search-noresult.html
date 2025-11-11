@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>검색 결과 없음</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 상태바 -->
+  <header class="status-bar">
+    
+    <div class="status-icons">
+      <span class="icon-signal"></span>
+      <span class="icon-wifi"></span>
+      <span class="icon-battery"></span>
+    </div>
+  </header>
+
+  <!-- 검색 헤더 -->
+  <section class="search-header">
+    <div class="search-keyword">
+      <h1>꿀,</h1>
+      <button type="button" class="close-btn" aria-label="닫기">×</button>
+    </div>
+
+    <!-- 탭 메뉴 -->
+    <nav class="search-tabs">
+      <a href="search-result-posts.html" class="tab">글</a>
+      <a href="search-result-authors.html" class="tab active">작가</a>
+    </nav>
+  </section>
+
+  <!-- 결과 없음 영역 -->
+  <main class="empty-result">
+    <div class="empty-content">
+      <div class="logo-placeholder">
+        <!-- 실제로는 SVG나 PNG로 교체 가능 -->
+        <span class="logo-text">B</span>
+      </div>
+      <p class="empty-message">검색 결과가 없습니다.</p>
+    </div>
+  </main>
+
+  
+</body>
+</html>
