@@ -52,9 +52,10 @@
       </form>
     </main>
     <div class="write-tools" role="toolbar">
-      <button class="add-image-btn" aria-label="이미지 첨부">
+      <label for="add-image" class="add-image-btn" aria-label="이미지 첨부">
         <img src="./../assets/images/add-image-icon.svg" alt="" />
-      </button>
+      </label>
+      <input id="add-image" type="file" accept="image/*" class="sr-only" />
       <button class="text-align-btn" aria-label="텍스트 정렬">
         <img src="./../assets/images/text-align-icon.svg" alt="" />
       </button>
