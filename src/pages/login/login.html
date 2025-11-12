@@ -4,18 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./login.css" />
-    <title>Document</title>
+    <title>login</title>
   </head>
   <body>
-    <section class="login-03">
+    <main class="login-basic">
       <a href=""><img src="/src/utils/img/img_mainLogin.png" alt="" /></a>
-      <div>
-        <input type="text" placeholder="이메일" />
-        <input type="text" placeholder="비밀번호" />
-      </div>
-      <div>아이콘 로그인 정보 저장</div>
+      <form>
+        <label for="email" class="sr-only">이메일</label>
+        <input type="text" id="email" name="email" placeholder="이메일" />
+        <label for="password" class="sr-only">비밀번호</label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          placeholder="비밀번호"
+        />
+        <div>
+          <button>아이콘</button>
+          <p>로그인 정보 저장</p>
+        </div>
+      </form>
       <button>로그인</button>
       <button>회원가입</button>
-    </section>
+    </main>
   </body>
 </html>
