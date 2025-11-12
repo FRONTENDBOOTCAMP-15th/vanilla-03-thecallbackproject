@@ -12,6 +12,11 @@ nav {
   gap: 12px;
 }
 
+.alarm-btn,
+.profile-btn {
+  display: none;
+}
+
 .search-btn {
   display: flex;
   width: 30px;
@@ -89,7 +94,8 @@ footer a:last-child {
   margin-right: 0;
 }
 
-.footer-links {
+.footer-links ul {
+  display: flex;
   width: 285px;
   height: auto;
   flex-shrink: 0;

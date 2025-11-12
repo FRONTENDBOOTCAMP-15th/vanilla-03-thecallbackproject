@@ -49,7 +49,7 @@
 
       <section class="brunch-list">
         <h2 class="brunch-title">요즘 뜨는 브런치</h2>
-        <ul>
+        <ol>
           <li>
             <h3>제목</h3>
             <h4>by 작가명</h4>
@@ -100,7 +100,39 @@
             <h4>by 작가명</h4>
             <p>“책 설명...”</p>
           </li>
-        </ul>
+        </ol>
+      </section>
+
+      <section class="best-seller">
+        <h3>브런치북 원작 베스트셀러</h3>
+
+        <div class="book-info">
+          <h4>여자야구입문기</h4>
+          <p class="best-seller-author">김입문</p>
+          <img
+            src="./src/assets/images/best-seller.svg"
+            alt="여자야구입문기 책 표지"
+          />
+        </div>
+
+        <h5>작가가 사랑한 문장</h5>
+        <blockquote>
+          <img src="./src/assets/images/quote-icon.svg" />
+          <p>
+            "최선을 다해서 응원해주는 이가 내 뒤에 있다. 그들을 뒤에 두고
+            있으면, 나는 앞을 볼 수 밖에 없다."
+          </p>
+        </blockquote>
+
+        <p class="best-seller-link">
+          <a href="#">
+            원작 브런치북 보기
+            <img
+              src="./src/assets/images/arrow-icon.svg"
+              alt="오른쪽 화살표 아이콘"
+            />
+          </a>
+        </p>
       </section>
 
       <section class="today-author">
@@ -110,38 +142,38 @@
           <p>직업</p>
           <img src="" alt="작가 사진" />
           <p>“작가 소개 문장”</p>
-          <ul>
+          <ul class="recent-books">
             <li class="recent-book">
-              <figure>
+              <div>
                 <img src="" alt="책 표지" />
                 <h4>책제목</h4>
-                <figcaption>“책 설명...”</figcaption>
-              </figure>
+                <p>“책 설명...”</p>
+              </div>
             </li>
             <li class="recent-book">
-              <figure>
+              <div>
                 <img src="" alt="책 표지" />
                 <h4>책제목</h4>
-                <figcaption>“책 설명...”</figcaption>
-              </figure>
+                <p>“책 설명...”</p>
+              </div>
             </li>
           </ul>
         </article>
       </section>
 
-      <section>
+      <section class="author-quote">
         <h3>그리움이 지칠 때</h3>
         <h4>by 작가명</h4>
         <img
           src="./src/assets/images/book-cover-longing.svg"
           alt="그리움이 지칠 때 책 표지"
         />
-        <p>
-          <strong
-            >작가가 사랑한 문장<br />"여행의 끝에서 일상으로 돌아오는 것은 몸의
-            기억을 되살리는 일이다."</strong
-          >
-        </p>
+        <h5>작가가 사랑한 문장</h5>
+        <blockquote>
+          <p>
+            "여행의 끝에서 일상으로 돌아오는 것은 몸의 기억을 되살리는 일이다."
+          </p>
+        </blockquote>
       </section>
 
       <section class="author-list">
@@ -177,9 +209,15 @@
       </section>
 
       <section class="award-books">
-        <h3>새로운 작가의 탄생</h3>
+        <h2>새로운 작가의 탄생</h2>
         <h3><strong>제 11회 브런치북 출판 프로젝트</strong></h3>
-        <h3><a href="">수상작 보기</a></h3>
+        <h3>
+          <a href=""
+            >수상작 보기<img
+              src="./src/assets/images/arrow-icon.svg"
+              alt="오른쪽 화살표 아이콘"
+          /></a>
+        </h3>
         <div class="book-list">
           <ul>
             <li>
@@ -200,8 +238,20 @@
           </ul>
         </div>
         <hr />
-        <h4>브런치 작가 지원 프로젝트</h4>
+
+        <p class="support-link">
+          <a href="">
+            브런치 작가 지원 프로젝트
+            <img
+              src="./src/assets/images/arrow-icon.svg"
+              alt="오른쪽 화살표 아이콘"
+            />
+          </a>
+        </p>
       </section>
+      <a href="#" class="scroll-top"
+        ><img src="./src/assets/images/up-icon.svg" alt="맨 위로 이동"
+      /></a>
     </main>
     <script
       type="module"
