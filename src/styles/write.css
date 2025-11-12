@@ -1,0 +1,111 @@
+/* reset, 웹접근성 연결, 전역 폰트 적용 */
+@import './base.css';
+
+/* header */
+header {
+  margin-inline: 1.25rem;
+
+  box-sizing: border-box;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #eeeeee;
+}
+
+header > button,
+header > a {
+  all: unset;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+button.write-btn.undone > img:nth-of-type(2) {
+  display: none;
+}
+
+button.write-btn.done > img:nth-of-type(1) {
+  display: none;
+}
+
+/* main (글쓰기 input) */
+
+main input,
+main textarea {
+  all: unset;
+  font-weight: 300;
+}
+
+main input:placeholder-shown,
+main textarea:placeholder-shown {
+  color: #959595;
+}
+
+.form-row:nth-of-type(1),
+.form-row:nth-of-type(2) {
+  box-sizing: border-box;
+  height: 70px;
+  border-bottom: solid 1px #eeeeee;
+  display: flex;
+  align-items: center;
+}
+
+.form-row {
+  padding-inline-start: 25px;
+}
+.form-row:nth-last-of-type(1) {
+  padding-block-start: 15px;
+}
+.input-title {
+  font-size: 24px;
+}
+
+.input-subtitle {
+  font-size: 20px;
+}
+
+.input-title,
+.input-subtitle {
+  width: 100%;
+  box-sizing: border-box;
+}
+.input-content {
+  height: calc(100vh - 140px - 84px - 50px - 25px);
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.write-tools {
+  height: 84px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  padding-block: 22px;
+  padding-inline: 25px;
+  display: flex;
+  gap: 24px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.write-tools button {
+  all: unset;
+  width: 40px;
+  height: 40px;
+}
+
+.write-tools label {
+  width: 40px;
+  height: 40px;
+}
+
+.write-tools button:nth-of-type(2) {
+  margin-left: auto;
+}
