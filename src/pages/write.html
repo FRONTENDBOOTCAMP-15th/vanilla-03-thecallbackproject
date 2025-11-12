@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <button class="back-btn" aria-label="뒤로 가기">
+        <img src="./../assets/images/back-icon.svg" alt="" />
+      </button>
+      <h1>글쓰기</h1>
+      <button class="done-btn" aria-label="글쓰기 완료">
+        <img src="./../assets/images/done-icon.svg" alt="" />
+      </button>
+    </header>
+    <main>
+      <form class="write-form">
+        <fieldset>
+          <legend class="sr-only">글쓰기 입력</legend>
+          <div class="form-row">
+            <label for="title" class="sr-only">제목</label>
+            <input
+              id="title"
+              type="text"
+              class="input-title"
+              name="title"
+              placeholder="제목"
+            />
+          </div>
+          <div class="form-row">
+            <label for="subtitle" class="sr-only">소제목</label>
+            <input
+              id="subtitle"
+              type="text"
+              class="input-subtitle"
+              name="subtitle"
+              placeholder="소제목"
+            />
+          </div>
+          <div class="form-row">
+            <label for="content" class="sr-only">내용</label>
+            <textarea
+              id="content"
+              class="input-content"
+              name="content"
+              placeholder="내용"
+            ></textarea>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <div class="write-tools" role="toolbar">
+      <label for="add-image" class="add-image-btn" aria-label="이미지 첨부">
+        <img src="./../assets/images/add-image-icon.svg" alt="" />
+      </label>
+      <input id="add-image" type="file" accept="image/*" class="sr-only" />
+      <button class="text-align-btn" aria-label="텍스트 정렬">
+        <img src="./../assets/images/text-align-icon.svg" alt="" />
+      </button>
+      <button class="hide-keyboard-btn" aria-label="키보드 숨기기">
+        <img src="./../assets/images/hide-keyboard-icon.svg" alt="" />
+      </button>
+    </div>
+  </body>
+</html>
