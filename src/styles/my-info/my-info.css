@@ -1,0 +1,174 @@
+@import '/src/styles/base.css';
+@import '/src/styles/reset.css';
+body {
+  display: flex;
+  flex-direction: column;
+
+  .section-header {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 15px;
+
+    h2 {
+      font-size: 19px;
+      font-weight: 600;
+    }
+    a {
+      /* 밑줄 없애기 */
+      font-size: 22px;
+      text-decoration: none !important;
+      color: black;
+    }
+  }
+  section[aria-labelledby='favorite-authors'] {
+    margin: 25px;
+
+    .authors-list {
+      overflow: hidden;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      display: flex;
+      overflow-x: scroll;
+      scrollbar-width: none;
+      li {
+        float: left;
+      }
+      figure {
+        margin-right: 26px;
+        align-items: center;
+        text-align: center;
+        color: #959595;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 999px;
+        font-size: 13px;
+      }
+      figcaption {
+        margin-top: 16px;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 20px;
+      }
+    }
+  }
+  section[aria-labelledby='recent-posts'] {
+    margin: 25px;
+  }
+  section[aria-labelledby='favorite-posts'] {
+    margin: 25px;
+  }
+  a {
+    /* 밑줄 없애기 */
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: 600;
+    text-decoration: none !important;
+    color: black;
+  }
+  .post-list {
+    margin-top: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+
+    figure {
+      position: relative;
+      margin-right: 35px;
+      width: 122px;
+      height: 172px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .bookcover-box {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        height: 90px;
+        background-color: #fff;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-bottom: 10px;
+
+        h3 {
+          display: -webkit-box;
+          padding: 10px 14px 0 9px;
+          font-size: 10px;
+          font-weight: 300;
+          line-height: 13px;
+          white-space: normal;
+          overflow: hidden;
+        }
+        p {
+          padding: 28px 0 0 9px;
+          color: #959595;
+          font-size: 7px;
+          font-weight: 300;
+          line-height: 10.75px;
+        }
+      }
+    }
+  }
+
+  /*  */
+  section[aria-labelledby='my-brunch'] {
+    margin: 25px;
+    a {
+      /* 밑줄 없애기 */
+      font-size: 19px;
+      line-height: 22px;
+      font-weight: 600;
+      text-decoration: none !important;
+      color: black;
+      margin-bottom: 14px;
+    }
+    .li-item {
+      border-top: 1px solid #eee;
+      margin-top: 14px;
+    }
+    h3 {
+      color: #959595;
+      font-size: 17px;
+      color: #111;
+      font-weight: 400;
+      line-height: 26px;
+    }
+    p {
+      margin: 9px 0 8px 0;
+      color: #959595;
+      font-size: 12px;
+    }
+    time {
+      color: #959595;
+      font-size: 12px;
+    }
+  }
+
+  .book-title {
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+    width: 122px;
+    overflow: hidden;
+  }
+  .book-author {
+    color: #959595;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+}
