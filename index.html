@@ -5,9 +5,297 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vanilla-03-thecallbackproject</title>
+    <link rel="stylesheet" href="/src/pages/header-footer/header-footer.css" />
   </head>
   <body>
     <div id="app"></div>
+    <main>
+      <!-- <section>
+        <div class="swiper">
+          <ul>
+            <li>
+              <img src="./src/assets/images/dummy.jpg" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </li>
+            <li>
+              <img src="./src/assets/images/dummy.jpg" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </li>
+            <li>
+              <img src="./src/assets/images/dummy.jpg" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </li>
+            <li>
+              <img src="./src/assets/images/dummy.jpg" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </li>
+            <li>
+              <img src="./src/assets/images/dummy.jpg" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </li>
+            <li>
+              <img src="./src/assets/images/dummy.jpg" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+      <section class="swiping-area">
+        <div class="swiper">
+          <!-- wrapper 부분 -->
+          <div class="swiper-wrapper">
+            <!-- 각 슬라이드 -->
+            <div class="swiper-slide">
+              <img src="./src/assets/images/dummy.jpg" alt="책 표지" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/assets/images/dummy.jpg" alt="책 표지" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/assets/images/dummy.jpg" alt="책 표지" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/assets/images/dummy.jpg" alt="책 표지" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/assets/images/dummy.jpg" alt="책 표지" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/assets/images/dummy.jpg" alt="책 표지" />
+              <h3>책 제목</h3>
+              <h4>by 작가명</h4>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="brunch-list">
+        <h2 class="brunch-title">요즘 뜨는 브런치</h2>
+        <ol>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+          <li>
+            <h3>제목</h3>
+            <h4>by 작가명</h4>
+            <p>“책 설명...”</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="best-seller">
+        <h3>브런치북 원작 베스트셀러</h3>
+
+        <div class="book-info">
+          <h4>여자야구입문기</h4>
+          <p class="best-seller-author">김입문</p>
+          <img
+            src="./src/assets/images/best-seller.svg"
+            alt="여자야구입문기 책 표지"
+          />
+        </div>
+
+        <h5>작가가 사랑한 문장</h5>
+        <blockquote>
+          <img src="./src/assets/images/quote-icon.svg" />
+          <p>
+            "최선을 다해서 응원해주는 이가 내 뒤에 있다. 그들을 뒤에 두고
+            있으면, 나는 앞을 볼 수 밖에 없다."
+          </p>
+        </blockquote>
+
+        <p class="best-seller-link">
+          <a href="#">
+            원작 브런치북 보기
+            <img
+              src="./src/assets/images/arrow-icon.svg"
+              alt="오른쪽 화살표 아이콘"
+            />
+          </a>
+        </p>
+      </section>
+
+      <section class="today-author">
+        <article>
+          <h3>오늘의 작가</h3>
+          <h4>작가명</h4>
+          <p>직업</p>
+          <img src="" alt="작가 사진" />
+          <p>“작가 소개 문장”</p>
+          <ul class="recent-books">
+            <li class="recent-book">
+              <div>
+                <img src="" alt="책 표지" />
+                <h4>책제목</h4>
+                <p>“책 설명...”</p>
+              </div>
+            </li>
+            <li class="recent-book">
+              <div>
+                <img src="" alt="책 표지" />
+                <h4>책제목</h4>
+                <p>“책 설명...”</p>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="author-quote">
+        <h3>그리움이 지칠 때</h3>
+        <h4>by 작가명</h4>
+        <img
+          src="./src/assets/images/book-cover-longing.svg"
+          alt="그리움이 지칠 때 책 표지"
+        />
+        <h5>작가가 사랑한 문장</h5>
+        <blockquote>
+          <p>
+            "여행의 끝에서 일상으로 돌아오는 것은 몸의 기억을 되살리는 일이다."
+          </p>
+        </blockquote>
+      </section>
+
+      <section class="author-list">
+        <h2>탑 구독 작가</h2>
+        <div class="author-grid">
+          <ul>
+            <li>
+              <img src="" />
+              <h3>닉네임</h3>
+              <p>직업</p>
+              <p>“abcdesdfsdgsdgsdgsgd”</p>
+            </li>
+            <li>
+              <img src="" />
+              <h3>닉네임</h3>
+              <p>직업</p>
+              <p>“abcdesdfsdgsdgsdgsgd”</p>
+            </li>
+            <li>
+              <img src="" />
+              <h3>닉네임</h3>
+              <p>직업</p>
+              <p>“abcdesdfsdgsdgsdgsgd”</p>
+            </li>
+            <li>
+              <img src="" />
+              <h3>닉네임</h3>
+              <p>직업</p>
+              <p>“abcdesdfsdgsdgsdgsgd”</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="award-books">
+        <h2>새로운 작가의 탄생</h2>
+        <h3><strong>제 11회 브런치북 출판 프로젝트</strong></h3>
+        <h3>
+          <a href=""
+            >수상작 보기<img
+              src="./src/assets/images/arrow-icon.svg"
+              alt="오른쪽 화살표 아이콘"
+          /></a>
+        </h3>
+        <div class="book-list">
+          <ul>
+            <li>
+              <img src="./src/assets/images/book-cover.svg" alt="수상작 표지" />
+              <h4>책 제목</h4>
+              <p>by 작가명</p>
+            </li>
+            <li>
+              <img src="./src/assets/images/book-cover.svg" alt="수상작 표지" />
+              <h4>책 제목</h4>
+              <p>by 작가명</p>
+            </li>
+            <li>
+              <img src="./src/assets/images/book-cover.svg" alt="수상작 표지" />
+              <h4>책 제목</h4>
+              <p>by 작가명</p>
+            </li>
+          </ul>
+        </div>
+        <hr />
+
+        <p class="support-link">
+          <a href="">
+            브런치 작가 지원 프로젝트
+            <img
+              src="./src/assets/images/arrow-icon.svg"
+              alt="오른쪽 화살표 아이콘"
+            />
+          </a>
+        </p>
+      </section>
+      <a href="#" class="scroll-top"
+        ><img src="./src/assets/images/up-icon.svg" alt="맨 위로 이동"
+      /></a>
+    </main>
+    <script
+      type="module"
+      src="/src/pages/header-footer/header-footer.ts"
+    ></script>
     <script type="module" src="/src/main.ts"></script>
     <ul>
       <li><a href="./src/pages/login/login.html">로그인페이지</a></li>
