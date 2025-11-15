@@ -9,6 +9,7 @@
     />
     <link rel="stylesheet" href="./write.css" />
     <title>글쓰기</title>
+    <script type="module" src="/src/pages/write/write.ts"></script>
   </head>
   <body>
     <header>
@@ -20,12 +21,13 @@
         class="write-btn undone"
         form="writeForm"
         aria-label="글쓰기 완료"
+        type="submit"
       >
         <img src="./../../assets/images/undone-icon.svg" alt="" />
         <img src="./../../assets/images/done-icon.svg" alt="" />
       </button>
     </header>
-    <main>
+    <main id="main">
       <form id="writeForm" class="write-form">
         <fieldset>
           <legend class="sr-only">글쓰기 입력</legend>
@@ -63,8 +65,13 @@
         </fieldset>
       </form>
       <figure class="image-preview">
-        <img src="./../../assets/images/temp-image.jpg" class="preview-image" alt="첨부 이미지 미리보기" />
-        <figcaption>PREVIEW
+        <img
+          src="./../../assets/images/temp-image.jpg"
+          class="preview-image"
+          alt="첨부 이미지 미리보기"
+        />
+        <figcaption>
+          PREVIEW
           <span class="sr-only">첨부한 이미지의 미리보기 영역입니다.</span>
         </figcaption>
       </figure>
@@ -73,7 +80,7 @@
       <label for="add-image" class="add-image-btn" aria-label="이미지 첨부">
         <img src="./../../assets/images/add-image-icon.svg" alt="" />
       </label>
-      <input id="add-image" type="file" accept="image/*" class="sr-only" />
+      <input id="add-image" type="file" accept="image/*" class="file-hidden" />
       <button class="text-align-btn" aria-label="텍스트 정렬">
         <img src="./../../assets/images/text-align-icon.svg" alt="" />
       </button>
@@ -85,6 +92,5 @@
       <p class="message-text"></p>
       <button class="close-btn">확인</button>
     </div>
-    <script type="module" src="/src/pages/write/write.ts"></script>
   </body>
 </html>
