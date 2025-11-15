@@ -1,5 +1,5 @@
 /* reset, 웹접근성 연결, 전역 폰트 적용 */
-@import './base.css';
+@import './../../styles/base.css';
 
 .post-header {
   width: 100%;
