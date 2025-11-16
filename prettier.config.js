@@ -16,6 +16,7 @@ const prettierConfig = {
   // windows에 뜨는 'Delete cr' 에러 해결
   endOfLine: 'auto',
   singleQuote: true,
+  quoteProps: 'preserve',
 };
 
 export default prettierConfig;

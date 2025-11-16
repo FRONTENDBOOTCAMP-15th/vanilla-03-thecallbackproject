@@ -1,0 +1,317 @@
+/* reset, 웹접근성 연결, 전역 폰트 적용 */
+@import './../../styles/base.css';
+
+.post-header {
+  width: 100%;
+  height: 240px;
+  background-image: url(./../../images/thumnail-image.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-bottom: solid 1px #eeeeee;
+}
+
+.post-header > .post-title,
+.post-header > .post-subtitle,
+.post-header > .post-author {
+  position: absolute;
+  left: 20px;
+}
+.post-header > .post-title {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 200;
+  top: 80px;
+}
+.post-header > .post-subtitle {
+  top: 150px;
+  color: #666666;
+  font-size: 16px;
+}
+.post-header > .post-author {
+  top: 200px;
+  display: flex;
+  gap: 13.5px;
+}
+
+.post-header > .post-author > .author-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.post-header > .post-author > .author-info > img {
+  width: 20px;
+  height: 20px;
+}
+.post-header > .post-author > .author-info > .author-name {
+  font-size: 12px;
+  line-height: 19.5px;
+}
+
+.post-header > .post-author > time {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.5px;
+  color: #959595;
+}
+
+.post-content {
+  padding-block-start: 100px;
+  padding-inline: 20px;
+  padding-block-end: 20px;
+  text-indent: 0.5em;
+  text-align: justify;
+}
+.post-content > img {
+  width: 100%;
+  display: inlne-block;
+  margin-block: 10px;
+}
+.post-tags {
+  padding-inline: 20px;
+  height: 50px;
+  display: flex;
+  align-items: end;
+  gap: 5px;
+}
+
+.post-tags > li {
+  height: 30px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  border: solid 1px #eeeeee;
+  border-radius: 30px;
+  line-height: 30px;
+  padding-inline: 10px;
+}
+
+.comments {
+  padding-inline: 20px;
+  padding-block-start: 30px;
+  padding-block-end: 64px;
+  border-bottom: solid 9px #f8f8f8;
+}
+
+.comments > .comment-title {
+  font-size: 15px;
+  font-weight: 400;
+  color: #1b1b1b;
+  display: flex;
+  gap: 5px;
+  padding-block-end: 30px;
+}
+
+.comments > .comment-title > span {
+  color: #00c6be;
+  font-weight: 200;
+}
+
+.comment-list > li {
+  border-bottom: solid 1px #eeeeee;
+}
+.comment-list > li:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.comment-list > .comment > header {
+  display: grid;
+  grid-template-columns: 32px auto;
+  grid-template-rows: auto auto;
+  column-gap: 8px;
+  align-items: center;
+  padding-block-start: 30px;
+}
+
+.comment-list > .comment > header > img {
+  grid-row: 1 / 3;
+  width: 32px;
+  height: 32px;
+}
+
+.comment-list > .comment > header > strong {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.comment-list > .comment > header > time {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 100;
+  color: #959595;
+}
+.comment-content {
+  padding-block-start: 10px;
+  padding-block-end: 30px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.comment-form {
+  border: solid 1px #dddddd;
+  padding-block-start: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.now-comment-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-inline: 20px;
+}
+
+.now-comment-author > img {
+  width: 18px;
+  height: 18px;
+}
+
+.now-comment-author-name {
+  font-size: 13px;
+  line-height: 20px;
+}
+.comment-form textarea {
+  all: unset;
+  display: block;
+  margin-inline: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.comment-form:placeholder-shown {
+  color: #bbbbbb;
+}
+.comment-form-bottom {
+  border-top: solid 1px #dddddd;
+  display: flex;
+}
+
+.comment-form-bottom > button {
+  all: unset;
+  border: solid 1px #dddddd;
+  height: 30px;
+  text-align: center;
+  padding-inline: 15px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  font-size: 13px;
+  line-height: 28px;
+  color: #959595;
+  margin-inline-start: auto;
+  margin-inline-end: 20px;
+  margin-block: 10px;
+}
+
+.author-box {
+  padding-inline: 20px;
+  border-bottom: solid 1px #eeeeee;
+  padding-block-start: 70px;
+  padding-block-end: 40px;
+}
+
+.author-info-box {
+  display: grid;
+  grid-template-columns: auto 50px;
+  grid-template-rows: auto auto;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.author-info-box > .author-name {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 22px;
+  line-height: 24px;
+}
+.author-info-box > .author-job {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 12px;
+  line-height: 18px;
+  color: #959595;
+}
+
+.author-info-box > img {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  width: 50px;
+  height: 50px;
+}
+
+.author-desc {
+  margin-block-start: 15px;
+  margin-block-end: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #959595;
+  text-align: justify;
+}
+
+.author-actions {
+  margin-block-end: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.author-subscriber-box {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.author-subscriber-box > .subscriber {
+  font-size: 14px;
+  line-height: 21px;
+  color: #959595;
+}
+
+.author-subscriber-box > .subscriber-count {
+  font-size: 14px;
+  line-height: 21px;
+  color: #666666;
+}
+
+.author-actions > .subscribe-btn {
+  all: unset;
+  color: #00c6be;
+  border: solid 1px #00c6be;
+  border-radius: 30px;
+  padding-inline: 15px;
+  font-size: 14px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.post-actions {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+}
+
+.post-actions > button {
+  all: unset;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.like-btn > img {
+  width: 20px;
+  height: 20px;
+}
+
+.like-btn span {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.comment-btn > img {
+  width: 20px;
+  height: 20px;
+}
+.like-btn span {
+  font-size: 16px;
+  line-height: 24px;
+}
