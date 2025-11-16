@@ -1,4 +1,8 @@
 // console.log('✅ header_footer.ts 연결 확인');
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 // window.addEventListener('DOMContentLoaded', () => {
 //   // map은 posts 배열의 각 요소(객체)를 p로 받아서,
@@ -101,3 +105,48 @@
 //     })
 //     .join('');
 // });
+
+// 아래부터 ts 코드
+//   const listEl = document.querySelector('.brunch-list')!;
+//   listEl.innerHTML += posts
+//     .map(p => {
+//       return `<section><h3>${p.title}</h3><p>${p.author} · ${p.views} views</p></section>`;
+//     })
+//     .join('');
+
+// const res = await axios.get("/posts", "https://fesp-api.koyeb.app/market/posts?type=brunch" )
+
+// window.addEventListener('DOMContentLoaded', () => {
+//   const brunchLiEl = document.querySelector('brunch-list-book') as HTMLElement;
+//   brunchLiEl.innerHTML =
+// });
+
+const swiper = new Swiper('.swiper', {
+  modules: [Pagination],
+
+  // 페이지네이션 디폴트 모양 bullet 기호
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    type: 'bullets',
+  },
+
+  // fraction 구현 보류
+  // on: {
+  //   init(swiper) {
+  //     const fractionEl = document.querySelector(
+  //       '.swiper-pagination-fraction',
+  //     ) as HTMLElement;
+  //     fractionEl.textContent = `1 / ${swiper.slides.length}`;
+  //   },
+  //   slideChange(swiper) {
+  //     const fractionEl = document.querySelector(
+  //       '.swiper-pagination-fraction',
+  //     ) as HTMLElement;
+  //     fractionEl.textContent = `${swiper.activeIndex + 1} / ${swiper.slides.length}`;
+  //   },
+  // },
+
+  slidesPerView: 1, // 디폴트는 'auto'
+  spaceBetween: 0, // 슬라이드 .swiper-slide 들 사이 가로 간격
+});
