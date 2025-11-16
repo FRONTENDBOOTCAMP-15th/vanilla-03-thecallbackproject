@@ -11,7 +11,7 @@ export default defineConfig({
         // 메인 페이지
         index: 'index.html',
         // 로그인 페이지
-        'pages/login/login-join': 'src/pages/login/login.html',
+        'pages/login/login-default': 'src/pages/login/login.html',
         // 카카오 로그인 페이지
         'pages/login/login-kakao': 'src/pages/login/login-kakao.html',
         // 카카오 간편로그인 페이지
