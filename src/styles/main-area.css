@@ -47,7 +47,7 @@ main {
   margin: 0 auto;
 }
 
-/* 스와이핑 영역 */
+/* -------------- 스와이핑 영역 -------------- */
 
 .swiping-area {
   width: 100%;
@@ -117,17 +117,32 @@ main {
   opacity: 1;
 }
 
-/* 브런치 리스트 */
+/* -------------- 브런치 리스트 -------------- */
 
 .brunch-title {
   padding: 2rem 1rem;
 }
 
+/* 예비1 */
+.brunch-list-books {
+  justify-content: space-between; /* 양쪽에 글/이미지 배치 */
+}
+
 .brunch-list li {
+  /* display: grid;
+  grid-template-columns: 1fr auto; */
   display: flex;
-  align-items: flex-start;
+  align-items: start;
+  /* align-items: flex-start;  (flex일 때 배치)*/
   gap: 1.2rem;
   justify-content: flex-start; /* 양 끝 배치 금지 */
+  width: 100%;
+  max-width: 35rem;
+  background-color: yellow;
+}
+
+.brunch-list li img {
+  align-self: start; /* 이미지 상단 고정 */
 }
 
 .brunch-list {
@@ -142,11 +157,14 @@ main {
   align-items: center;
   gap: 2rem;
   padding: 2.2rem 0 2.2rem 0;
+  margin-left: 0;
+  background-color: #00c6be;
 }
 
-.brunch-list li img {
-  width: 80px;
+.brunch-list-books img {
+  width: 6.25rem;
   height: auto;
+  object-fit: cover;
 }
 
 .brunch-list li.brunch-list-books {
@@ -160,23 +178,35 @@ main {
 }
 
 .brunch-list-book {
-  max-width: 22rem;
+  max-width: 16rem;
   min-width: 0;
 }
 
 .brunch-list-book h3 {
-  max-width: 14ch; /* 공백 포함 22글자까지만 1줄 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* 2줄까지 */
+  max-width: 18ch; /* 공백 포함 14글자까지만 1줄 */
+  /* overflow: hidden;
+  display: block;
+  overflow-wrap: break-word; 줄바꿈 허용 */
+  /* max-width: 14ch; 정확히 14글자까지만 첫 줄에 들어가게 */
 }
 
 .brunch-list-book p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
   font-size: 0.8125rem;
-  max-width: 19ch;
-  white-space: nowrap;
+  /* max-width: 22ch; */
   overflow: hidden; /* 넘친 글자 숨김 */
   text-overflow: ellipsis;
+  white-space: normal; /* 줄바꿈 허용 必 */
 }
 
-/* 브런치북 원작 베스트 셀러 */
+/* -------------- 브런치북 원작 베스트 셀러 -------------- */
 
 .best-seller {
   max-width: 35rem;
@@ -263,8 +293,7 @@ blockquote {
   max-width: 24ch;
 }
 
-/* 오늘의 작가 영역
- */
+/* --------------오늘의 작가 영역 -------------- */
 .today-author {
   margin: 1.5rem auto;
   padding: 1.5rem 1.5625rem 1.5625rem 1.5625rem;
@@ -374,7 +403,7 @@ blockquote {
   overflow: hidden;
 }
 
-/* 그리움이 지칠 때 */
+/* -------------- 그리움이 지칠 때 -------------- */
 .longing {
   padding: 3.5rem 2.5rem 3rem 2.5rem;
   margin: 0 auto;
@@ -415,7 +444,7 @@ blockquote {
   max-width: 42ch;
 }
 
-/* 탑 구독 작가 */
+/* -------------- 탑 구독 작가 -------------- */
 .top-author-list {
   padding: 1rem;
   max-width: 35rem;
@@ -499,7 +528,7 @@ blockquote {
   border-left-width: 0.0625rem;
 }
 
-/* 새로운 작가의 탄생 */
+/* -------------- 새로운 작가의 탄생 -------------- */
 
 .award-books {
   margin: 0 auto;

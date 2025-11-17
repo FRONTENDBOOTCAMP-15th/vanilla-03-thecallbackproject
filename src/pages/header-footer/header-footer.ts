@@ -3,124 +3,48 @@ import Swiper from 'swiper';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { getAxios } from '../../utils/axios';
 
-// window.addEventListener('DOMContentLoaded', () => {
-//   // map은 posts 배열의 각 요소(객체)를 p로 받아서,
-//   // 그 안의 title, author, views 값을 꺼내 HTML 문자열로 만들어 반환
-//   const posts = [
-//     {
-//       title: 'dummy1',
-//       author: 'by 작가 A',
-//       views: 100,
-//       subject: '제목 1',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//     {
-//       title: 'dummy2',
-//       author: 'by 작가 B',
-//       views: 90,
-//       subject: '제목 2',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//     {
-//       title: 'dummy3',
-//       author: 'by 작가 C',
-//       views: 80,
-//       subject: '제목 3',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//     {
-//       title: 'dummy4',
-//       author: 'by 작가 D',
-//       views: 70,
-//       subject: '제목 4',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//     {
-//       title: 'dummy5',
-//       author: 'by 작가 E',
-//       views: 60,
-//       subject: '제목 5',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//     {
-//       title: 'dummy6',
-//       author: 'by 작가 F',
-//       views: 50,
-//       subject: '제목 6',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//     {
-//       title: 'dummy7',
-//       author: 'by 작가 G',
-//       views: 40,
-//       subject: '제목 7',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//     {
-//       title: 'dummy8',
-//       author: 'by 작가 H',
-//       views: 30,
-//       subject: '제목 8',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//     {
-//       title: 'dummy9',
-//       author: 'by 작가 I',
-//       views: 20,
-//       subject: '제목 9',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//     {
-//       title: 'dummy10',
-//       author: 'by 작가 J',
-//       views: 10,
-//       subject: '제목 10',
-//       comment: '“abcdesdfsdgsdgsdgsgd”',
-//       occupation: 'OOO',
-//     },
-//   ];
+const api = getAxios();
 
-//   const listEl = document.querySelector('.brunch-list')!;
-//   listEl.innerHTML += posts
-//     .map(p => {
-//       return `<section><h3>${p.title}</h3><p>${p.author} · ${p.views} views</p></section>`;
-//     })
-//     .join('');
+// 서버에서 데이터 fetch 해오기
+async function fetchBrunchPosts() {
+  const res = await api.get('/posts', {
+    params: {
+      type: 'brunch',
+      limit: 10,
+      sort: JSON.stringify({ createdAt: -1 }),
+    },
+  });
 
-//   const authorEl = document.querySelector('.author-grid')!;
-//   authorEl.innerHTML = posts
-//     .slice(0, 4)
-//     .map(p => {
-//       return `<article><h3>${p.author}</h3><p>${p.comment}</p></article>`;
-//     })
-//     .join('');
-// });
+  return res.data.item;
+}
 
-// 아래부터 ts 코드
-//   const listEl = document.querySelector('.brunch-list')!;
-//   listEl.innerHTML += posts
-//     .map(p => {
-//       return `<section><h3>${p.title}</h3><p>${p.author} · ${p.views} views</p></section>`;
-//     })
-//     .join('');
+// DOM에 데이터 뿌리기
+window.addEventListener('DOMContentLoaded', async () => {
+  const posts = await fetchBrunchPosts();
 
-// const res = await axios.get("/posts", "https://fesp-api.koyeb.app/market/posts?type=brunch" )
+  console.log(posts); // 🔥 콘솔 확인
 
-// window.addEventListener('DOMContentLoaded', () => {
-//   const brunchLiEl = document.querySelector('brunch-list-book') as HTMLElement;
-//   brunchLiEl.innerHTML =
-// });
+  const brunchLiEl = document.querySelector('.brunch-list ol');
 
+  brunchLiEl!.innerHTML = posts
+    .map(
+      (post: any, i: number) =>
+        `<li class="brunch-list-books">
+      <div class="brunch-list-book">
+<h3>${post.title}</h3>
+<h4>by ${post.user?.name || '익명'}</h4>
+<p>${post.content || ''}</p>
+</div>
+      <img src="${post.image}" alt="${post.title} 이미지" 
+      // onerror="this.src='/src/assets/images/brunch-list-book.svg'"
+      /> </li>`,
+    )
+    .join('');
+});
+
+// swiper 영역
 const swiper = new Swiper('.swiper', {
   modules: [Pagination],
 
