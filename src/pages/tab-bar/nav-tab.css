@@ -1,0 +1,105 @@
+@import './../../styles/base.css';
+
+.tab-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.tab-list {
+  display: flex;
+  padding-inline: 33px;
+  padding-block: 18px;
+
+  justify-content: space-around;
+}
+
+.tab-list li a {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-list img {
+  width: 48px;
+  height: 48px;
+}
+body.home .home-li img.on {
+  display: block;
+}
+
+body.home .home-li img.off {
+  display: none;
+}
+
+body .home-li img.on {
+  display: none;
+}
+
+body .home-li img.off {
+  display: block;
+}
+
+body.search .search-li img.on {
+  display: block;
+}
+
+body.search .search-li img.off {
+  display: none;
+}
+
+body .search-li img.on {
+  display: none;
+}
+
+body .search-li img.off {
+  display: block;
+}
+
+.write-li a img.click {
+  display: none;
+}
+.write-li a:hover img.click {
+  display: block;
+}
+.write-li a:hover img.off {
+  display: none;
+}
+
+body.myinfo .myinfo-li img.on {
+  display: block;
+}
+
+body.myinfo .myinfo-li img.off {
+  display: none;
+}
+
+body .myinfo-li img.on {
+  display: none;
+}
+
+body .myinfo-li img.off {
+  display: block;
+}
+
+body .home-li a:hover img.on {
+  display: block;
+}
+body .home-li a:hover img.off {
+  display: none;
+}
+
+body .search-li a:hover img.on {
+  display: block;
+}
+
+body .search-li a:hover img.off {
+  display: none;
+}
+body .myinfo-li a:hover img.on {
+  display: block;
+}
+body .myinfo-li a:hover img.off {
+  display: none;
+}
