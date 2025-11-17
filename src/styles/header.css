@@ -1,0 +1,97 @@
+/* reset, 웹접근성 연결, 전역 폰트 적용 */
+@import './base.css';
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.2rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.8rem 0;
+}
+h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.6rem 0;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.4rem 0;
+}
+h6 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.3rem 0;
+}
+
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  /* color: rgba(0, 0, 0, 0.788); */
+}
+
+li {
+  list-style: none;
+}
+
+.alarm-btn,
+.profile-btn {
+  display: none;
+}
+
+.search-btn {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 5.5px 5.98px 5.98px 5.5px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.start-btn {
+  display: flex;
+  width: 62px;
+  height: 24px;
+  padding: 4px 12.91px 5px 13.12px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background-color: #231f20;
+  color: #fff;
+}
+
+.profile-btn img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover; /* 이미지가 안 늘어나고 꽉 차게 */
+  display: block;
+}
