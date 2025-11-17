@@ -9,7 +9,7 @@ body {
   background-color: #e9eef1;
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
     "Noto Sans KR", sans-serif;
-  display: block; /* 두 쪽으로 쪼개지는 문제 해결 */
+  display: block; 
 }
 
 /* 메인 카드 영역 */
@@ -78,7 +78,7 @@ body {
   padding: 6px 18px;
   border-radius: 999px;
   border: none;
-  background-color: #00c98d;
+  background-color: #00C6BE;
   color: #fff;
   font-size: 13px;
   font-weight: 500;
