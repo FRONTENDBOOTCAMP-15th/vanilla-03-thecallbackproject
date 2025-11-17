@@ -1,155 +1,141 @@
-/* reset, 웹접근성 연결, 전역 폰트 적용 */
-@import "./base.css";
-/* 기본 리셋 */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html,body { height: 100%; }
+/* 공통 */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Inter", "Helvetica", "Arial", sans-serif;
-  background: #ffffff;
-  color: #222;
-  line-height: 1.4;
-  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 24px 0;
+  background-color: #e9eef1;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Noto Sans KR", sans-serif;
+  display: block; /* 두 쪽으로 쪼개지는 문제 해결 */
 }
 
-/* 전체 레이아웃 (모바일 폭에 맞춤) */
-.header {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 18px 20px;
-  height: 56px;
-  border-bottom: 0;
-}
-.header img { height:20px; }
-
-/* 메인 컨테이너 */
+/* 메인 카드 영역 */
 .main {
-  padding: 18px 20px;
-  max-width: 420px; /* 데스크톱에서도 어느 정도 정돈되게 */
+  width: 360px;
   margin: 0 auto;
-}
-
-/* 프로필 섹션 */
-.profile {
   background: #fff;
-  position: relative;
-  padding-bottom: 18px;
-  margin-bottom: 12px;
-  border-radius: 6px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  padding-bottom: 20px;
 }
 
-/* 큰 원형 프로필 썸네일 (오른쪽 상단) */
-.profile .profile-img {
+/* ---------------- 프로필 ---------------- */
+.profile {
+  position: relative;
+  padding: 20px 20px 80px; /* 구독버튼 자리 공간 확보 */
+}
+
+/* 프로필 이미지 오른쪽 상단 */
+.profile-img {
   width: 72px;
   height: 72px;
   border-radius: 50%;
   object-fit: cover;
+
   position: absolute;
+  top: 20px;
   right: 20px;
-  top: -6px;
-  box-shadow: 0 0 0 3px rgba(255,255,255,1);
-  background: linear-gradient(180deg,#0b3b3f, #2b8f84); /* 대체 배경(이미지 없을 때) */
 }
 
-/* 이름과 역할 */
+/* 텍스트 왼쪽 정렬 */
 .name {
   font-size: 22px;
   font-weight: 600;
-  margin-top: 8px;
-  color: #222;
+  margin: 0 0 4px;
+  text-align: left;
 }
+
 .role {
   font-size: 13px;
-  color: #8a8a8a;
-  margin-top: 4px;
+  color: #888;
+  margin: 0 0 14px;
+  text-align: left;
 }
 
-/* 구독자/관심작가 카운트 영역 */
 .counts {
-  display:flex;
-  gap: 18px;
-  margin-top: 12px;
-  font-size: 13px;
-  color: #666;
-}
-.counts b {
-  display:inline-block;
-  font-weight:700;
-  margin-left:6px;
-  color:#222;
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
-/* 구독 버튼 - 오른쪽 정렬 느낌 (프로필 이미지 아래쪽) */
+.counts b {
+  color: #333;
+  font-weight: 600;
+}
+
+/* 구독 버튼 오른쪽 정렬 */
 .subscribe-btn {
   position: absolute;
+  top: 110px;   /* 프로필 이미지 아래로 */
   right: 20px;
-  top: 52px;
-  transform: translateY(6px);
-  padding: 8px 12px;
-  border-radius: 20px;
+
+  padding: 6px 18px;
+  border-radius: 999px;
   border: none;
-  font-size: 13px;
-  cursor: pointer;
-  box-shadow: none;
-}
-
-/* 구독중 스타일 (초록 계열) */
-.subscribe-btn.subscribed {
-  background: #18bd9b; /* 화면 기준의 민트/초록 계열 */
+  background-color: #00c98d;
   color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-/* 게시글 리스트 */
+/* ---------------- 게시글 ---------------- */
 .posts {
-  margin-top: 8px;
+  border-top: 1px solid #f3f3f3;
+  margin-top: 12px;
 }
 
-/* 각 포스트 아이템 */
-.post-list { list-style: none; }
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .post {
-  padding: 14px 0;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f3f3;
 }
 
-/* 태그(카테고리) */
+/* 태그 */
 .post .tag {
-  display:inline-block;
+  margin: 0 0 6px;
   font-size: 12px;
-  color: #1ea69b; /* 태그의 청록색 */
-  margin-bottom: 8px;
+  color: #00c98d;
+  font-weight: 500;
 }
 
 /* 제목 */
 .post h3 {
+  margin: 0 0 8px;
   font-size: 15px;
-  margin: 2px 0 8px;
-  color: #111;
   font-weight: 600;
-  line-height: 1.25;
+  color: #333;
 }
 
-/* 설명 문구 */
+.post h3 a {
+  color: inherit;         
+  text-decoration: none;  
+}
+
+
+/* 내용 */
 .post .desc {
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 10px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* 줄임 처리 (2줄) */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* 날짜/메타 */
-.post .date {
+  margin: 0 0 10px;
   font-size: 12px;
-  color: #b1b1b1;
+  color: #777;
+  line-height: 1.5;
 }
 
-/* 반응형: 아주 좁은 화면 보정 */
-@media (max-width: 360px) {
-  .main { padding: 14px; }
-  .profile .profile-img { width:64px; height:64px; right:14px; top:-8px; }
-  .subscribe-btn { top:48px; right:14px; padding:6px 10px; font-size:12px; }
-  .name { font-size:20px; }
+/* 날짜 */
+.post .date {
+  font-size: 11px;
+  color: #b6b6b6;
+  margin: 0;
 }
