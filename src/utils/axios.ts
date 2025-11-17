@@ -5,7 +5,7 @@ const API_SERVER = 'https://fesp-api.koyeb.app/market';
 export function getAxios() {
   const instance = axios.create({
     baseURL: API_SERVER, // 기본 URL
-    timeout: 1000 * 5,
+    timeout: 1000 * 5, // 15000
     headers: {
       'Content-Type': 'application/json', // 요청 바디의 데이터 타입
       // 설정하지 않으면 크롬일 경우 "application/json, text/plain, */*"
