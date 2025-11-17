@@ -62,7 +62,9 @@ body {
       flex-shrink: 0;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
     }
+
     .login-btn-activation {
       font-size: 14px;
       color: #fff;
