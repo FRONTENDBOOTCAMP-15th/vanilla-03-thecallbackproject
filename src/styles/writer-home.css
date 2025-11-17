@@ -72,7 +72,7 @@ body {
 /* 구독 버튼 오른쪽 정렬 */
 .subscribe-btn {
   position: absolute;
-  top: 110px;   /* 프로필 이미지 아래로 */
+  top: 110px;   
   right: 20px;
 
   padding: 6px 18px;
