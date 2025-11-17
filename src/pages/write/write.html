@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./../../../icons/logo.svg" />
     <link
       rel="stylesheet"
       href="./../../../fonts/pretendard/pretendardvariable.css"
@@ -62,19 +63,29 @@
               placeholder="내용"
             ></textarea>
           </div>
+          <div clas="form-row">
+            <label for="tags" class="sr-only">태그</label>
+            <input
+              id="tags"
+              class="input-tags"
+              type="text"
+              name="tags"
+              placeholder="태그를 입력해주세요. (예시: #태그1 #태그2 / 최대 5개)"
+            />
+          </div>
         </fieldset>
       </form>
-      <figure class="image-preview">
+      <div class="image-preview">
         <img
           src="./../../assets/images/temp-image.jpg"
           class="preview-image"
           alt="첨부 이미지 미리보기"
         />
-        <figcaption>
-          PREVIEW
+        <p>
+          IMAGE PREVIEW
           <span class="sr-only">첨부한 이미지의 미리보기 영역입니다.</span>
-        </figcaption>
-      </figure>
+        </p>
+      </div>
     </main>
     <div class="write-tools" role="toolbar">
       <label for="add-image" class="add-image-btn" aria-label="이미지 첨부">

@@ -3,6 +3,12 @@ import { createPostRequest } from './createPostRequest';
 // import type { PostContent } from '../../types/post';
 
 window.addEventListener('DOMContentLoaded', function () {
+  //닫기(뒤로 가기) 버튼 함수 및 이벤트 추가
+  const backBtn = document.querySelector('.back-btn') as HTMLAnchorElement;
+  function closeWritePage() {
+    history.back();
+  }
+  backBtn?.addEventListener('click', closeWritePage);
   // 폼 요소
   const writeForm = document.querySelector('#writeForm');
   const toast = document.querySelector('.toast-message');
@@ -133,7 +139,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const title = form.elements.namedItem('title') as HTMLInputElement;
     const subtitle = form.elements.namedItem('subtitle') as HTMLInputElement;
     const content = form.elements.namedItem('content') as HTMLTextAreaElement;
-
+    const tagsEl = form.elements.namedItem('tags') as HTMLInputElement;
     // 1) 빈 필드 확인
     const missingFields = validateForm(title, subtitle, content);
 
@@ -150,6 +156,7 @@ window.addEventListener('DOMContentLoaded', function () {
       title.value,
       subtitle.value,
       content.value,
+      tagsEl.value,
       getAlign, // 정렬 함수
       file, // 파일
     );
@@ -157,12 +164,20 @@ window.addEventListener('DOMContentLoaded', function () {
     console.log('최종 전송 데이터:', postData);
 
     // 4) 서버에 게시물 저장(JSON 전송)
-    await addPost(postData);
+
+    try {
+      await addPost(postData);
+      alert('글이 등록되었습니다.');
+    } catch (error) {
+      alert('글쓰기에 실패했습니다. 다시 시도해주세요.');
+      return; // ★ 실패면 아래 코드 실행하지 않음
+    }
 
     // 5) 입력값 초기화
     title.value = '';
     subtitle.value = '';
     content.value = '';
+    tagsEl.value = '';
     contentTextarea?.classList.remove('left', 'center', 'right');
     contentTextarea?.classList.add('left');
 

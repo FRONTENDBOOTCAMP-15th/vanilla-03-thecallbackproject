@@ -35,6 +35,7 @@ button.write-btn.done > img:nth-of-type(1) {
 }
 
 /* main (글쓰기 input) */
+
 main input,
 main textarea {
   all: unset;
@@ -59,7 +60,7 @@ main textarea:placeholder-shown {
   padding-inline: 20px;
   box-sizing: border-box;
 }
-.form-row:nth-last-of-type(1) {
+.form-row:nth-last-of-type(2) {
   padding-block: 15px;
 }
 .input-title {
@@ -76,7 +77,7 @@ main textarea:placeholder-shown {
   box-sizing: border-box;
 }
 .input-content {
-  height: calc(100dvh - 140px - 84px - 50px - 25px - 10px - 70px);
+  height: calc(100dvh - 140px - 84px - 50px - 25px - 10px - 70px - 40px);
   font-size: 20px;
   line-height: 30px;
   width: calc(100vw - 40px);
@@ -99,6 +100,15 @@ main textarea:placeholder-shown {
   text-align: right;
 }
 
+.input-tags {
+  background-color: #eeeeee;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  padding-inline: 20px;
+  border-bottom: solid 1px #eeeeee;
+}
 .image-preview {
   display: none;
   align-items: center;
@@ -118,10 +128,10 @@ main textarea:placeholder-shown {
   height: 50px;
   background-color: black;
 }
-.image-preview figcaption {
+.image-preview p {
   align-self: end;
   padding-block-end: 10px;
-  font-weight: 900;
+  font-weight: 700;
 }
 .write-tools {
   height: 84px;

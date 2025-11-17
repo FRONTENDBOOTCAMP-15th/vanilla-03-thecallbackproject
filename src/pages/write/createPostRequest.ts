@@ -4,9 +4,17 @@ export async function createPostRequest(
   title: string,
   subtitle: string,
   content: string,
+  tagsEl: string,
   getAlign: () => string,
   file?: File,
 ) {
+  const tag = tagsEl
+    .split(' ')
+    .map(tag => tag.replace('#', ''))
+    .filter(tag => tag.trim() !== '')
+    .slice(0, 5)
+    .join(', ');
+
   let imageUrl = '';
 
   if (file) {
@@ -23,6 +31,7 @@ export async function createPostRequest(
       align: getAlign(),
     },
     content,
+    tag,
     createdAt: new Date().toISOString(),
     image: imageUrl, // ← 업로드 API에서 받은 URL 저장
   };
