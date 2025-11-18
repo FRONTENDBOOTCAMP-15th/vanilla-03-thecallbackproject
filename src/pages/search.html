@@ -1,216 +1,276 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>검색 결과</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 페이지</title>
+    <link rel="stylesheet" href="./../styles/search.css" />
+    <link rel="stylesheet" href="./tab-bar/nav-tab.css" />
+    <script type="module" src="./tab-bar/nav-tab.ts"></script>
+  </head>
 
-  <!-- ============================= -->
-  <!-- 검색 공통 헤더 -->
-  <!-- ============================= -->
-  <header class="search-header">
-    <div class="search-keyword">
-      <h1>꿀</h1>
-      <button type="button" class="close-btn" aria-label="닫기">×</button>
-    </div>
+  <body class="search">
+    <div class="page-wrapper">
+      <!-- 검색 입력 화면 -->
 
-    <!-- 탭 메뉴 -->
-    <nav class="search-tabs">
-      <button type="button" class="tab active" data-target="result-posts">글</button>
-      <button type="button" class="tab" data-target="result-authors">작가</button>
-    </nav>
-  </header>
+      <div class="screen">
+        <section class="search-input-screen">
+          <header class="input-header">
+            <input class="search-input" placeholder="검색어 입력" />
+          </header>
+          <!-- 지금 인기 키워드로 수정함 -->
+          <div class="recommend">
+            <p class="label">지금 인기 키워드</p>
+            <div class="chips">
+              <span class="chip">일상</span>
+              <span class="chip">유산기</span>
+              <span class="chip">여행</span>
+              <span class="chip">그림책</span>
+            </div>
+          </div>
 
-  <!-- ============================= -->
-  <!-- 글 검색 결과 -->
-  <!-- ============================= -->
-  <section id="result-posts" class="search-section active">
-    <div class="result-info">
-      <p>글 검색 결과 <strong>800건</strong></p>
-      <div class="sort-options">
-        <button class="sort active">정확도</button>
-        <button class="sort">최신</button>
+          <div class="recent-keywords">
+            <p class="label">최근 검색어</p>
+            <ul>
+              <li>사진관</li>
+              <li>꿀</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- 글 검색 결과 화면 -->
+
+      <div class="screen">
+        <header class="search-header">
+          <div class="search-keyword">
+            <h1>꿀</h1>
+            <button class="close-btn">×</button>
+          </div>
+
+          <nav class="search-tabs">
+            <button class="tab active">글</button>
+            <button class="tab">작가</button>
+          </nav>
+        </header>
+
+        <section class="search-section">
+          <div class="result-info">
+            <p>글 검색 결과 <strong>800건</strong></p>
+            <div class="sort-options">
+              <button class="sort active">정확도</button>
+              <button class="sort">최신</button>
+            </div>
+          </div>
+
+          <ul class="post-list">
+            <li class="post-item">
+              <a href="#">
+                <div class="text-content">
+                  <h3 class="title">
+                    딸의 정부청사 출장에 부모님이 동행하는 이유
+                  </h3>
+                  <p class="desc">
+                    법이 명시로, 감사합니다! 직장인딸의 출장길이었으므로....
+                  </p>
+                  <p class="meta">
+                    Apr 19. 2024 · <span class="author">by 은선</span>
+                  </p>
+                </div>
+                <div class="thumbnail">
+                  <img src="./../assets/images/image1.png" />
+                </div>
+              </a>
+            </li>
+
+            <li class="post-item">
+              <a href="#">
+                <div class="text-content">
+                  <h3 class="title">덴마크의 ‘꿀 하트’ 쿠키, Honninghjerter</h3>
+                  <p class="desc">
+                    안녕하세요 쿠키 좋아하는 윈즈버드입니다. 데니쉬 여왕의
+                    마음쿠키...
+                  </p>
+                  <p class="meta">
+                    Nov 16. 2023 · <span class="author">by Windsbird</span>
+                  </p>
+                </div>
+                <div class="thumbnail">
+                  <img src="./../assets/images/image2.png" />
+                </div>
+              </a>
+            </li>
+
+            <li class="post-item">
+              <a href="#">
+                <div class="text-content">
+                  <h3 class="title">꿀 빠는 풍경</h3>
+                  <p class="desc">
+                    책을 보다 기다리던 것도 잊다. 책을 끌어안는 그 순간의
+                    행복...
+                  </p>
+                  <p class="meta">
+                    Jan 25. 2024 · <span class="author">by 북쪽루씨</span>
+                  </p>
+                </div>
+                <div class="thumbnail">
+                  <img src="./../assets/images/image3.png" />
+                </div>
+              </a>
+            </li>
+
+            <li class="post-item">
+              <a href="#">
+                <div class="text-content">
+                  <h3 class="title">
+                    373) 사진만 봐도 꿀팁 윤기가 좌르르, 구움과자
+                  </h3>
+                  <p class="desc">
+                    홍대에서 여행지 시장, 크로플과 휘낭시에 향연...
+                  </p>
+                  <p class="meta">
+                    Mar 28. 2023 ·
+                    <span class="author">by 빵덕 설리언케익</span>
+                  </p>
+                </div>
+                <div class="thumbnail">
+                  <img src="./../assets/images/image4.png" />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- 작가 검색 결과 화면 -->
+
+      <div class="screen">
+        <header class="search-header">
+          <div class="search-keyword">
+            <h1>꿀</h1>
+            <button class="close-btn">×</button>
+          </div>
+
+          <nav class="search-tabs">
+            <button class="tab">글</button>
+            <button class="tab active">작가</button>
+          </nav>
+        </header>
+
+        <section class="search-section">
+          <p>작가 검색 결과 <strong>32건</strong></p>
+
+          <ul class="author-list">
+            <li class="author-item">
+              <a href="#">
+                <div class="profile-thumb">
+                  <img
+                    src="./../assets/images/Link1.png"
+                    alt="꿀아빠 프로필 이미지"
+                  />
+                </div>
+                <div class="author-info">
+                  <h3 class="name">꿀아빠</h3>
+                  <p class="desc">
+                    두 아이 아빠 기록남기기 좋아하는 아빠입니다.
+                  </p>
+                  <ul class="tags">
+                    <li><span class="tag">여행</span></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+
+            <li class="author-item">
+              <a href="#">
+                <div class="profile-thumb">
+                  <img
+                    src="./../assets/images/Link2.png"
+                    alt="꿀별 프로필 이미지"
+                  />
+                </div>
+                <div class="author-info">
+                  <h3 class="name">꿀별</h3>
+                  <p class="desc">
+                    글 쓰고 디자인 하는 사람. 마음이 담긴 일을 해요.
+                  </p>
+                  <ul class="tags">
+                    <li><span class="tag">콘텐츠</span></li>
+                    <li><span class="tag">만화</span></li>
+                    <li><span class="tag">여행</span></li>
+                    <li><span class="tag">크리에이터</span></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+
+            <li class="author-item">
+              <a href="#">
+                <div class="profile-thumb">
+                  <img
+                    src="./../assets/images/Link3.png"
+                    alt="개발자 꿀 프로필 이미지"
+                  />
+                </div>
+                <div class="author-info">
+                  <h3 class="name">개발자 꿀</h3>
+                  <p class="desc">
+                    느리게 흘러가는 소프트플로에서 사는 개발자입니다! 🐝
+                  </p>
+                  <ul class="tags">
+                    <li><span class="tag">해외생활</span></li>
+                    <li><span class="tag">IT</span></li>
+                    <li><span class="tag">개발자</span></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+
+            <li class="author-item">
+              <a href="#">
+                <div class="profile-thumb">
+                  <img
+                    src="./../assets/images/Link4.png"
+                    alt="꿀갱 프로필 이미지"
+                  />
+                </div>
+                <div class="author-info">
+                  <h3 class="name">꿀갱</h3>
+                  <p class="desc">제 일상에 대한 꿀입니다.</p>
+                  <ul class="tags">
+                    <li><span class="tag">여행</span></li>
+                    <li><span class="tag">CEO</span></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- 검색 결과 없음 화면 -->
+
+      <div class="screen">
+        <header class="search-header">
+          <div class="search-keyword">
+            <h1>꿀_</h1>
+            <button class="close-btn">×</button>
+          </div>
+
+          <nav class="search-tabs">
+            <button class="tab">글</button>
+            <button class="tab active">작가</button>
+          </nav>
+        </header>
+
+        <section class="empty-result">
+          <div class="logo-placeholder">
+            <img src="./../assets/images/Vector.png" alt="브런치 스토리 로고" />
+          </div>
+          <p class="empty-message">검색 결과가 없습니다.</p>
+        </section>
       </div>
     </div>
-
-    <main class="search-results" aria-label="검색 결과 목록">
-  <ul class="post-list">
-    <li class="post-item">
-      <a href="#">
-        <div class="text-content">
-          <h3 class="title">딸의 정부청사 출장에 부모님이 동행하는 이유</h3>
-          <p class="desc">
-            법이 명시로, 감사합니다! 직장인딸의 출장길이었으므로
-            동시에 근무하며 현재의 직장생활이...
-          </p>
-          <p class="meta">
-            Apr 19. 2024 · <span class="author">by 은선 aka출첵하는 알</span>
-          </p>
-        </div>
-        <div class="thumbnail">
-          <img src="./../../assets/images/image1.png" alt="딸의 정부청사 출장 관련 이미지" />
-        </div>
-      </a>
-    </li>
-
-    <li class="post-item">
-      <a href="#">
-        <div class="text-content">
-          <h3 class="title">덴마크의 ‘꿀 하트’ 쿠키, Honninghjerter</h3>
-          <p class="desc">
-            안녕하세요 쿠키 좋아하는 윈즈버드입니다. 데니쉬 여왕의
-            마음쿠키, 이 레시피에 설레발을 쳐봅니다.
-          </p>
-          <p class="meta">
-            Nov 16. 2023 · <span class="author">by Windsbird</span>
-          </p>
-        </div>
-        <div class="thumbnail">
-          <img src="./../../assets/images/image2.png" alt="데니쉬 여왕의 마음쿠키 관련 이미지" />
-        </div>
-      </a>
-    </li>
-
-    <li class="post-item">
-      <a href="#">
-        <div class="text-content">
-          <h3 class="title">꿀 빠는 풍경</h3>
-          <p class="desc">
-            책을 보다 기다리던 것도 잊다. 책을 끌어안는 그 순간의 행복을
-            기억합니다.
-          </p>
-          <p class="meta">
-            Jan 25. 2024 · <span class="author">by 북쪽루씨</span>
-          </p>
-        </div>
-        <div class="thumbnail">
-          <img src="./../../assets/images/image3.png" alt="책보다 기다리던 것 관련 이미지" />
-        </div>
-      </a>
-    </li>
-
-    <li class="post-item">
-      <a href="#">
-        <div class="text-content">
-          <h3 class="title">373) 사진만 봐도 꿀팁 윤기가 좌르르, 구움과자</h3>
-          <p class="desc">
-            홍대에서 여행지 시장, 크로플과 휘낭시에 향연, 숨겨진 달콤한
-            맛의 기억을 꺼내봅니다.
-          </p>
-          <p class="meta">
-            Mar 28. 2023 · <span class="author">by 빵덕 설리언케익</span>
-          </p>
-        </div>
-        <div class="thumbnail">
-          <img src="./../../assets/images/image4.png" alt="크로플과 휘낭시에 향연 관련 이미지" />
-        </div>
-      </a>
-    </li>
-  </ul>
-</main>
-
-  </section>
-
-  <!-- ============================= -->
-  <!-- 작가 검색 결과 -->
-  <!-- ============================= -->
-  <section id="result-authors" class="search-section hidden">
-    <div class="result-info">
-      <p>작가 검색 결과 <strong>32건</strong></p>
-    </div>
-
-    <main class="author-results" aria-label="작가 검색 결과 목록">
-  <ul class="author-list">
-    <li class="author-item">
-      <a href="#">
-        <div class="profile-thumb">
-          <img src="./../../assets/images/Link1.png" alt="꿀아빠 프로필 이미지" />
-        </div>
-        <div class="author-info">
-          <h3 class="name">꿀아빠</h3>
-          <p class="desc">두 아이 아빠 기록남기기 좋아하는 아빠 고민하는 아빠입니다.</p>
-          <ul class="tags" aria-label="관련 태그">
-            <li><span class="tag">여행</span></li>
-          </ul>
-        </div>
-      </a>
-    </li>
-
-    <li class="author-item">
-      <a href="#">
-        <div class="profile-thumb">
-          <img src="./../../assets/images/Link2.png" alt="꿀별 프로필 이미지" />
-        </div>
-        <div class="author-info">
-          <h3 class="name">꿀별</h3>
-          <p class="desc">
-            글 쓰고 디자인 하는 사람. 마음이 담긴 일을 해요. 하늘 옆에 마음을 담아요.
-          </p>
-          <ul class="tags" aria-label="관련 태그">
-            <li><span class="tag">콘텐츠</span></li>
-            <li><span class="tag">만화</span></li>
-            <li><span class="tag">여행</span></li>
-            <li><span class="tag">크리에이터</span></li>
-          </ul>
-        </div>
-      </a>
-    </li>
-
-    <li class="author-item">
-      <a href="#">
-        <div class="profile-thumb">
-          <img src="./../../assets/images/Link3.png" alt="개발자 꿀 프로필 이미지" />
-        </div>
-        <div class="author-info">
-          <h3 class="name">개발자 꿀</h3>
-          <p class="desc">
-            느리게 흘러가는 소프트플로에서 사는 개발자입니다! 🐝 요가를 좋아하고 심심하면 이것저것 써요.
-          </p>
-          <ul class="tags" aria-label="관련 태그">
-            <li><span class="tag">해외생활</span></li>
-            <li><span class="tag">IT</span></li>
-            <li><span class="tag">개발자</span></li>
-          </ul>
-        </div>
-      </a>
-    </li>
-
-    <li class="author-item">
-      <a href="#">
-        <div class="profile-thumb">
-          <img src="./../../assets/images/Link4.png" alt="꿀갱 프로필 이미지" />
-        </div>
-        <div class="author-info">
-          <h3 class="name">꿀갱</h3>
-          <p class="desc">제 일상에 대한 꿀입니다.</p>
-          <ul class="tags" aria-label="관련 태그">
-            <li><span class="tag">여행</span></li>
-            <li><span class="tag">CEO</span></li>
-          </ul>
-        </div>
-      </a>
-    </li>
-  </ul>
-</main>
-
-  </section>
-
-  <!-- ============================= -->
-  <!-- 검색 결과 없음 -->
-  <!-- ============================= -->
-  <section id="no-results" class="search-section hidden">
-    <main class="empty-result">
-      <div class="empty-content">
-        <div class="logo-placeholder">
-          <img src="./../../assets/images/Vector.png" alt="브런치 스토리 로고" />
-        </div>
-        <p class="empty-message">검색 결과가 없습니다.</p>
-      </div>
-    </main>
-  </section>
-
-</body>
+    <tab-nav> </tab-nav>
+  </body>
 </html>

@@ -25,9 +25,9 @@ export default defineConfig({
         // 발견 페이지
         'pages/search': 'src/pages/search.html',
         // 글쓰기 페이지
-        'pages/write': 'src/pages/write/write.html',
+        'pages/write-page/write': 'src/pages/write-page/write.html',
         // 상세 페이지
-        'pages/detail': 'src/pages/detail/detail.html',
+        'pages/detail-page/detail': 'src/pages/detail-page/detail.html',
         //
       },
     },

@@ -3,66 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="작가 소개 글"> // 동적 처리 필요
-  <title>OOO의 브런치스토리</title> // 동적 처리 필요
+  <meta name="description" content="작가 소개 글">
+   <script type="module" src="./write-page/writer-home.ts"></script>
+  <title>브런치 작가 홈</title>
+  <link rel="stylesheet" href="/src/styles/writer-home.css" />
 </head>
 <body>
-  <header class="header">
-  <img src="./../assets/images/LOGO.png" alt="브런치스토리 로고이미지" />
 
-  <!-- 헤더
-  <div class="header-icons">
-    <button class="icon" aria-label="알림 보기"><img src="/src/assets/종.png" alt="종 아이콘" /></button> 
-    <button class="icon" aria-label="검색"><img src="/src/assets/돋보기.png" alt="돋보기 아이콘" /></button> 
-    <img src="/src/assets/프로필.png" alt="프로필" class="profile-thumb">
-  </div>
-</header> -->
+  <main class="main" aria-label="작가의 프로필 홈">
 
-  <!-- 프로필 -->
-  <main class="main" sr-only="작가의 프로필 홈">
-  <section class="profile">
-    <img src="./../assets/images/프로필 커버.png" alt="프로필 커버" class="profile-img">
-    <h2 class="name">AB</h2>
-    <p class="role">기획자</p>
-    <div class="counts">
-      <span>구독자 <b>30</b></span>
-      <span>관심작가 <b>16</b></span>
-    </div>
-    <button class="subscribe-btn subscribed">✔ 구독중</button>
-  </section>
+    <!-- 프로필 영역 -->
+    <section class="profile">
+      <img src="./../assets/images/프로필 커버.png" alt="프로필 커버" class="profile-img">
 
-  <!-- 게시판 -->
-  <section class="posts" aria-label="게시글 목록">
-  <ul class="post-list">
-    <li class="post">
-      <p class="tag">취준은 처음이라</p>
-      <h3>[취업특강] 노션 포트폴리오 만들기</h3>
-      <p class="desc">
-        with 노슈니, 슈크림 마을, 마포청년나루 │ 취업 준비를 위해 반드시 필요한 것 세 가지...
-      </p>
-      <p class="date">댓글 0 · Jul 02. 2024</p>
-    </li>
+      <h2 class="name">AB</h2>
+      <p class="role">기획자</p>
 
-    <li class="post">
-      <p class="tag">취준은 처음이라</p>
-      <h3>[취업특강] 노션 포트폴리오 만들기</h3>
-      <p class="desc">
-        with 노슈니, 슈크림 마을, 마포청년나루 │ 취업 준비를 위해 반드시 필요한 것 세 가지...
-      </p>
-      <p class="date">댓글 0 · Jul 02. 2024</p>
-    </li>
+      <div class="counts">
+        <span>구독자 <b>30</b></span>
+        <span>관심작가 <b>16</b></span>
+      </div>
 
-    <li class="post">
-      <p class="tag">취준은 처음이라</p>
-      <h3>[취업특강] 노션 포트폴리오 만들기</h3>
-      <p class="desc">
-        with 노슈니, 슈크림 마을, 마포청년나루 │ 취업 준비를 위해 반드시 필요한 것 세 가지...
-      </p>
-      <p class="date">댓글 0 · Jul 02. 2024</p>
-    </li>
-  </ul>
-</section>
+      <button class="subscribe-btn subscribed">✔ 구독중</button>
+    </section>
+
+    <!-- 게시판 영역 -->
+    <section class="posts">
+      <ul class="post-list">
+
+        <li class="post">
+          <p class="tag">취준은 처음이라</p>
+          <h3><a href="#">[취업특강] 노션 포트폴리오 만들기</a></h3>
+          <p class="desc">
+            with 노슈니, 슈크림 마을, 마포청년나루 │ 취업 준비를 위해 반드시 필요한 것 세 가지...
+          </p>
+          <p class="date">댓글 0 · Jul 02. 2024</p>
+        </li>
+
+        <li class="post">
+          <p class="tag">취준은 처음이라</p>
+          <h3><a href="#">[취업특강] 노션 포트폴리오 만들기</a></h3>
+          <p class="desc">
+            with 노슈니, 슈크림 마을, 마포청년나루 │ 취업 준비를 위해 반드시 필요한 것 세 가지...
+          </p>
+          <p class="date">댓글 0 · Jul 02. 2024</p>
+        </li>
+
+        <li class="post">
+          <p class="tag">취준은 처음이라</p>
+          <h3><a href="#">[취업특강] 노션 포트폴리오 만들기</a></h3>
+          <p class="desc">
+            with 노슈니, 슈크림 마을, 마포청년나루 │ 취업 준비를 위해 반드시 필요한 것 세 가지...
+          </p>
+          <p class="date">댓글 0 · Jul 02. 2024</p>
+        </li>
+
+      </ul>
+    </section>
 
   </main>
+
 </body>
 </html>
