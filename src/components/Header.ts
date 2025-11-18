@@ -1,5 +1,6 @@
 import type { User } from '../types/user';
-
+import search from '/src/assets/images/search.svg';
+import logo from '/src/assets/images/logo-header.svg';
 class HeaderComponent extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -31,7 +32,7 @@ class HeaderComponent extends HTMLElement {
         <h1 class="logo">
           <a href="/index.html">
             <img
-              src="/src/assets/images/logo-header.svg"
+              src="${logo}"
               aria-label="브런치 홈"
             />
           </a>
@@ -39,7 +40,7 @@ class HeaderComponent extends HTMLElement {
 
         <nav>
           <a href="/src/pages/search-page/search.html" class="search-btn" aria-label="검색 버튼">
-            <img src="/src/assets/images/search.svg" alt="검색" />
+            <img src="${search}" alt="검색" />
           </a>
 
           ${user?.name ? loginHTML : logoutHTML}
