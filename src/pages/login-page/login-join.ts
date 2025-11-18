@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', function () {
     try {
     const joinData = await newJoin(nickName.value, email.value, passWord.value);
       console.log("회원가입 성공:", joinData);
+      
     } catch (error) {
       console.error('회원가입 실패:',error);     
     }
