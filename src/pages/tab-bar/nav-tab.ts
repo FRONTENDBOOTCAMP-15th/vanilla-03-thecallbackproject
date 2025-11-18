@@ -28,7 +28,7 @@ class TabNav extends HTMLElement {
           </li>
 
           <li class="myinfo-li">
-            <a href="/src/pages/myinfo/my-info.html" class="tab-item">
+            <a href="/src/pages/login-page/login.html" class="tab-item">
               <img src="./../../../icons/myinfo.png" class="off" alt="" aria-hidden="true" />
               <img src="./../../../icons/myinfo-on.png" class="on" alt="" aria-hidden="true" />
               <span>내 서랍</span>
