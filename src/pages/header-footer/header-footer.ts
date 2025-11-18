@@ -7,7 +7,19 @@ import { getAxios } from '../../utils/axios';
 
 const api = getAxios();
 
-// 서버에서 데이터 fetch 해오기
+// 1. 스와이퍼용 랜덤 6개 데이터
+async function fetchSwiperPosts() {
+  const res = await api.get('/posts', {
+    params: {
+      type: 'brunch',
+      limit: 6,
+      sort: JSON.stringify({ random: 1 }),
+    },
+  });
+  return res.data.item;
+}
+
+// 2. '요즘 뜨는 브런치' 영역 데이터
 async function fetchBrunchPosts() {
   const res = await api.get('/posts', {
     params: {
@@ -22,6 +34,25 @@ async function fetchBrunchPosts() {
 
 // DOM에 데이터 뿌리기
 window.addEventListener('DOMContentLoaded', async () => {
+  // 스와이퍼
+  const swiperPosts = await fetchSwiperPosts();
+
+  const swiperEl = document.querySelector('.swiper-wrapper');
+  swiperEl!.innerHTML = swiperPosts
+    .map(
+      (post: any) => `
+      <div class="swiper-slide">
+        <div class="slide-text">
+          <h3>${post.title}</h3>
+          <h4>by ${post.user?.name || '익명'}</h4>
+        </div>
+        <img src="${post.image}" alt="${post.title}">
+      </div>
+    `,
+    )
+    .join('');
+
+  // 요즘 뜨는 브런치
   const posts = await fetchBrunchPosts();
 
   console.log(posts); // 🔥 콘솔 확인
@@ -54,22 +85,6 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
     type: 'bullets',
   },
-
-  // fraction 구현 보류
-  // on: {
-  //   init(swiper) {
-  //     const fractionEl = document.querySelector(
-  //       '.swiper-pagination-fraction',
-  //     ) as HTMLElement;
-  //     fractionEl.textContent = `1 / ${swiper.slides.length}`;
-  //   },
-  //   slideChange(swiper) {
-  //     const fractionEl = document.querySelector(
-  //       '.swiper-pagination-fraction',
-  //     ) as HTMLElement;
-  //     fractionEl.textContent = `${swiper.activeIndex + 1} / ${swiper.slides.length}`;
-  //   },
-  // },
 
   slidesPerView: 1, // 디폴트는 'auto'
   spaceBetween: 0, // 슬라이드 .swiper-slide 들 사이 가로 간격
