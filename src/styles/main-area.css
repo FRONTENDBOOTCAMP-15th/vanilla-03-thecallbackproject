@@ -1,0 +1,603 @@
+/* reset, 웹접근성 연결, 전역 폰트 적용 */
+@import './base.css';
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.2rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.8rem 0;
+}
+h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.6rem 0;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.4rem 0;
+}
+h6 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.3rem 0;
+}
+
+a {
+  text-decoration: none;
+  /* color: rgba(0, 0, 0, 0.788); */
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* -------------- 스와이핑 영역 -------------- */
+
+.swiping-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-wrapper {
+  /* swiper는 자체적으로 display: flex가 적용됨 */
+  /* display: flex; */
+  gap: 0;
+}
+.swiper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  margin: 0 auto; /* 가운데 정렬 */
+  max-width: 35rem;
+  background: linear-gradient(180deg, #9a5b98 0%, #8d4e8e 45%, #6d3d6e 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0 2rem;
+}
+.swiper-slide img {
+  padding: 0rem 0 4rem 7.5rem;
+  width: 8.5rem;
+  aspect-ratio: 135 / 190;
+  object-fit: cover;
+  /* max-width: 500px; */
+
+  z-index: 1;
+}
+
+.slide-text {
+  margin-top: 2.5rem; /*시안처럼 위쪽 여백*/
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.slide-text h3 {
+  font-weight: 300;
+  font-size: 1.35rem;
+  color: #f8f8f8;
+}
+
+.slide-text h4 {
+  color: #f8f8f8;
+  font-weight: 400;
+}
+
+.swiping-area .swiper-pagination-bullet {
+  background: #f8f8f8;
+}
+.swiping-area .swiper-pagination-bullet-active {
+  background: #f8f8f8;
+  opacity: 1;
+}
+
+/* -------------- 브런치 리스트 -------------- */
+
+.brunch-title {
+  padding: 2rem 1rem;
+}
+
+/* 예비1 */
+.brunch-list-books {
+  justify-content: space-between; /* 양쪽에 글/이미지 배치 */
+}
+
+.brunch-list li {
+  /* display: grid;
+  grid-template-columns: 1fr auto; */
+  display: flex;
+  align-items: start;
+  /* align-items: flex-start;  (flex일 때 배치)*/
+  gap: 1.2rem;
+  justify-content: flex-start; /* 양 끝 배치 금지 */
+  width: 100%;
+  max-width: 35rem;
+  /* background-color: yellow; */
+}
+
+.brunch-list li img {
+  align-self: start; /* 이미지 상단 고정 */
+}
+
+.brunch-list {
+  max-width: 35rem; /* 스와이퍼보다 좁게 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 0 1rem; /* 양쪽 여백(선택) */
+}
+
+.brunch-list ol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.2rem 0 2.2rem 0;
+  margin-left: 0;
+  /* background-color: #00c6be; */
+}
+
+.brunch-list-books img {
+  width: 6.25rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.brunch-list li.brunch-list-books {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.brunch-list-books img {
+  flex-shrink: 0;
+}
+
+.brunch-list-book {
+  max-width: 16rem;
+  min-width: 0;
+}
+
+.brunch-list-book h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* 2줄까지 */
+  max-width: 18ch; /* 공백 포함 14글자까지만 1줄 */
+  /* overflow: hidden;
+  display: block;
+  overflow-wrap: break-word; 줄바꿈 허용 */
+  /* max-width: 14ch; 정확히 14글자까지만 첫 줄에 들어가게 */
+}
+
+.brunch-list-book p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  font-size: 0.8125rem;
+  /* max-width: 22ch; */
+  overflow: hidden; /* 넘친 글자 숨김 */
+  text-overflow: ellipsis;
+  white-space: normal; /* 줄바꿈 허용 必 */
+}
+
+/* -------------- 브런치북 원작 베스트 셀러 -------------- */
+
+.best-seller {
+  max-width: 35rem;
+  padding: 1rem 3rem;
+  /* text-align: center; */
+  background-color: #147a4e;
+  margin: 0 auto;
+
+  color: #ffffff;
+}
+
+.best-seller h4 {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding-bottom: 0.625rem;
+}
+
+.best-seller-nomi {
+  font-weight: 300;
+  line-height: 18px;
+  margin: 2rem auto 3rem auto;
+  width: 14rem;
+  text-align: center;
+  padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+  border-top: 0.0625rem solid #ffffff;
+  border-bottom: 0.0625rem solid #ffffff;
+}
+
+.best-seller-book {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.best-seller-book-info {
+  padding-bottom: 4rem;
+}
+
+.best-seller-button {
+  display: inline-block;
+  margin: 2.5rem auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1rem;
+  display: flex;
+  width: 9.3rem;
+  padding: 0.75rem 1rem 0.5625rem 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.104rem;
+}
+
+blockquote {
+  max-width: 800px;
+  background-color: #ffffff;
+  border: #ffffff;
+  color: black;
+  padding: 3rem 1rem 1.2rem 1rem;
+  margin: 0 auto;
+}
+
+.blockquote-bottomgap {
+  padding-bottom: 1.5rem;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.blockquote-uppergap {
+  margin: 0 auto;
+  padding: 1rem 1rem 0 0.5rem;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 24ch;
+}
+
+/* --------------오늘의 작가 영역 -------------- */
+.today-author {
+  margin: 1.5rem auto;
+  padding: 1.5rem 1.5625rem 1.5625rem 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #fff;
+  background: #fff;
+  border-radius: 6px;
+  max-width: 35rem;
+}
+
+.today-author-top {
+  display: flex;
+  justify-content: space-between; /* 왼쪽 글 + 오른쪽 사진 */
+  align-items: center;
+  gap: 1rem;
+}
+
+.today-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.today-author-info h3 {
+  color: #00c6be;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.today-author-info h4 {
+  font-size: 1.875rem;
+}
+
+.today-author-job {
+  color: #959595;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.125rem;
+}
+
+.today-author-desc {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.375rem;
+  overflow: hidden;
+  line-clamp: 2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2줄까지만 표시 */
+  -webkit-box-orient: vertical;
+  max-width: none;
+  white-space: normal;
+}
+
+.today-author-img {
+  width: 5rem;
+  height: 5rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.top-author-list {
+  /* border-bottom: 1px solid #ddd; */
+  padding: 0.5rem 0;
+}
+
+.recent-book {
+  max-width: 800px;
+  background-color: #f8f8f8;
+  padding: 0 1rem;
+  margin: 0.5rem auto 0.5rem auto;
+}
+
+.recent-book-flex {
+  min-width: 0;
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* 가로 가운데 */
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+}
+
+.recent-book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.recent-book-info p {
+  white-space: normal;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* 2줄까지만 표시 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* -------------- 그리움이 지칠 때 -------------- */
+.longing {
+  padding: 3.5rem 2.5rem 3rem 2.5rem;
+  margin: 0 auto;
+  max-width: 35rem;
+  background: linear-gradient(
+    136deg,
+    #fff 0%,
+    #f8f8f8 17%,
+    #f8f8f8 75%,
+    #eee 100%
+  );
+  border-top: 1px solid #ddd;
+  background: #f8f8f8;
+}
+
+.longing-book {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.longing-bottomgap {
+  padding-bottom: 1.5rem;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.longing-uppergap {
+  margin: 0 auto;
+  padding: 1rem 1rem 0 0.5rem;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 42ch;
+}
+
+/* -------------- 탑 구독 작가 -------------- */
+.top-author-list {
+  padding: 1rem;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.top-author-list h2 {
+  font-size: 1.5rem;
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 2rem 0.5rem;
+}
+
+.top-author-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.top-author-grid ul {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 2rem; */
+  padding: 1rem;
+}
+
+.top-author-grid li {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-color: #ddd;
+  border-style: solid;
+}
+
+.top-author-grid li p {
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 2줄까지만 표시 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.top-author-grid li img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.top-author-grid-job {
+  color: #959595;
+  font-weight: 300;
+  line-height: 18px;
+  padding-bottom: 1rem;
+}
+
+.top-author-grid li:nth-child(1) {
+  border-bottom-width: 0.0625rem;
+  border-right-width: 0.0625rem;
+}
+
+.top-author-grid li:nth-child(2) {
+  border-bottom-width: 0.0625rem;
+  border-left-width: 0.0625rem;
+}
+
+.top-author-grid li:nth-child(3) {
+  border-top-width: 0.0625rem;
+  border-right-width: 0.0625rem;
+}
+
+.top-author-grid li:nth-child(4) {
+  border-top-width: 0.0625rem;
+  border-left-width: 0.0625rem;
+}
+
+/* -------------- 새로운 작가의 탄생 -------------- */
+
+.award-books {
+  margin: 0 auto;
+  max-width: 35rem;
+  padding: 1.57rem 1.57rem 0rem 1.57rem;
+  background-color: #111;
+  color: #f8f8f8;
+}
+
+.award-books a {
+  color: #f8f8f8;
+}
+
+.award-books > h2 {
+  font-weight: 100;
+  padding: 0.5rem 0;
+}
+
+.award-books > h3 {
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.award-books h3 a {
+  padding-bottom: 0.5rem;
+  font-weight: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* 글자와 오른쪽 화살표 아이콘 사이 간격 */
+}
+
+.award-book-list ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.award-book-list li {
+  gap: 5rem;
+  text-align: center;
+}
+
+.award-book-list img {
+  margin: 0 0.5rem 0 0;
+}
+
+.award-book-list h4 {
+  font-size: 0.875rem;
+  margin: 1rem 0;
+  padding: 0 0.2rem;
+  font-weight: 100;
+}
+
+.award-book-list p {
+  margin: 1rem 0; /* 원하는 간격 */
+  font-weight: 100;
+  font-size: 0.75rem;
+}
+
+.support-link {
+  border-top: 0.03rem solid #eeeeee;
+  margin: 1.5rem auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.support-link a {
+  font-weight: 100;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 999;
+}

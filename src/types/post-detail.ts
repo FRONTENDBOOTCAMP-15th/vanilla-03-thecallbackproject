@@ -9,6 +9,7 @@ export interface ReplyUser {
 export interface Reply {
   content: string;
   user: ReplyUser;
+  createdAt: string;
 }
 
 // 작성자 정보

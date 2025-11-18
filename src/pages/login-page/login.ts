@@ -1,3 +1,6 @@
+import { loginAPI } from '../../apis/loginAPIs';
+
+
 const loginButton = document.querySelector<HTMLButtonElement>('.login-btn');
 const loginForm = document.getElementById(
   'login-form',
@@ -8,23 +11,32 @@ const loginCheckBtn =
 let isChecked: boolean = false;
 
 // 로그인 버튼 클릭 핸들러
-function loginButtonClick(e: Event) {
+async function loginButtonClick(e: Event) {
   e.preventDefault();
 
   if (!loginForm) return;
 
-  const userEmail = (loginForm.querySelector('#userEmail') as HTMLInputElement)
-    .value;
-  const userPassword = (
-    loginForm.querySelector('#userPassword') as HTMLInputElement
-  ).value;
+  const userEmail = (loginForm.querySelector('#userEmail') as HTMLInputElement).value;
+  const userPassword = (loginForm.querySelector('#userPassword') as HTMLInputElement).value;
 
-  if (userEmail === 'gkstjq309@gmail.com' && userPassword === 'k12455241') {
-    alert('로그인 성공!');
-  } else {
-    alert('아이디나 비밀번호를 확인해주세요.');
+  if(!userEmail || !userPassword){
+    alert('이메일과 비밀번호를 입력해주세요');
+    return;
   }
+
+  try {
+  const result = await loginAPI(userEmail,userPassword);
+  console.log('로그인',result);
+  localStorage.setItem('token', result.token);
+  alert('로그인 성공');
+} catch (error) {
+  console.error(error);
+    console.log('로그인',userEmail,userPassword);
+    alert('아이디 또는 비밀번호가 올바르지 않습니다.');
 }
+}
+
+
 
 if (loginButton) {
   loginButton.addEventListener('click', loginButtonClick);

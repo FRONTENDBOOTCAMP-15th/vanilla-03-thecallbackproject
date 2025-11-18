@@ -1,0 +1,341 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f2f2f2;
+  overflow-x: auto;  
+  overflow-y: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
+}
+
+/* 가로로 화면 나열  js 추가하게 되면 변경 해야 할 듯 ..*/
+.page-wrapper {
+  display: flex;
+  width: max-content;
+}
+
+/* 360px 모바일 화면 */
+.screen {
+  width: 360px;
+  height: 100vh;
+  background: #fff;
+  padding: 0 24px; 
+  flex-shrink: 0;
+  overflow-y: auto;
+  border-right: 1px solid #eee;
+}
+
+
+/* 검색 입력 화면 */
+
+.search-input-screen {
+  padding-top: 20px;
+}
+
+/* js 들어가면서 수정 해야 할 거 */
+.search-input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.label {
+  font-size: 14px;
+  margin: 18px 0 10px;
+  color: #BBBBBB;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: #f2f2f2;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.recent-keywords ul {
+  list-style: none;
+}
+
+.recent-keywords ul li {
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+
+/* 헤더 */
+
+.search-header {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+.search-keyword {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+}
+
+
+/* 탭 */
+
+.search-tabs {
+  margin-top: 14px;
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 14px;
+}
+
+.tab.active {
+  color: #00c4b3;
+  border-bottom: 2px solid #00C6BE;
+  font-weight: 600;
+}
+
+
+/* 글 검색 결과 */
+
+.search-section {
+  padding-top: 20px;
+}
+
+.result-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* 정렬 버튼 스타일 */
+.sort-options {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sort {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #b1b1b1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sort.active {
+  color: #00c4b3;
+  font-weight: 600;
+  position: relative;
+}
+
+.sort.active::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #00C6BE;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* 게시글 카드 */
+.post-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.post-item a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #333;
+}
+
+.text-content {
+  width: calc(100% - 90px);
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.desc {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.meta {
+  font-size: 12px;
+  color: #999;
+}
+
+.thumbnail img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+/* 작가 검색 결과 */
+
+.author-list {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.author-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.author-item a {
+  display: flex;
+  gap: 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.profile-thumb img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info .name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.author-info .desc {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* 전체 작가 리스트 */
+.author-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* 작가 항목 */
+.author-item a {
+  display: flex;
+  gap: 14px;
+  text-decoration: none;
+  color: #000;
+  padding-bottom: 22px;
+}
+
+/* 프로필 이미지 */
+.profile-thumb img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 이름 */
+.author-info .name {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: #000;
+}
+
+/* 소개 */
+.author-info .desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  margin: 0 0 10px;
+}
+
+/* 태그 리스트 */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none; 
+}
+
+/* 태그 칩 */
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #f1f1f1;
+  border-radius: 11px;
+  font-size: 12px;
+  color: #555;
+}
+
+.author-item {
+  border-bottom: none;
+}
+
+
+
+/* 검색 결과 없음 */
+
+.empty-result {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.logo-placeholder img {
+  width: 55px;
+  opacity: 0.5;
+}
+
+.empty-message {
+  margin-top: 20px;
+  color: #666;
+  font-size: 15px;
+}

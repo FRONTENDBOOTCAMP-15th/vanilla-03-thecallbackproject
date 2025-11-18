@@ -15,7 +15,6 @@ export async function uploadImage(file: File): Promise<string> {
     // ★ 성공 시 이미지 경로 반환
     return data.item[0].path;
   } catch (err) {
-    console.error('이미지 업로드 실패:', err);
     throw err;
   }
 }
