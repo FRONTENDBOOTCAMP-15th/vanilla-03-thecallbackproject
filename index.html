@@ -7,12 +7,16 @@
 
     <link rel="stylesheet" href="./fonts/pretendard/pretendardvariable.css" />
     <link rel="stylesheet" href="./src/styles/main-area.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
 
     <link rel="stylesheet" href="./src/pages/tab-bar/nav-tab.css" />
     <script type="module" src="./src/pages/tab-bar/nav-tab.ts"></script>
     <title>vanilla-03-thecallbackproject</title>
   </head>
+
+  <a src="./index.html"></a>
   <body class="home">
+    <brunch-header></brunch-header>
     <main>
       <!-- 스와이핑 영역 -->
       <section class="swiping-area">
@@ -438,12 +442,11 @@
         ><img src="./src/assets/images/up-icon.svg" alt="맨 위로 이동"
       /></a>
     </main>
+    <script type="module" src="/src/components/Header.ts"></script>
     <script
       type="module"
       src="/src/pages/header-footer/header-footer.ts"
     ></script>
-
-    <script type="module" src="/src/main.ts"></script>
     <tab-nav></tab-nav>
   </body>
 </html>
