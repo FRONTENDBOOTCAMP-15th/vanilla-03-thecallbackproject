@@ -1,4 +1,5 @@
-/* 공통 */
+@import './../../styles/base.css';
+
 * {
   box-sizing: border-box;
 }
