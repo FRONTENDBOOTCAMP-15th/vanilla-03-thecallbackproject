@@ -322,6 +322,13 @@
   line-height: 24px;
 }
 
+.comment-btn {
+  cursor: pointer !important;
+}
+
+.like-btn {
+  cursor: pointer !important;
+}
 .comment-btn > img {
   width: 20px;
   height: 20px;
