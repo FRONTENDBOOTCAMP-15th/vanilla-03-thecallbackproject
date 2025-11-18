@@ -32,7 +32,8 @@ h6 {
 }
 
 header {
-  background-color: #fff;
+  /* background-color: #fff; */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
