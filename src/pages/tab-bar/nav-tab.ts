@@ -4,7 +4,7 @@ class TabNav extends HTMLElement {
       <nav class="tab-nav" aria-label="하단 메뉴">
         <ul class="tab-list">
           <li class="home-li">
-            <a href="/index.html" class="tab-item">
+            <a href="https://thecallbackproject.netlify.app/" class="tab-item">
               <img src="./../../../icons/home.png" class="off" alt="" aria-hidden="true" />
               <img src="./../../../icons/home-on.png" class="on" alt="" aria-hidden="true" />
               <span>홈</span>
