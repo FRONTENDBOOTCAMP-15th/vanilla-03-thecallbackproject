@@ -11,13 +11,13 @@ export default defineConfig({
         // 메인 페이지
         index: 'index.html',
         // 로그인 페이지
-        'pages/login/login-default': 'src/pages/login/login-page.html',
+        'pages/login/login-default': 'src/pages/login-page/login.html',
         // 카카오 로그인 페이지
-        'pages/login/login-kakao': 'src/pages/login/login-kakao.html',
+        'pages/login/login-kakao': 'src/pages/login-page/login-kakao.html',
         // 카카오 간편로그인 페이지
-        'pages/login/login-kakao-easy': 'src/pages/login/login-kakao-easy.html',
+        'pages/login/login-kakao-easy': 'src/pages/login-page/login-kakao-easy.html',
         // 회원가입 페이지
-        'pages/login/login-join': 'src/pages/login/login-join.html',
+        'pages/login/login-join': 'src/pages/login-page/login-join.html',
         // 내 서랍 페이지
         'pages/my-info': 'src/pages/myinfo/my-info.html',
         // 작가 홈 페이지
