@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   brunchLiEl!.innerHTML = posts
     .map(
-      (post: any, i: number) =>
+      (post: any) =>
         `<li class="brunch-list-books">
       <div class="brunch-list-book">
 <h3>${post.title}</h3>
@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 // swiper 영역
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
   modules: [Pagination],
 
   // 페이지네이션 디폴트 모양 bullet 기호
