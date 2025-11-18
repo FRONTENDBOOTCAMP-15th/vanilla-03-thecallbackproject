@@ -12,7 +12,7 @@ class HeaderComponent extends HTMLElement {
       <a class="alarm-btn" aria-label="알림 버튼">
         <img src="/src/assets/images/noti-btn.svg" />
       </a>
-      <a href="#" class="profile-btn" aria-label="프로필 버튼">
+      <a href="/src/pages/myinfo/my-info.html" class="profile-btn" aria-label="프로필 버튼">
         <img
           src="${user.image}"
           onerror="this.src='/src/assets/images/login-profile.svg'"
@@ -21,15 +21,15 @@ class HeaderComponent extends HTMLElement {
     `;
 
     const logoutHTML = `
-      <a href="#" class="start-btn" aria-label="시작하기 버튼">
+      <a href="/src/pages/login-page/login.html" class="start-btn" aria-label="시작하기 버튼">
         시작하기
       </a>
     `;
 
     this.innerHTML = `
-      <header>
+      <header class="header">
         <h1 class="logo">
-          <a href="https://brunch.co.kr/">
+          <a href="/index.html">
             <img
               src="/src/assets/images/logo-header.svg"
               aria-label="브런치 홈"
@@ -38,7 +38,7 @@ class HeaderComponent extends HTMLElement {
         </h1>
 
         <nav>
-          <a class="search-btn" aria-label="검색 버튼">
+          <a href="/src/pages/search-page/search.html" class="search-btn" aria-label="검색 버튼">
             <img src="/src/assets/images/search.svg" alt="검색" />
           </a>
 
