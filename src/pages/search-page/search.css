@@ -1,3 +1,4 @@
+@import './../../styles/base.css';
 
 * {
   box-sizing: border-box;
@@ -12,14 +13,16 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
 }
 
+
 /* 가로로 화면 나열  js 추가하게 되면 변경 해야 할 듯 ..*/
-.page-wrapper {
-  display: flex;
+/* .page-wrapper { */
+  /* display: flex;
   width: max-content;
-}
+} */
 
 /* 360px 모바일 화면 */
 .screen {
+  display: none;
   width: 360px;
   height: 100vh;
   background: #fff;
@@ -27,6 +30,10 @@ body {
   flex-shrink: 0;
   overflow-y: auto;
   border-right: 1px solid #eee;
+}
+
+.screen.active {
+  display: block;
 }
 
 
