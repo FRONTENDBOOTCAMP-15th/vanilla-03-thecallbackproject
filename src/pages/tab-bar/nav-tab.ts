@@ -12,7 +12,7 @@ class TabNav extends HTMLElement {
           </li>
 
           <li class="search-li">
-            <a href="/src/pages/search.html" class="tab-item">
+            <a href="/src/pages/search-page/search.html" class="tab-item">
               <img src="./../../../icons/search.png" class="off" alt="" aria-hidden="true" />
               <img src="./../../../icons/search-on.png" class="on" alt="" aria-hidden="true" />
               <span>발견</span>
