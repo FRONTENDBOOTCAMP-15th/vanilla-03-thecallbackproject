@@ -43,6 +43,7 @@ body {
   display: flex;
   gap: 24px;
   font-size: 12px;
+  padding-top: 16.06px;
   color: #666;
 }
 
