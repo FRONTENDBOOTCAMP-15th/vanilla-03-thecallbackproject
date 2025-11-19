@@ -147,6 +147,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const subtitle = form.elements.namedItem('subtitle') as HTMLInputElement;
     const content = form.elements.namedItem('content') as HTMLTextAreaElement;
     const tagsEl = form.elements.namedItem('tags') as HTMLInputElement;
+
     // 1) 빈 필드 확인
     const missingFields = validateForm(title, subtitle, content);
 
@@ -155,6 +156,7 @@ window.addEventListener('DOMContentLoaded', function () {
       showToastMessage(toastMessage);
       return;
     }
+
     // 2) 파일 가져오기
     const file = fileInput.files?.[0];
 
@@ -168,13 +170,15 @@ window.addEventListener('DOMContentLoaded', function () {
       file, // 파일
     );
 
-    console.log('최종 전송 데이터:', postData);
-
     // 4) 서버에 게시물 저장(JSON 전송)
-
     try {
-      await addPost(postData);
+      const result = await addPost(postData); // ← addPost 결과 받아오기
+      const newPostId = result.item._id; // ← 새 글 ID 추출
+
       alert('글이 등록되었습니다.');
+
+      // 글 상세페이지로 이동
+      window.location.href = `/src/pages/detail-page/detail.html?id=${newPostId}`;
     } catch (error) {
       alert('글쓰기에 실패했습니다. 다시 시도해주세요.');
       return; // ★ 실패면 아래 코드 실행하지 않음
@@ -209,16 +213,12 @@ window.addEventListener('DOMContentLoaded', function () {
     const mobileVisualViewport = window.visualViewport;
     if (!mobileVisualViewport) return;
 
-    const keyboardHeight =
-      window.innerHeight -
-      mobileVisualViewport.height -
-      mobileVisualViewport.offsetTop;
+    const visualHeight = mobileVisualViewport.height;
+    const fullHeight = window.innerHeight;
 
-    if (keyboardHeight > 0) {
-      toolbar.style.bottom = `${keyboardHeight}px`;
-    } else {
-      toolbar.style.bottom = `0px`;
-    }
+    const keyboardHeight = fullHeight - visualHeight;
+
+    toolbar.style.bottom = `${keyboardHeight}px`;
   }
 
   window.visualViewport?.addEventListener('resize', updateToolbarPosition);

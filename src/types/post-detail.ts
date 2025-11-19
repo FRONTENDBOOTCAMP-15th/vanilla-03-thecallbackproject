@@ -26,7 +26,7 @@ export interface PostDetail {
   type: string;
   title: string;
   extra: {
-    subTitle: string;
+    subtitle: string;
     align: string;
   };
   content: string;
