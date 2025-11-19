@@ -1,47 +1,18 @@
+import axios from "axios";
+
 document.addEventListener("DOMContentLoaded", () => {
-  // -----------------------------------------------------
-  // 타입 정의
-  // -----------------------------------------------------
   type SearchType = "post" | "author";
-  type SortType = "accuracy" | "latest";
 
-  interface PostItem {
-    id: number;
-    title: string;
-    desc: string;
-    date: string;
-    author: string;
-    thumbnail: string;
-  }
+  const api = axios.create({
+    baseURL: "https://fesp-api.koyeb.app/market",
+    timeout: 5000,
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      "Client-Id": "febc15-vanilla03-ecad",
+    },
+  });
 
-  interface AuthorItem {
-    id: number;
-    name: string;
-    desc: string;
-    tags: string[];
-    profileImg: string;
-  }
-
-  interface SearchResponse<T> {
-    total: number;
-    items: T[];
-  }
-
-  // -----------------------------------------------------
-  // mock API
-  // -----------------------------------------------------
-  async function fetchSearch(
-    keyword: string,
-    type: SearchType,
-    sort: SortType
-  ): Promise<SearchResponse<any>> {
-    const res = await fetch("/mock/search.json");
-    return await res.json();
-  }
-
-  // -----------------------------------------------------
-  // DOM 요소들
-  // -----------------------------------------------------
   const screens = document.querySelectorAll<HTMLDivElement>(".screen");
   const searchInput = document.querySelector<HTMLInputElement>(".search-input");
   const chips = document.querySelectorAll<HTMLSpanElement>(".chip");
@@ -50,54 +21,47 @@ document.addEventListener("DOMContentLoaded", () => {
   const tabButtons = document.querySelectorAll<HTMLButtonElement>(".tab");
   const sortButtons = document.querySelectorAll<HTMLButtonElement>(".sort");
 
-  const postList = document.querySelector(".post-list");
-  const authorList = document.querySelector(".author-list");
-
-  // -----------------------------------------------------
-  // 화면 전환 함수
-  // -----------------------------------------------------
   function showScreen(index: number) {
     screens.forEach((screen, i) => {
       screen.style.display = i === index ? "block" : "none";
     });
   }
 
-  // -----------------------------------------------------
-  // 최근 검색어 저장/삭제/렌더링
-  // -----------------------------------------------------
-  function saveRecentKeyword(keyword: string) {
-    let recents = JSON.parse(localStorage.getItem("recentKeywords") || "[]");
-    recents = recents.filter((k: string) => k !== keyword);
-    recents.unshift(keyword);
-    recents = recents.slice(0, 5);
+  function updateSearchTitle(keyword: string) {
+    const titles = document.querySelectorAll(".search-keyword h1");
+    titles.forEach((t) => (t.textContent = keyword));
+  }
 
-    localStorage.setItem("recentKeywords", JSON.stringify(recents));
+  function saveRecentKeyword(keyword: string) {
+    let list = JSON.parse(localStorage.getItem("recentKeywords") || "[]");
+    list = list.filter((v: string) => v !== keyword);
+    list.unshift(keyword);
+    list = list.slice(0, 5);
+    localStorage.setItem("recentKeywords", JSON.stringify(list));
     renderRecentKeywords();
   }
 
   function deleteRecentKeyword(keyword: string) {
-    let recents = JSON.parse(localStorage.getItem("recentKeywords") || "[]");
-    recents = recents.filter((k: string) => k !== keyword);
-    localStorage.setItem("recentKeywords", JSON.stringify(recents));
+    let list = JSON.parse(localStorage.getItem("recentKeywords") || "[]");
+    list = list.filter((v: string) => v !== keyword);
+    localStorage.setItem("recentKeywords", JSON.stringify(list));
     renderRecentKeywords();
   }
 
   function renderRecentKeywords() {
-    const recents = JSON.parse(localStorage.getItem("recentKeywords") || "[]");
+    const list = JSON.parse(localStorage.getItem("recentKeywords") || "[]");
     if (!recentList) return;
 
-    recentList.innerHTML = recents
+    recentList.innerHTML = list
       .map(
         (k: string) => `
       <li>
         <span class="keyword-text">${k}</span>
         <button class="recent-remove" data-key="${k}">×</button>
-      </li>
-    `
+      </li>`
       )
       .join("");
 
-    // 검색어 클릭
     recentList.querySelectorAll(".keyword-text").forEach((item) => {
       item.addEventListener("click", () => {
         const keyword = item.textContent!.trim();
@@ -106,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // 개별 삭제
     recentList.querySelectorAll(".recent-remove").forEach((btn) => {
       btn.addEventListener("click", () => {
         const key = btn.getAttribute("data-key")!;
@@ -115,96 +78,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // -----------------------------------------------------
-  // 검색 실행
-  // -----------------------------------------------------
+  
+  // 검색 엔진
+  
   async function performSearch(keyword: string, type: SearchType) {
     if (!keyword) return;
 
+    updateSearchTitle(keyword);
     saveRecentKeyword(keyword);
 
-    const result = await fetchSearch(keyword, type, "accuracy");
-
-    if (type === "post") {
-      renderPostResults(result);
-      showScreen(1);
+    // "꿀" 검색
+    if (keyword === "꿀") {
+      if (type === "post") showScreen(1);
+      else showScreen(2);
+      return;
     }
-
-    if (type === "author") {
-      renderAuthorResults(result);
-      showScreen(2);
-    }
-
-    if (result.items.length === 0) {
-      showScreen(3);
-    }
+    // 그 외 검색어는 결과 없음 화면으로
+    // 나중에 api 해야됨
+    showScreen(3);
   }
 
-  // -----------------------------------------------------
-  // 글/작가 렌더링 함수
-  // -----------------------------------------------------
-  function renderPostResults(res: SearchResponse<PostItem>) {
-    const info = document.querySelector(".result-info p");
-    if (info) info.innerHTML = `글 검색 결과 <strong>${res.total}건</strong>`;
-
-    if (!postList) return;
-
-    postList.innerHTML = res.items
-      .map(
-        (item) => `
-      <li class="post-item">
-        <a href="#">
-          <div class="text-content">
-            <h3 class="title">${item.title}</h3>
-            <p class="desc">${item.desc}</p>
-            <p class="meta">${item.date} · <span class="author">by ${item.author}</span></p>
-          </div>
-          <div class="thumbnail"><img src="${item.thumbnail}" /></div>
-        </a>
-      </li>`
-      )
-      .join("");
-  }
-
-  function renderAuthorResults(res: SearchResponse<AuthorItem>) {
-    const info = document.querySelector(".search-section p");
-    if (info) info.innerHTML = `작가 검색 결과 <strong>${res.total}건</strong>`;
-
-    if (!authorList) return;
-
-    authorList.innerHTML = res.items
-      .map(
-        (item) => `
-      <li class="author-item">
-        <a href="#">
-          <div class="profile-thumb">
-            <img src="${item.profileImg}" alt="${item.name}" />
-          </div>
-          <div class="author-info">
-            <h3 class="name">${item.name}</h3>
-            <p class="desc">${item.desc}</p>
-            <ul class="tags">
-              ${item.tags.map((tag) => `<li><span class="tag">${tag}</span></li>`).join("")}
-            </ul>
-          </div>
-        </a>
-      </li>`
-      )
-      .join("");
-  }
-
-  // -----------------------------------------------------
-  // 이벤트 바인딩
-  // -----------------------------------------------------
-
-  // 엔터 검색
+  
+  // 이벤트
+  
   searchInput?.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
-      performSearch(searchInput.value.trim(), "post");
+      const keyword = searchInput.value.trim();
+      performSearch(keyword, "post");
     }
   });
 
-  // 인기 키워드 클릭
   chips.forEach((chip) => {
     chip.addEventListener("click", () => {
       const keyword = chip.textContent!.trim();
@@ -213,12 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 닫기 버튼 → 입력 화면으로
   closeButtons.forEach((btn) => {
     btn.addEventListener("click", () => showScreen(0));
   });
 
-  // 탭 전환
   tabButtons.forEach((tab) => {
     tab.addEventListener("click", () => {
       tabButtons.forEach((t) => t.classList.remove("active"));
@@ -227,13 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const keyword = searchInput!.value.trim();
       const type = tab.textContent === "글" ? "post" : "author";
 
-      if (keyword) {
-        performSearch(keyword, type);
-      }
+      if (keyword) performSearch(keyword, type);
     });
   });
 
-  // 정렬 버튼
   sortButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       sortButtons.forEach((b) => b.classList.remove("active"));
@@ -241,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 초기 세팅
   renderRecentKeywords();
   showScreen(0);
 });
