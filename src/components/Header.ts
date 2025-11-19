@@ -34,7 +34,7 @@ class HeaderComponent extends HTMLElement {
     `;
 
     this.innerHTML = `
-      <header class="header ${user?.accessToken ? 'login' : ''}">
+      <header class="header ${user?.token ? 'login' : ''}">
         <h1 class="logo">
           <a href="/index.html">
             <img
@@ -46,7 +46,7 @@ class HeaderComponent extends HTMLElement {
 
         <nav>
 
-        ${user?.accessToken ? loginHTML : ''}
+        ${user?.token ? loginHTML : ''}
 
 
           <a href="/src/pages/search-page/search.html" class="search-btn" aria-label="검색 버튼">
@@ -54,14 +54,14 @@ class HeaderComponent extends HTMLElement {
           </a>
 
 
-          ${user?.accessToken ? profileHTML : logoutHTML}
+          ${user?.token ? profileHTML : logoutHTML}
         </nav>
       </header>
     `;
   }
 
   private getUser(): User {
-    return JSON.parse(localStorage.getItem('user') || '{}');
+    return JSON.parse(localStorage.getItem('item') || '{}');
   }
 }
 
