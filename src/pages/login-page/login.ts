@@ -72,7 +72,7 @@ async function loginButtonClick(e: Event) {
       throw new Error("토큰 반환 실패");     
     }
     // localStorage.setItem('token', result.token);
-    localStorage.setItem('user', JSON.stringify(result.user));
+    localStorage.setItem('user', JSON.stringify(result.item));
     //페이지 이동 액션
     window.location.href = '/';
 
