@@ -66,6 +66,11 @@
   display: none;
 }
 
+.header.login .alarm-btn,
+.header.login .profile-btn {
+  display: inline-flex;
+}
+
 .header .search-btn {
   display: flex;
   width: 30px;

@@ -1,58 +1,75 @@
 import axios from 'axios';
-import { TEMP_TOKEN } from './token';
 
 const API_SERVER = 'https://fesp-api.koyeb.app/market';
+
+// axiosInstance를 외부에서도 접근할 수 있도록 선언
+export let axiosInstance: ReturnType<typeof getAxios> | null = null;
+
 export function getAxios() {
   const instance = axios.create({
     baseURL: API_SERVER, // 기본 URL
-    timeout: 1000 * 5, // 15000
+    timeout: 1000 * 5,
     headers: {
-      'Content-Type': 'application/json', // 요청 바디의 데이터 타입
-      // 설정하지 않으면 크롬일 경우 "application/json, text/plain, */*"
-      Accept: 'application/json', // 응답 바디의 데이터 타입이 json이면 좋겠음
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
       'Client-Id': 'febc15-vanilla03-ecad',
-      // 'Client-Id': 'febc15-vanilla00-ecad',
-      Authorization: `Bearer ${TEMP_TOKEN}`,
+      Authorization: `Bearer`, // 초기에는 비워둠 (인터셉터에서 채워짐)
     },
   });
 
-  // 요청 인터셉터 추가하기
+  // 생성된 instance 저장
+  axiosInstance = instance;
+
+  // 요청 인터셉터: 토큰 자동 추가
   instance.interceptors.request.use(
     config => {
       console.log('요청 인터셉터 호출', config);
-      // 요청이 전달되기 전에 필요한 공통 작업 수행
+
+      // localStorage에서 토큰 가져오기
+      const token = JSON.parse(localStorage.getItem('item') || '{}')?.token
+        ?.accessToken;
+
+      if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
+
+      // 기존 params 유지
       config.params = {
-        // delay: 3000,
-        ...config.params, // 기존 쿼리스트링 복사
+        ...config.params,
       };
+
       return config;
     },
     error => {
-      // 공통 에러 처리
-
       return Promise.reject(error);
     },
   );
 
-  // 응답 인터셉터 추가하기
+  // 응답 인터셉터
   instance.interceptors.response.use(
     response => {
       console.log('정상 응답 인터셉터 호출', response);
-      // 2xx 범위에 있는 상태 코드는 이 함수가 호출됨
-      // 응답 데이터를 이용해서 필요한 공통 작업 수행
-      // if(response.data.ok !== undefined){
-      //   response.data.ok = !!response.data.ok; // 숫자 1을 true로, 0을 false로 변환
-      // }
       return response;
     },
     error => {
       console.error('에러 응답 인터셉터 호출', error);
-      // 2xx 외의 범위에 있는 상태 코드는 이 함수가 호출됨
-      // 공통 에러 처리
-
       return Promise.reject(new Error('잠시 후 다시 이용해 주시기 바랍니다.'));
     },
   );
 
   return instance;
+}
+
+// 현재 Authorization 헤더 값을 가져오는 함수
+export function getAuthorizationHeader(): string {
+  const item = localStorage.getItem('item');
+  if (!item) return '';
+
+  try {
+    const parsed = JSON.parse(item);
+    const token = parsed?.token?.accessToken;
+    return token ? `Bearer ${token}` : '';
+  } catch {
+    return '';
+  }
 }

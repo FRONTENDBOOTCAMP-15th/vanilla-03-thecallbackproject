@@ -1,4 +1,4 @@
-import { getAxios } from '../utils/login-axios';
+import { getAxios } from '../utils/axios';
 
 const axiosInstance = getAxios();
 
@@ -16,10 +16,6 @@ export async function newJoin(
     password: string,
   ) {
   try {
-      if(password.length < 3){
-      alert('비밀번호를 4자 이상 작성해주세요!!!');
-      return;
-    }
     const postData = {
      name: name,
      email: email,

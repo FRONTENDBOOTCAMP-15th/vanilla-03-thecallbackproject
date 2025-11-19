@@ -1,5 +1,6 @@
 import type { User } from '../types/user';
 import search from '/src/assets/images/search.svg';
+import noti from '/src/assets/images/noti-btn.svg';
 import logo from '/src/assets/images/logo-header.svg';
 class HeaderComponent extends HTMLElement {
   connectedCallback() {
@@ -9,17 +10,22 @@ class HeaderComponent extends HTMLElement {
   render() {
     const user = this.getUser();
 
+    // 로그인 시, 표시될 '알림' 버튼
     const loginHTML = `
       <a class="alarm-btn" aria-label="알림 버튼">
-        <img src="/src/assets/images/noti-btn.svg" />
+        <img src="${noti}" />
       </a>
+      `;
+
+    // 로그인 시, 표시될 "프로필" 버튼 (검색 버튼 뒤에 위치)
+    const profileHTML = `
       <a href="/src/pages/myinfo/my-info.html" class="profile-btn" aria-label="프로필 버튼">
         <img
           src="${user.image}"
-          onerror="this.src='/src/assets/images/login-profile.svg'"
+          onerror="this.src='/images/login-profile-fallback.svg'"
         />
       </a>
-    `;
+      `;
 
     const logoutHTML = `
       <a href="/src/pages/login-page/login.html" class="start-btn" aria-label="시작하기 버튼">
@@ -28,7 +34,7 @@ class HeaderComponent extends HTMLElement {
     `;
 
     this.innerHTML = `
-      <header class="header">
+      <header class="header ${user?.accessToken ? 'login' : ''}">
         <h1 class="logo">
           <a href="/index.html">
             <img
@@ -39,11 +45,16 @@ class HeaderComponent extends HTMLElement {
         </h1>
 
         <nav>
+
+        ${user?.accessToken ? loginHTML : ''}
+
+
           <a href="/src/pages/search-page/search.html" class="search-btn" aria-label="검색 버튼">
             <img src="${search}" alt="검색" />
           </a>
 
-          ${user?.name ? loginHTML : logoutHTML}
+
+          ${user?.accessToken ? profileHTML : logoutHTML}
         </nav>
       </header>
     `;
