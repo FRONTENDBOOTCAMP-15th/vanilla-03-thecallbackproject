@@ -4,6 +4,7 @@ import { getAuthorizationHeader } from '../../utils/axios';
 import type { PostDetail } from '../../types/post-detail';
 import type { AuthorDetail } from '../../types/detail-author';
 import defaultHeaderImage from '/images/thumnail-image.jpg';
+import { deletePostAPI } from '../../apis/deletePostAPIs';
 
 window.addEventListener('DOMContentLoaded', () => {
   // 전역 게시물 createdAt 저장용
@@ -110,6 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
       postCreatedAt = post.createdAt;
 
       renderPostDetail(post);
+      setupPostDeleteButton(post); // 내 글일 때만 삭제 버튼 보이게 처리
       renderAuthorDetail(author);
       renderCommentWriterInfo(); // 로그인 유저 정보 반영
       setupCommentForm();
@@ -118,6 +120,41 @@ window.addEventListener('DOMContentLoaded', () => {
       alert('게시물을 불러오지 못했습니다');
       history.back();
     }
+  }
+
+  // 게시글 삭제 버튼 설정
+  function setupPostDeleteButton(post: PostDetail) {
+    const deleteBtn = document.querySelector(
+      '.post-delete-btn',
+    ) as HTMLButtonElement;
+    if (!deleteBtn) return;
+
+    // 로그인한 사용자 id
+    const loginUserId = getLoginUserId();
+    if (!loginUserId) return;
+
+    // 내가 쓴 글인지 확인
+    const isMyPost = loginUserId === post.user._id;
+    if (!isMyPost) return;
+
+    // 내 글이면 삭제 버튼 활성화
+    deleteBtn.style.display = 'block';
+
+    // 삭제 버튼 눌렀을 때
+    deleteBtn.addEventListener('click', async () => {
+      const ok = confirm('이 게시글을 삭제하시겠습니까?');
+      if (!ok) return;
+
+      try {
+        await deletePostAPI(post._id);
+
+        alert('게시글이 삭제되었습니다');
+        location.href = '/index.html';
+      } catch (err) {
+        console.error(err);
+        alert('게시글 삭제 실패');
+      }
+    });
   }
 
   // 게시물 렌더링
@@ -135,7 +172,7 @@ window.addEventListener('DOMContentLoaded', () => {
       post.createdAt,
     );
     document.querySelector('.post-subtitle')!.textContent =
-      post.extra.subTitle || '';
+      post.extra.subtitle || '';
 
     const postImage = document.querySelector('.post-image') as HTMLImageElement;
     if (post.image && post.image.trim() !== '') {
@@ -157,7 +194,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const contentEl = document.querySelector('.post-content p')!;
-    contentEl.innerHTML = post.content.replace(/\n/g, '<br/>');
+    contentEl.innerHTML = post.content
+      .trimStart() // 맨 앞 개행/공백 제거
+      .replace(/\n/g, '<br/>');
 
     const wrapper = document.querySelector('.post-content') as HTMLElement;
     wrapper.classList.remove('left', 'center', 'right');
@@ -212,7 +251,11 @@ window.addEventListener('DOMContentLoaded', () => {
           <img src="${getProfileImage(reply.user.image)}" alt="" />
           <strong class="comment-author">${reply.user.name}</strong>
           <time>${formatted}</time>
-          ${isMyComment ? `<button class="comment-delete-btn" data-id="${reply._id}" type="button">삭제</button>` : ''}
+          ${
+            isMyComment
+              ? `<button class="comment-delete-btn" data-id="${reply._id}" type="button">삭제</button>`
+              : ''
+          }
         </header>
         <p class="comment-content">${reply.content}</p>
       `;
@@ -245,12 +288,17 @@ window.addEventListener('DOMContentLoaded', () => {
         <img src="${getProfileImage(reply.user.image)}" alt="" />
         <strong class="comment-author">${reply.user.name}</strong>
         <time>${formatted}</time>
-        ${isMyComment ? `<button class="comment-delete-btn" data-id="${reply._id}" type="button">삭제</button>` : ''}
+        ${
+          isMyComment
+            ? `<button class="comment-delete-btn" data-id="${reply._id}" type="button">삭제</button>`
+            : ''
+        }
       </header>
       <p class="comment-content">${reply.content}</p>
     `;
 
-    commentList.prepend(li);
+    // 최신 댓글이 가장 아래로 가게
+    commentList.appendChild(li);
 
     const countEl = document.querySelector('.comment-title span')!;
     countEl.textContent = String(Number(countEl.textContent) + 1);
@@ -334,14 +382,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // 작성자 정보 렌더링
   function renderAuthorDetail(author: AuthorDetail) {
-    document.querySelector('.author-info-box .author-name')!.textContent =
-      author.name;
-    document.querySelector('.author-info-box .author-job')!.textContent =
-      author.extra?.job || '';
+    const linkEl = document.querySelector(
+      '.author-info-box a',
+    ) as HTMLAnchorElement;
 
-    const profileImg = document.querySelector(
-      '.author-info-box img',
-    ) as HTMLImageElement;
+    // writer-home.html?id=작가ID 로 이동하도록 링크 수정
+    linkEl.href = `/src/pages/writer-home-page/writer-home.html?id=${author._id}`;
+
+    const nameEl = linkEl.querySelector('.author-name') as HTMLElement;
+    const jobEl = linkEl.querySelector('.author-job') as HTMLElement;
+    const profileImg = linkEl.querySelector('img') as HTMLImageElement;
+
+    nameEl.textContent = author.name;
+    jobEl.textContent = author.extra?.job || '';
     profileImg.src = getProfileImage(author.image);
 
     document.querySelector('.author-desc')!.textContent =
