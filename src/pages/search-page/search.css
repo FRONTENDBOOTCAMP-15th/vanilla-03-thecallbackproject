@@ -9,7 +9,7 @@
 body {
   background: #f2f2f2;
   overflow-x: auto;  
-  overflow-y: hidden;
+  overflow-y: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
 }
 
@@ -32,9 +32,6 @@ body {
   border-right: 1px solid #eee;
 }
 
-.screen.active {
-  display: block;
-}
 
 
 /* 검색 입력 화면 */
@@ -69,6 +66,7 @@ body {
   padding: 6px 10px;
   border-radius: 12px;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .recent-keywords ul {
