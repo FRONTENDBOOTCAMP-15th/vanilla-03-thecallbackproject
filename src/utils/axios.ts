@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const API_SERVER = 'https://fesp-api.koyeb.app/market';
 
-// 추가: axiosInstance를 외부에서도 접근할 수 있도록 선언
-let axiosInstance: ReturnType<typeof getAxios> | null = null;
+// axiosInstance를 외부에서도 접근할 수 있도록 선언
+export let axiosInstance: ReturnType<typeof getAxios> | null = null;
 
 export function getAxios() {
   const instance = axios.create({
@@ -17,7 +17,7 @@ export function getAxios() {
     },
   });
 
-  // 추가: 생성된 instance를 저장
+  // 생성된 instance 저장
   axiosInstance = instance;
 
   // 요청 인터셉터: 토큰 자동 추가
@@ -25,7 +25,7 @@ export function getAxios() {
     config => {
       console.log('요청 인터셉터 호출', config);
 
-      // localStorage에서 토큰 가져오기 (가장 간단 버전)
+      // localStorage에서 토큰 가져오기
       const token = JSON.parse(localStorage.getItem('item') || '{}')?.token
         ?.accessToken;
 
@@ -60,9 +60,16 @@ export function getAxios() {
   return instance;
 }
 
-// 추가: 현재 Authorization 헤더 값을 가져오는 함수
+// 현재 Authorization 헤더 값을 가져오는 함수
 export function getAuthorizationHeader(): string {
-  if (!axiosInstance) return ''; // getAxios() 아직 안 불렸으면 빈 문자열
-  const auth = axiosInstance.defaults.headers.Authorization;
-  return typeof auth === 'string' ? auth : '';
+  const item = localStorage.getItem('item');
+  if (!item) return '';
+
+  try {
+    const parsed = JSON.parse(item);
+    const token = parsed?.token?.accessToken;
+    return token ? `Bearer ${token}` : '';
+  } catch {
+    return '';
+  }
 }

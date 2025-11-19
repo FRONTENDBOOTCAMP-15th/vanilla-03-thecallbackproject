@@ -1,4 +1,4 @@
-import { getAxios } from '../utils/login-axios';
+import { getAxios } from '../utils/axios';
 
 const axiosInstance = getAxios();
 
@@ -16,7 +16,6 @@ export async function newJoin(
     password: string,
   ) {
   try {
-   
     const postData = {
      name: name,
      email: email,

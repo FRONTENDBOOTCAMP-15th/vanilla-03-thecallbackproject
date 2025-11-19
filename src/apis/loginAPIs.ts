@@ -1,4 +1,4 @@
-import { getAxios } from "../utils/login-axios";
+import { getAxios } from "../utils/axios";
 
 const axiosInstance = getAxios();
 
