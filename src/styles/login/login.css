@@ -62,10 +62,9 @@ body {
       flex-shrink: 0;
       justify-content: center;
       align-items: center;
-      cursor: pointer;
     }
 
-    .login-btn-activation {
+    .login-btn.active {
       font-size: 14px;
       color: #fff;
       background-color: #00c6be;
@@ -76,6 +75,7 @@ body {
       flex-shrink: 0;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
     }
 
     .join-btn {
