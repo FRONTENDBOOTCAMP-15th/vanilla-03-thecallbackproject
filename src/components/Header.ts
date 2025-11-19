@@ -17,14 +17,22 @@ class HeaderComponent extends HTMLElement {
       </a>
       `;
 
-    // 로그인 시, 표시될 "프로필" 버튼 (검색 버튼 뒤에 위치)
+    // 로그인 시, 표시될 "프로필" 버튼 (검색 버튼 뒤에 위치) + 드롭다운 추가
     const profileHTML = `
+    <div class="profile-dropdown-wrapper">
       <a href="/src/pages/myinfo/my-info.html" class="profile-btn" aria-label="프로필 버튼">
         <img
           src="${user.image}"
           onerror="this.src='/images/login-profile-fallback.svg'"
         />
       </a>
+
+        <ul class="profile-dropdown">
+          <li><a href="/src/pages/myinfo/my-info.html">내 서랍</a></li>
+          <li><a href="/src/pages/write-page/write.html">글쓰기</a></li>
+          <li class="logout-btn">로그아웃</li>
+        </ul>
+      </div>
       `;
 
     const logoutHTML = `
@@ -58,10 +66,42 @@ class HeaderComponent extends HTMLElement {
         </nav>
       </header>
     `;
+
+    this.addDropdownEvent();
+  }
+
+  // 드롭다운 + 로그아웃 기능 추가
+  private addDropdownEvent() {
+    const profileBtn = this.querySelector('.profile-btn');
+    const dropdown = this.querySelector('.profile-dropdown');
+    const logoutBtn = this.querySelector('.logout-btn');
+
+    if (!profileBtn || !dropdown) return;
+
+    profileBtn.addEventListener('click', e => {
+      e.preventDefault();
+      dropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', e => {
+      if (!this.contains(e.target as Node)) dropdown.classList.remove('show');
+    });
+
+    logoutBtn?.addEventListener('click', () => {
+      localStorage.removeItem('item');
+      alert('로그아웃 되었습니다.');
+      location.reload();
+    });
   }
 
   private getUser(): User {
-    return JSON.parse(localStorage.getItem('item') || '{}');
+    const raw = localStorage.getItem('item');
+    if (!raw || raw === 'undefined') return {};
+    try {
+      return JSON.parse(raw);
+    } catch {
+      return {};
+    }
   }
 }
 
