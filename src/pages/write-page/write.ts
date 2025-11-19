@@ -1,8 +1,15 @@
 import { addPost } from '../../apis/postAPIs';
+import { getAuthorizationHeader } from '../../utils/axios';
 import { createPostRequest } from './createPostRequest';
 // import type { PostContent } from '../../types/post';
 
 window.addEventListener('DOMContentLoaded', function () {
+  const auth = getAuthorizationHeader();
+
+  if (!auth || !auth.startsWith('Bearer ')) {
+    window.location.href = '/src/pages/login-page/login.html';
+  }
+
   //닫기(뒤로 가기) 버튼 함수 및 이벤트 추가
   const backBtn = document.querySelector('.back-btn') as HTMLAnchorElement;
   function closeWritePage() {
