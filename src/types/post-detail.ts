@@ -7,6 +7,7 @@ export interface ReplyUser {
 
 // 댓글 정보
 export interface Reply {
+  _id: number;
   content: string;
   user: ReplyUser;
   createdAt: string;
