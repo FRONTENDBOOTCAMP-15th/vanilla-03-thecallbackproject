@@ -1,17 +1,12 @@
-import axios from "axios";
+
+// import { getAxios } from "../../utils/axios";
 
 document.addEventListener("DOMContentLoaded", () => {
   type SearchType = "post" | "author";
 
-  const api = axios.create({
-    baseURL: "https://fesp-api.koyeb.app/market",
-    timeout: 5000,
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      "Client-Id": "febc15-vanilla03-ecad",
-    },
-  });
+  // const api = getAxios(
+    
+  // );
 
   const screens = document.querySelectorAll<HTMLDivElement>(".screen");
   const searchInput = document.querySelector<HTMLInputElement>(".search-input");
@@ -142,3 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderRecentKeywords();
   showScreen(0);
 });
+
+
+
