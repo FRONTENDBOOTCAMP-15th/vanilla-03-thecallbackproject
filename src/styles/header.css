@@ -1,71 +1,72 @@
 /* reset, 웹접근성 연결, 전역 폰트 적용 */
 @import './base.css';
-h1 {
+.header h1 {
+  box-sizing: border-box;
   font-size: 2rem;
   font-weight: 700;
-  margin: 1.2rem 0;
 }
-h2 {
+.header h2 {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 1rem 0;
 }
-h3 {
+.header h3 {
   font-size: 1.3rem;
   font-weight: 600;
   margin: 0.8rem 0;
 }
-h4 {
+.header h4 {
   font-size: 1.1rem;
   font-weight: 500;
   margin: 0.6rem 0;
 }
-h5 {
+.header h5 {
   font-size: 1rem;
   font-weight: 500;
   margin: 0.4rem 0;
 }
-h6 {
+.header h6 {
   font-size: 0.9rem;
   font-weight: 500;
   margin: 0.3rem 0;
 }
 
-header {
-  background-color: #fff;
+.header {
+  /* background-color: #fff; */
+  padding-inline: 20px;
+  padding-block: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 }
 
-nav {
+.header nav {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-nav a {
+.header nav a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-a {
+.header a {
   text-decoration: none;
   /* color: rgba(0, 0, 0, 0.788); */
 }
 
-li {
+.header li {
   list-style: none;
 }
 
-.alarm-btn,
-.profile-btn {
+.header .alarm-btn,
+.header .profile-btn {
   display: none;
 }
 
-.search-btn {
+.header .search-btn {
   display: flex;
   width: 30px;
   height: 30px;
@@ -75,7 +76,7 @@ li {
   flex-shrink: 0;
 }
 
-.start-btn {
+.header .start-btn {
   display: flex;
   width: 62px;
   height: 24px;

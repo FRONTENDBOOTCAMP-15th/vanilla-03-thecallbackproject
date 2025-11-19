@@ -6,6 +6,7 @@
   left: 0;
   width: 100%;
   background-color: white;
+  z-index: 1000;
 }
 .tab-list {
   display: flex;
@@ -26,6 +27,7 @@
   width: 48px;
   height: 48px;
 }
+
 body.home .home-li img.on {
   display: block;
 }
