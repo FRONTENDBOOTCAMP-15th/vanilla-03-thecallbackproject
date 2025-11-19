@@ -24,3 +24,15 @@ export async function createReply(postId: string, content: string) {
     throw err; // detail.ts에서 처리하게 던짐
   }
 }
+
+export async function deleteReplyAPI(postId: string, replyId: string) {
+  try {
+    const { data } = await axiosInstance.delete(
+      `/posts/${postId}/replies/${replyId}`,
+    );
+    return data;
+  } catch (error) {
+    console.error('댓글 삭제 API 호출 중 오류:', error);
+    throw error;
+  }
+}
