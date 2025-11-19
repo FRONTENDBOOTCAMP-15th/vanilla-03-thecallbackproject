@@ -76,22 +76,24 @@ class HeaderComponent extends HTMLElement {
     const dropdown = this.querySelector('.profile-dropdown');
     const logoutBtn = this.querySelector('.logout-btn');
 
-    if (!profileBtn || !dropdown) return;
+    if (profileBtn && dropdown) {
+      profileBtn.addEventListener('click', e => {
+        e.preventDefault();
+        dropdown.classList.toggle('show');
+      });
 
-    profileBtn.addEventListener('click', e => {
-      e.preventDefault();
-      dropdown.classList.toggle('show');
-    });
+      document.addEventListener('click', e => {
+        if (!this.contains(e.target as Node)) dropdown.classList.remove('show');
+      });
+    }
 
-    document.addEventListener('click', e => {
-      if (!this.contains(e.target as Node)) dropdown.classList.remove('show');
-    });
-
-    logoutBtn?.addEventListener('click', () => {
-      localStorage.removeItem('item');
-      alert('로그아웃 되었습니다.');
-      location.reload();
-    });
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('item');
+        alert('로그아웃 되었습니다.');
+        location.reload();
+      });
+    }
   }
 
   private getUser(): User {

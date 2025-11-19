@@ -137,5 +137,14 @@
 
 .logout-btn {
   cursor: pointer;
-  color: #c00;
+  color: #8d4e8e;
+}
+
+/* 클릭 전-후, active, hover 모두 색 고정 */
+.profile-dropdown a:link,
+.profile-dropdown a:visited,
+.profile-dropdown a:hover,
+.profile-dropdown a:active {
+  color: #333;
+  text-decoration: none;
 }
