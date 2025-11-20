@@ -1,5 +1,5 @@
 import type { User } from '../types/user';
-import search from '/src/assets/images/search.svg';
+import search from '/src/assets/images/search-30px.svg';
 import noti from '/src/assets/images/noti-btn.svg';
 import logo from '/src/assets/images/logo-header.svg';
 class HeaderComponent extends HTMLElement {
