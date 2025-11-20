@@ -1,5 +1,5 @@
 import { axiosInstance, getAxios } from '../../utils/axios';
-import type { FollowAuthor } from '../../types/my-info';
+import type { FollowAuthor } from '../../types/my-info-type';
 
 window.addEventListener('DOMContentLoaded', async () => {
   const UserItem = localStorage.getItem('item');
