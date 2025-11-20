@@ -7,52 +7,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="./../tab-bar/nav-tab.css" />
     <script type="module" src="./../tab-bar/nav-tab.ts"></script>
+    <script type="module" src="./my-info.ts"></script>
   </head>
-  <body>
+  <body class="myinfo">
     <h1 class="sr-only">내 서랍(마이페이지)</h1>
     <!-- 관심 작가 -->
-    <!-- 디버깅 -->
     <section aria-labelledby="favorite-authors">
       <div class="section-header">
         <a href="/src/pages/writer-home-page/writer-home.html">
           <h2>관심작가 &gt;</h2>
         </a>
       </div>
-      <ul class="authors-list">
-        <li>
-          <a href="/src/pages/writer-home-page/writer-home.html">
-            <figure>
-              <img
-                src="/src/assets/images/my-info/그레이스.png"
-                alt="그레이스 작가"
-              />
-              <figcaption>그레이스</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="/src/pages/writer-home-page/writer-home.html">
-            <figure>
-              <img
-                src="/src/assets/images/my-info/베이스.png"
-                alt="베이스 작가"
-              />
-              <figcaption>베이스</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="/src/pages/writer-home-page/writer-home.html">
-            <figure>
-              <img
-                src="/src/assets/images/my-info/톰요크.png"
-                alt="톰요크 작가"
-              />
-              <figcaption>톰 요크</figcaption>
-            </figure>
-          </a>
-        </li>
-      </ul>
+      <ul class="authors-list"></ul>
     </section>
     <!-- 최근 본 글 -->
     <section aria-labelledby="recent-posts">
