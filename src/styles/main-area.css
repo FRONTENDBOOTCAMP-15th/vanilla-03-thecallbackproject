@@ -505,6 +505,11 @@ blockquote {
   object-fit: cover;
 }
 
+.top-author-grid li:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .top-author-grid-job {
   color: #959595;
   font-weight: 300;

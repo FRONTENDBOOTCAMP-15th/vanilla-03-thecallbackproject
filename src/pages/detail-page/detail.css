@@ -45,9 +45,17 @@
 .post-header > .post-author {
   top: 200px;
   display: flex;
+  align-items: center;
   gap: 13.5px;
 }
-
+.post-delete-btn {
+  display: none;
+  border: none;
+  background: none;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+}
 .post-header > .post-author > .author-info {
   display: flex;
   align-items: center;
@@ -75,7 +83,6 @@
   padding-block-start: 100px;
   padding-inline: 20px;
   padding-block-end: 20px;
-  text-indent: 0.5em;
 }
 
 .post-content.left {
@@ -89,9 +96,15 @@
   text-align: right;
 }
 .post-content > img {
+  all: unset;
   width: 100%;
   display: inlne-block;
   margin-block: 10px;
+  text-indent: 0;
+}
+
+.post-content > p {
+  text-indent: 0.5em;
 }
 .post-tags {
   padding-inline: 20px;
@@ -271,21 +284,23 @@
   padding-block-end: 40px;
 }
 
-.author-info-box {
+.author-info-box > a {
+  all: unset;
   display: grid;
   grid-template-columns: auto 50px;
   grid-template-rows: auto auto;
   column-gap: 20px;
   align-items: center;
+  cursor: pointer;
 }
 
-.author-info-box > .author-name {
+.author-info-box > a > .author-name {
   grid-column: 1;
   grid-row: 1;
   font-size: 22px;
   line-height: 24px;
 }
-.author-info-box > .author-job {
+.author-info-box > a > .author-job {
   grid-column: 1;
   grid-row: 2;
   font-size: 12px;
@@ -293,7 +308,7 @@
   color: #959595;
 }
 
-.author-info-box > img {
+.author-info-box > a > img {
   grid-column: 2;
   grid-row: 1 / 3;
   width: 50px;
@@ -343,6 +358,12 @@
   font-size: 14px;
   line-height: 36px;
   cursor: pointer;
+}
+
+.author-actions > .subscribe-btn.subscribed {
+  background: #333;
+  color: white;
+  border-color: #333;
 }
 
 .post-actions {
