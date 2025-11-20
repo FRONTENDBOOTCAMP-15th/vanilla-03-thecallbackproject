@@ -256,9 +256,18 @@ window.addEventListener('DOMContentLoaded', () => {
     ) as HTMLElement;
 
     const authHeader = getAuthorizationHeader();
+    const loginUserId = getLoginUserId();
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
       btn.disabled = true;
+      btn.classList.add('disabled-subscribe');
       btn.textContent = '+ 구독';
+      return;
+    }
+
+    if (loginUserId === authorId) {
+      btn.disabled = true;
+      btn.textContent = '+ 구독';
+      btn.classList.add('disabled-subscribe');
       return;
     }
 
