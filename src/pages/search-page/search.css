@@ -8,31 +8,21 @@
 
 body {
   background: #f2f2f2;
-  overflow-x: auto;  
+  overflow-x: auto;
   overflow-y: auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif;
 }
-
-
-/* 가로로 화면 나열  js 추가하게 되면 변경 해야 할 듯 ..*/
-/* .page-wrapper { */
-  /* display: flex;
-  width: max-content;
-} */
 
 /* 360px 모바일 화면 */
 .screen {
   display: none;
   width: 360px;
-  height: 100vh;
-  background: #fff;
-  padding: 0 24px; 
-  flex-shrink: 0;
+  height: calc(100vh - 90px);
   overflow-y: auto;
-  border-right: 1px solid #eee;
+  background: #fff;
+  padding: 0 24px;
+  flex-shrink: 0;
 }
-
-
 
 /* 검색 입력 화면 */
 
@@ -40,7 +30,6 @@ body {
   padding-top: 20px;
 }
 
-/* js 들어가면서 수정 해야 할 거 */
 .search-input {
   width: 100%;
   padding: 14px;
@@ -52,7 +41,7 @@ body {
 .label {
   font-size: 14px;
   margin: 18px 0 10px;
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 .chips {
@@ -79,7 +68,6 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-
 /* 헤더 */
 
 .search-header {
@@ -98,7 +86,6 @@ body {
   border: none;
   font-size: 28px;
 }
-
 
 /* 탭 */
 
@@ -119,10 +106,9 @@ body {
 
 .tab.active {
   color: #00c4b3;
-  border-bottom: 2px solid #00C6BE;
+  border-bottom: 2px solid #00c6be;
   font-weight: 600;
 }
-
 
 /* 글 검색 결과 */
 
@@ -162,10 +148,10 @@ body {
 }
 
 .sort.active::before {
-  content: "";
+  content: '';
   width: 6px;
   height: 6px;
-  background: #00C6BE;
+  background: #00c6be;
   border-radius: 50%;
   display: inline-block;
 }
@@ -218,7 +204,6 @@ body {
   border-radius: 8px;
   object-fit: cover;
 }
-
 
 /* 작가 검색 결과 */
 
@@ -308,7 +293,7 @@ body {
   gap: 6px;
   margin: 0;
   padding: 0;
-  list-style: none; 
+  list-style: none;
 }
 
 /* 태그 칩 */
@@ -324,8 +309,6 @@ body {
 .author-item {
   border-bottom: none;
 }
-
-
 
 /* 검색 결과 없음 */
 
