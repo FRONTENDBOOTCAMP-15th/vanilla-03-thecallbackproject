@@ -7,7 +7,7 @@ const axiosInstance = getAxios();
  * @param postId - 댓글을 달 게시물 ID
  * @param content - 댓글 내용
  */
-export async function createReply(postId: string, content: string) {
+export async function createReply(postId: number, content: string) {
   try {
     const { data } = await axiosInstance.post(`/posts/${postId}/replies`, {
       content,
@@ -25,7 +25,7 @@ export async function createReply(postId: string, content: string) {
   }
 }
 
-export async function deleteReplyAPI(postId: string, replyId: string) {
+export async function deleteReplyAPI(postId: number, replyId: number) {
   try {
     const { data } = await axiosInstance.delete(
       `/posts/${postId}/replies/${replyId}`,
