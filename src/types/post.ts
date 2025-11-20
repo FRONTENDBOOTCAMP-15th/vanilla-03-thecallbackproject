@@ -3,7 +3,7 @@ export interface PostContent {
   type: string;
   title: string;
   extra: {
-    subtitle: string;
+    subTitle: string;
     align: string;
   };
   content: string;

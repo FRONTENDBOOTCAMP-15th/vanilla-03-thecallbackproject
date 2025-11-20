@@ -1,19 +1,26 @@
 import { addPost } from '../../apis/postAPIs';
+import { getAuthorizationHeader } from '../../utils/axios';
 import { createPostRequest } from './createPostRequest';
-// import type { PostContent } from '../../types/post';
 
 window.addEventListener('DOMContentLoaded', function () {
-  //닫기(뒤로 가기) 버튼 함수 및 이벤트 추가
+  const auth = getAuthorizationHeader();
+
+  if (!auth || !auth.startsWith('Bearer ')) {
+    window.location.href = '/src/pages/login-page/login.html';
+  }
+
+  //닫기(뒤로 가기) 버튼
   const backBtn = document.querySelector('.back-btn') as HTMLAnchorElement;
   function closeWritePage() {
     history.back();
   }
   backBtn?.addEventListener('click', closeWritePage);
-  // 폼 요소
+
+  // 폼
   const writeForm = document.querySelector('#writeForm');
   const toast = document.querySelector('.toast-message');
 
-  // 폼의 유효성 검사해서 빈 필드 배열 만들어 반환
+  // 유효성 검사
   function validateForm(
     title: HTMLInputElement,
     subtitle: HTMLInputElement,
@@ -28,31 +35,27 @@ window.addEventListener('DOMContentLoaded', function () {
     return missingFields;
   }
 
-  // 빈 필드가 있다면 토스트 메시지를 만든다.
+  // 토스트 메시지 생성
   function createToastMessage(missingFields: string[]) {
-    if (missingFields.length === 0) {
-      return '';
-    } else {
-      return (
-        missingFields.map(f => `<u>${f}</u>`).join('과 ') + '을 입력해주세요.'
-      );
-    }
+    if (missingFields.length === 0) return '';
+    return (
+      missingFields.map(f => `<u>${f}</u>`).join('과 ') + '을 입력해주세요.'
+    );
   }
 
-  // 만들어진 토스트 메시지를 토스트 메시지 창을 띄워 보여준다.
+  // 토스트 표시
   function showToastMessage(toastMessage: string) {
     const toastText = document.querySelector('.message-text');
     toast!.classList.add('on');
     toastText!.innerHTML = toastMessage;
   }
 
-  // 텍스트 정렬 관련 요소
+  // 텍스트 정렬
   const alignBtn = document.querySelector('.text-align-btn');
   const contentTextarea = document.querySelector('.input-content');
   const aligns = ['left', 'center', 'right'];
   let index = 0;
 
-  // 텍스트 정렬 토글 업데이트
   function updateTextAlign() {
     index = (index + 1) % aligns.length;
     const currentAlign = aligns[index];
@@ -61,19 +64,16 @@ window.addEventListener('DOMContentLoaded', function () {
     contentTextarea?.classList.add(currentAlign);
   }
 
-  // 텍스트 정렬 버튼 누르면 함수 실행
   alignBtn?.addEventListener('click', updateTextAlign);
 
-  // 현재 textarea가 가진 정렬 클래스를 반환
   function getAlign() {
     if (contentTextarea?.classList.contains('left')) return 'left';
     if (contentTextarea?.classList.contains('center')) return 'center';
     if (contentTextarea?.classList.contains('right')) return 'right';
-
-    return 'left'; // 기본값
+    return 'left';
   }
 
-  // 제목, 소제목, 내용 입력 요소
+  // 입력 요소
   const titleInput = document.querySelector('.input-title') as HTMLInputElement;
   const subtitleInput = document.querySelector(
     '.input-subtitle',
@@ -82,19 +82,16 @@ window.addEventListener('DOMContentLoaded', function () {
     '.input-content',
   ) as HTMLTextAreaElement;
 
-  // 전송 버튼 활성화
   titleInput.addEventListener('input', updateSubmitBtn);
   subtitleInput.addEventListener('input', updateSubmitBtn);
   contentInput.addEventListener('input', updateSubmitBtn);
 
-  // 전송 버튼 상태 업데이트
   function updateSubmitBtn() {
     const submitBtn = document.querySelector('.write-btn');
-    const title = titleInput.value.trim();
-    const subtitle = subtitleInput.value.trim();
-    const content = contentInput.value.trim();
-
-    const isValid = title && subtitle && content;
+    const isValid =
+      titleInput.value.trim() &&
+      subtitleInput.value.trim() &&
+      contentInput.value.trim();
 
     if (isValid) {
       submitBtn?.classList.remove('undone');
@@ -105,32 +102,62 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // 파일 첨부 관련 요소
+  // 파일 첨부
   const fileInput = document.querySelector('#add-image') as HTMLInputElement;
   const previewFigure = document.querySelector('.image-preview') as HTMLElement;
   const previewImage = document.querySelector(
     '.preview-image',
   ) as HTMLImageElement;
+  const fileInfo = document.querySelector('.file-info') as HTMLElement;
 
-  // 미리보기 처리 함수
+  // 삭제 버튼
+  const removeImageBtn = document.querySelector(
+    '.remove-image-btn',
+  ) as HTMLButtonElement;
+
+  // 미리보기 + 용량 검사
   function handleImagePreview() {
     const file = fileInput.files?.[0];
     if (!file) return;
 
-    const reader = new FileReader();
+    const maxSize = 2 * 1024 * 1024; // 2MB
+    const fileSizeMB = (file.size / (1024 * 1024)).toFixed(2);
 
+    // 용량 초과
+    if (file.size > maxSize) {
+      previewImage.src = '';
+      previewFigure.classList.remove('on');
+      fileInfo.textContent = `${fileSizeMB}MB (최대 2MB까지 업로드 가능합니다)`;
+      fileInfo.classList.add('error');
+      alert('파일 용량이 2MB를 초과했습니다.');
+      fileInput.value = '';
+      return;
+    }
+
+    // 정상 파일
+    fileInfo.textContent = `${fileSizeMB}MB / 최대 2MB`;
+    fileInfo.classList.remove('error');
+
+    const reader = new FileReader();
     reader.onload = () => {
       previewImage.src = reader.result as string;
       previewFigure.classList.add('on');
     };
-
     reader.readAsDataURL(file);
   }
 
-  // 파일 선택 이벤트
   fileInput.addEventListener('change', handleImagePreview);
 
-  // 전송 이벤트 핸들러
+  // 이미지 삭제
+  removeImageBtn?.addEventListener('click', () => {
+    fileInput.value = ''; // 파일 제거
+    previewImage.src = ''; // 미리보기 제거
+    previewFigure.classList.remove('on');
+    fileInfo.textContent = ''; // 파일 정보 제거
+    fileInfo.classList.remove('error');
+  });
+
+  // 제출
   async function submitHandler(e: Event) {
     e.preventDefault();
 
@@ -140,84 +167,70 @@ window.addEventListener('DOMContentLoaded', function () {
     const subtitle = form.elements.namedItem('subtitle') as HTMLInputElement;
     const content = form.elements.namedItem('content') as HTMLTextAreaElement;
     const tagsEl = form.elements.namedItem('tags') as HTMLInputElement;
-    // 1) 빈 필드 확인
+
     const missingFields = validateForm(title, subtitle, content);
 
     if (missingFields.length !== 0) {
-      const toastMessage = createToastMessage(missingFields);
-      showToastMessage(toastMessage);
+      showToastMessage(createToastMessage(missingFields));
       return;
     }
-    // 2) 파일 가져오기
+
     const file = fileInput.files?.[0];
 
-    // 3) postData 생성 (이미지 업로드 포함)
     const postData = await createPostRequest(
       title.value,
       subtitle.value,
       content.value,
       tagsEl.value,
-      getAlign, // 정렬 함수
-      file, // 파일
+      getAlign,
+      file,
     );
 
-    console.log('최종 전송 데이터:', postData);
-
-    // 4) 서버에 게시물 저장(JSON 전송)
-
     try {
-      await addPost(postData);
+      const result = await addPost(postData);
+      const newPostId = result.item._id;
+
       alert('글이 등록되었습니다.');
+      window.location.href = `/src/pages/detail-page/detail.html?id=${newPostId}`;
     } catch (error) {
       alert('글쓰기에 실패했습니다. 다시 시도해주세요.');
-      return; // ★ 실패면 아래 코드 실행하지 않음
+      return;
     }
 
-    // 5) 입력값 초기화
+    // 초기화
     title.value = '';
     subtitle.value = '';
     content.value = '';
     tagsEl.value = '';
     contentTextarea?.classList.remove('left', 'center', 'right');
     contentTextarea?.classList.add('left');
-
     previewImage.src = '';
     previewFigure.classList.remove('on');
+    fileInfo.textContent = '';
   }
 
-  // write 폼 요소에 전송 이벤트 등록
   writeForm?.addEventListener('submit', submitHandler);
 
-  // 토스트 메시지 확인 버튼
   const closeBtn = document.querySelector('.close-btn');
+  closeBtn?.addEventListener('click', () => toast!.classList.remove('on'));
 
-  closeBtn?.addEventListener('click', function () {
-    toast!.classList.remove('on');
-  });
-
-  // 툴바 위치 제어 (모바일에서 키보드가 나올 때)
+  // 툴바 위치 제어
   const toolbar = document.querySelector('.write-tools') as HTMLElement;
 
   function updateToolbarPosition() {
     const mobileVisualViewport = window.visualViewport;
     if (!mobileVisualViewport) return;
 
-    const keyboardHeight =
-      window.innerHeight -
-      mobileVisualViewport.height -
-      mobileVisualViewport.offsetTop;
+    const visualHeight = mobileVisualViewport.height;
+    const fullHeight = window.innerHeight;
 
-    if (keyboardHeight > 0) {
-      toolbar.style.bottom = `${keyboardHeight}px`;
-    } else {
-      toolbar.style.bottom = `0px`;
-    }
+    const keyboardHeight = fullHeight - visualHeight;
+    toolbar.style.bottom = `${keyboardHeight}px`;
   }
 
   window.visualViewport?.addEventListener('resize', updateToolbarPosition);
   window.visualViewport?.addEventListener('scroll', updateToolbarPosition);
 
-  // 키보드 숨김 버튼
   function hideKeyboard() {
     const inputs = document.querySelectorAll<
       HTMLInputElement | HTMLTextAreaElement

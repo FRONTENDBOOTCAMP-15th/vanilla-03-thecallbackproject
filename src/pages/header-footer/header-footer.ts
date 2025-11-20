@@ -32,9 +32,21 @@ async function fetchBrunchPosts() {
   return res.data.item;
 }
 
-// DOM에 데이터 뿌리기
+// 3. '탑 구독 작가' 영역 데이터
+async function fetchtopAuthorLists() {
+  const res = await api.get('/posts', {
+    params: {
+      type: 'brunch',
+      limit: 4,
+      sort: JSON.stringify({ likes: -1 }),
+    },
+  });
+  return res.data.item;
+}
+
+//////////////////////////////// DOM에 데이터 뿌리기
 window.addEventListener('DOMContentLoaded', async () => {
-  // 스와이퍼
+  // 1. 스와이퍼
   const swiperPosts = await fetchSwiperPosts();
 
   const swiperEl = document.querySelector('.swiper-wrapper');
@@ -52,17 +64,17 @@ window.addEventListener('DOMContentLoaded', async () => {
     )
     .join('');
 
-  // 요즘 뜨는 브런치
+  // 2. 요즘 뜨는 브런치
   const posts = await fetchBrunchPosts();
 
-  console.log(posts); // 🔥 콘솔 확인
+  console.log(posts); // 🟧🟧 콘솔 확인
 
   const brunchLiEl = document.querySelector('.brunch-list ol');
 
   brunchLiEl!.innerHTML = posts
     .map(
       (post: any) =>
-        `<li class="brunch-list-books">
+        `<li class="brunch-list-books" data-id="${post._id}">
       <div class="brunch-list-book">
 <h3>${post.title}</h3>
 <h4>by ${post.user?.name || '익명'}</h4>
@@ -73,6 +85,48 @@ window.addEventListener('DOMContentLoaded', async () => {
       /> </li>`,
     )
     .join('');
+
+  // ㄴ li 클릭 시 상세 페이지 이동 기능 추가
+  document.querySelectorAll('.brunch-list-books').forEach(li => {
+    li.addEventListener('click', () => {
+      const id = li.getAttribute('data-id');
+      if (!id) return;
+
+      location.href = `/src/pages/detail-page/detail.html?id=${id}`;
+    });
+  });
+
+  // 3. 탑 구독 작가
+  const topAuthorLists = await fetchtopAuthorLists();
+  const topAuthorEl = document.querySelector(
+    '.top-author-list .top-author-grid ul',
+  );
+
+  topAuthorEl!.innerHTML = topAuthorLists
+    .map(
+      (post: any) =>
+        `
+<li data-id="${post.user?._id}">
+<img src="${post.user?.image}" alt="${post.user?.name ?? '작가'} 이미지" 
+      // onerror="this.src='/src/assets/images/top-author-grid-1.svg'"
+      />
+      <h3>${post.user?.name ?? '익명'}</h3>
+      <p>${post.user?.extra?.job ?? '비공개'}</p>
+      <p>${post.content ?? ''}</p>
+</li>
+`,
+    )
+    .join('');
+
+  // ㄴ 탑 구독 작가 클릭 시 상세 페이지 이동 기능 추가
+  document.querySelectorAll('.top-author-grid li').forEach(li => {
+    li.addEventListener('click', () => {
+      const userId = li.getAttribute('data-id');
+      if (!userId) return;
+
+      location.href = `/src/pages/writer-home-page/writer-home.html?id=${userId}`;
+    });
+  });
 });
 
 // swiper 영역
