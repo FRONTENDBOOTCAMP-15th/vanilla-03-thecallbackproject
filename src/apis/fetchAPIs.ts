@@ -5,7 +5,7 @@ import { getAxios } from '../utils/axios';
 const axiosInstance = getAxios();
 
 // 게시물 상세조회
-export async function fetchPostDetail(id: string): Promise<PostDetail> {
+export async function fetchPostDetail(id: number): Promise<PostDetail> {
   try {
     const { data } = await axiosInstance.get<{ item: PostDetail }>(
       `/posts/${id}`,
@@ -17,7 +17,7 @@ export async function fetchPostDetail(id: string): Promise<PostDetail> {
   }
 }
 // 작가 상세조회 (게시물 상세페이지용)
-export async function fetchAuthorDetail(id: string): Promise<AuthorDetail> {
+export async function fetchAuthorDetail(id: number): Promise<AuthorDetail> {
   try {
     const { data } = await axiosInstance.get<{ item: AuthorDetail }>(
       `/users/${id}`,

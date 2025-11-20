@@ -8,8 +8,9 @@
       "loginType": "email",
       "image": "https://cdn-icons-png.flaticon.com/512/6084/6084444.png",
       "extra": {
-        "job": "서비스 운영",
-        "biography": "안정적인 플랫폼 운영을 책임집니다."
+        "job": "서비스 운영 총괄",
+        "biography": "플랫폼의 안정성과 효율적인 고객 경험을 위한 운영 전략을 책임지고 있습니다.",
+        "keyword": ["플랫폼관리", "CS", "데이터보안"]
       }
     },
     {
@@ -20,9 +21,9 @@
       "loginType": "email",
       "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png",
       "extra": {
-        "job": "브랜드 마케터",
-        "biography": "콘텐츠 전략과 퍼포먼스 마케팅을 연구합니다.",
-        "keyword": ["브랜딩", "데이터분석", "마케팅"]
+        "job": "퍼포먼스 마케터",
+        "biography": "AARRR 지표 기반의 데이터 분석과 최적화된 콘텐츠 전략으로 매출 성장을 이끌어냅니다.",
+        "keyword": ["GA4", "데이터분석", "콘텐츠마케팅", "브랜딩"]
       }
     },
     {
@@ -33,9 +34,9 @@
       "loginType": "email",
       "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png",
       "extra": {
-        "job": "인문학 강사",
-        "biography": "일상 속의 철학적 질문을 던지는 사색가. '나'를 탐구하는 글을 씁니다.",
-        "keyword": ["철학", "인문", "자기계발"]
+        "job": "인문학 강사 및 작가",
+        "biography": "고전과 현대 철학을 통해 '나'를 탐구하는 사색가. 삶의 본질적인 질문을 던지는 글을 씁니다.",
+        "keyword": ["철학", "인문", "사색", "글쓰기"]
       }
     },
     {
@@ -47,8 +48,8 @@
       "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png",
       "extra": {
         "job": "Generative AI 컨설턴트",
-        "biography": "최신 GPT 모델 활용 및 최적의 프롬프트 엔지니어링 강의.",
-        "keyword": ["AI", "LLM", "프롬프트", "자동화"]
+        "biography": "최신 LLM 모델 활용 및 프롬프트 엔지니어링 강의를 통해 기업 AI 도입을 돕습니다. 자동화 전문가.",
+        "keyword": ["AI", "LLM", "프롬프트", "자동화", "GPT"]
       }
     },
     {
@@ -59,9 +60,9 @@
       "loginType": "kakao",
       "image": "https://cdn-icons-png.flaticon.com/512/706/706831.png",
       "extra": {
-        "job": "재활치료사",
-        "biography": "몸과 마음의 건강 회복을 돕는 전문가입니다. 긍정 에너지 전파!",
-        "keyword": ["재활", "운동", "심리"]
+        "job": "물리치료사 및 운동처방사",
+        "biography": "정확한 신체 분석을 기반으로 맞춤형 재활 계획과 운동 처방을 제공합니다. 건강한 일상을 돕습니다.",
+        "keyword": ["재활", "운동처방", "물리치료", "건강"]
       }
     },
     {
@@ -73,8 +74,8 @@
       "image": "https://cdn-icons-png.flaticon.com/512/3135/3135789.png",
       "extra": {
         "job": "공연 및 이벤트 기획자",
-        "biography": "사람들을 즐겁게 하는 축제를 기획하고 운영합니다.",
-        "keyword": ["공연", "축제", "이벤트", "문화"]
+        "biography": "대규모 문화 축제부터 기업 이벤트까지, 사람들에게 잊을 수 없는 경험을 선사하는 기획과 운영 전문가.",
+        "keyword": ["공연", "축제기획", "이벤트", "문화콘텐츠"]
       }
     },
     {
@@ -85,9 +86,9 @@
       "loginType": "kakao",
       "image": "https://cdn-icons-png.flaticon.com/512/706/706796.png",
       "extra": {
-        "job": "인디 뮤지션",
-        "biography": "자작곡으로 감동을 전하는 싱어송라이터. 매력적인 음악 세계로 초대합니다!",
-        "keyword": ["음악", "인디", "공연", "작곡"]
+        "job": "인디 밴드 싱어송라이터",
+        "biography": "일상의 감정을 노래로 만드는 인디 뮤지션. 매력적인 음색과 가사로 사람들의 마음을 움직입니다.",
+        "keyword": ["음악", "인디", "싱어송라이터", "공연"]
       }
     },
     {
@@ -98,9 +99,9 @@
       "loginType": "email",
       "image": "https://cdn-icons-png.flaticon.com/512/219/219970.png",
       "extra": {
-        "job": "대학교수",
-        "biography": "미래 인재 양성을 위한 교육 철학을 공유합니다. 진로 멘토링 전문.",
-        "keyword": ["교육", "진로", "리더십"]
+        "job": "경영학과 대학교수",
+        "biography": "미래 인재 양성을 위한 리더십 교육 철학을 공유하며, 대학생들의 진로와 성장을 돕는 멘토입니다.",
+        "keyword": ["교육", "진로멘토링", "리더십", "경영학"]
       }
     },
     {
@@ -111,9 +112,9 @@
       "loginType": "kakao",
       "image": "https://cdn-icons-png.flaticon.com/512/706/706821.png",
       "extra": {
-        "job": "전업 투자자",
-        "biography": "조기 은퇴 후 경제적 자유를 누리는 삶. 투자 노하우 공유.",
-        "keyword": ["FIRE", "투자", "경제적자유"]
+        "job": "전업 투자 및 경제 크리에이터",
+        "biography": "30대 초반 조기 은퇴(FIRE) 후, 경제적 자유를 이루는 과정을 담은 투자 노하우와 재테크 전략을 공유합니다.",
+        "keyword": ["FIRE", "투자", "경제적자유", "재테크"]
       }
     },
     {
@@ -124,9 +125,9 @@
       "loginType": "email",
       "image": "https://cdn-icons-png.flaticon.com/128/706/706800.png",
       "extra": {
-        "job": "가든 디자이너",
-        "biography": "일상에 아름다움을 더하는 공간을 디자인합니다. 플랜테리어 전문가.",
-        "keyword": ["가드닝", "인테리어", "식물"]
+        "job": "가든 디자이너 및 플랜테리어 전문가",
+        "biography": "자연을 도시 공간으로 가져와 일상에 아름다움을 더하는 가든 디자인과 플랜테리어 서비스를 제공합니다.",
+        "keyword": ["가드닝", "인테리어", "플랜테리어", "공간디자인"]
       }
     },
     {
@@ -138,8 +139,8 @@
       "image": "https://cdn-icons-png.flaticon.com/512/4202/4202832.png",
       "extra": {
         "job": "푸드 칼럼니스트",
-        "biography": "세상의 모든 맛을 기록하고 공유합니다. 숨겨진 맛집 탐방이 취미.",
-        "keyword": ["요리", "미식", "푸드", "맛집"]
+        "biography": "미식 경험과 깊이 있는 요리 문화 해설을 기록합니다. 숨겨진 로컬 맛집과 레시피 탐방가.",
+        "keyword": ["요리", "미식", "푸드", "맛집탐방"]
       }
     },
     {
@@ -150,18 +151,18 @@
       "loginType": "email",
       "image": "https://cdn-icons-png.flaticon.com/512/6997/6997668.png",
       "extra": {
-        "job": "헤드헌터",
-        "biography": "당신의 잠재력을 발견하고 최고의 직장으로 이끌어 드립니다.",
-        "keyword": ["취업", "커리어", "면접", "헤드헌팅"]
+        "job": "HR 전문가 및 헤드헌터",
+        "biography": "개인의 잠재력 분석을 통해 최적의 커리어 로드맵을 제시하고, 성공적인 이직 및 취업을 돕습니다.",
+        "keyword": ["취업", "커리어코칭", "헤드헌팅", "면접"]
       }
     }
   ],
   "post": [
     {
       "type": "brunch",
-      "title": "[커리어 전략] 합격률 높이는 노션 포트폴리오의 비밀",
+      "title": "[취업 성공 전략] 합격률 2배 높이는 노션 포트폴리오의 비밀",
       "extra": {
-        "subTitle": "실무자가 알려주는 포폴 핵심 구성 요소",
+        "subTitle": "인사담당자가 바로 채택하는 포트폴리오 핵심 구성 요소 분석",
         "align": "left"
       },
       "views": 1250,
@@ -171,13 +172,13 @@
         "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
       "image": "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8JUVBJUBDJTgzfGVufDB8fDB8fHww",
-      "content": "취업에 필수적인 세 가지 요소: 자기소개서, 이력서, 그리고 **경쟁력 있는 포트폴리오**.\n\n최근 하반기 공채를 준비하며 가장 집중했던 부분은 포트폴리오였습니다. 특히 노션 툴을 활용한 디지털 포트폴리오 제작에 돌입했고, 이는 곧바로 **'마포청년나루'의 '합격을 부르는 노션 포트폴리오 만들기'** 강의로 이어졌습니다. 4회차에 걸친 이 강의는 제 커리어 준비에 **가장 큰 전환점**이 되었습니다.\n\n강사님은 노션 앰배서더이자 유명 커뮤니티 '슈크림 마을' 대표였습니다. 노션 포트폴리오의 개념조차 몰랐던 저도 쉽게 따라 할 수 있도록 구성된 점이 인상 깊었습니다. 실무자의 시선으로 본 포트폴리오 작성 시 **가장 중요했던 세 가지 인사이트**를 공유합니다.\n\n**1. '하지 말아야 할 것 5가지'와 '해야 할 것 5가지'의 명확한 기준**\n\n**❌ 하지 말아야 할 것:** 경험 숨기기, 요약 없는 장황한 설명, 단순 성과 나열, 비수행 업무 기재, **JD(Job Description) 무시**.\n\n**✅ 해야 할 것:** **문제-해결 과정** 명시, 주요 성과 강조, 결과보다 **프로세스** 중심 설명, 프로젝트 단위 구성, 시각 자료 활용.\n\n**2. 핵심 '키워드' 추출 전략**\n\n장황한 내용을 직무에 맞게 압축하는 것이 관건입니다. **그로우앤베터** 같은 플랫폼으로 **직무 트렌드**를 파악하고, **AI 챗봇**을 활용해 프로젝트 설명을 요약하며, 지원할 회사의 **JD를 철저히 분석**해 반복되는 단어(키워드)를 포트폴리오에 녹여내는 것이 중요합니다.\n\n**3. '친절한' 포트폴리오 설계**\n\n수천 건의 서류를 검토하는 채용 담당자를 위해 문서를 **쉽게** 만들어야 합니다. 프로젝트마다 **목표, 나의 역할, 어려움 및 해결 과정, 성과, 인사이트** 등 모든 스토리를 빠짐없이 명확하게 담아내야 합니다.\n\nOutro\n\n강의를 통해 얻은 가장 큰 깨달음은 **포트폴리오는 '내가 얼마나 함께 일하기 좋은 문제 해결형 동료인지'를 증명하는 문서**라는 점입니다. 하반기 재도전을 위해 포트폴리오를 계속 다듬어 나갈 계획입니다.",
+      "content": "취업에 필수적인 세 가지 요소: 자기소개서, 이력서, 그리고 경쟁력 있는 포트폴리오.\n\n최근 하반기 공채를 준비하며 가장 집중했던 부분은 포트폴리오였습니다. 특히 노션 툴을 활용한 디지털 포트폴리오 제작에 돌입했고, 이는 곧바로 '마포청년나루'의 '합격을 부르는 노션 포트폴리오 만들기' 강의로 이어졌습니다. 4회차에 걸친 이 강의는 제 커리어 준비에 가장 큰 전환점이 되었습니다.\n\n강사님은 노션 앰배서더이자 유명 커뮤니티 '슈크림 마을' 대표였습니다. 노션 포트폴리오의 개념조차 몰랐던 저도 쉽게 따라 할 수 있도록 구성된 점이 인상 깊었습니다. 실무자의 시선으로 본 포트폴리오 작성 시 가장 중요했던 세 가지 인사이트를 공유합니다.\n\n1. '하지 말아야 할 것 5가지'와 '해야 할 것 5가지'의 명확한 기준\n\n❌ 하지 말아야 할 것: 경험 숨기기, 요약 없는 장황한 설명, 단순 성과 나열, 비수행 업무 기재, JD(Job Description) 무시.\n\n✅ 해야 할 것: 문제-해결 과정 명시, 주요 성과 강조, 결과보다 프로세스 중심 설명, 프로젝트 단위 구성, 시각 자료 활용.\n\n2. 핵심 '키워드' 추출 전략\n\n장황한 내용을 직무에 맞게 압축하는 것이 관건입니다. 그로우앤베터 같은 플랫폼으로 직무 트렌드 파악하고, AI 챗봇을 활용해 프로젝트 설명을 요약하며, 지원할 회사의 JD를 철저히 분석해 반복되는 단어(키워드)를 포트폴리오에 녹여내는 것이 중요합니다.\n\n3. '친절한' 포트폴리오 설계\n\n수천 건의 서류를 검토하는 채용 담당자를 위해 문서를 쉽게 만들어야 합니다. 프로젝트마다 목표, 나의 역할, 어려움 및 해결 과정, 성과, 인사이트 등 모든 스토리를 빠짐없이 명확하게 담아내야 합니다.\n\nOutro\n\n강의를 통해 얻은 가장 큰 깨달음은 포트폴리오는 '내가 얼마나 함께 일하기 좋은 문제 해결형 동료인지'를 증명하는 문서라는 점입니다. 하반기 재도전을 위해 포트폴리오를 계속 다듬어 나갈 계획입니다.",
       "replies": [
         {
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://cdn-icons-png.flaticon.com/512/1177/1177568.png"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           },
           "content": "좋은 정보 감사합니다. 노션 포트폴리오, 시도해봐야겠어요.",
           "like": 12
@@ -186,7 +187,7 @@
           "user": {
             "_id": 4,
             "name": "프롬프트 마스터",
-            "image": "https://cdn-icons-png.flaticon.com/512/1177/1177568.png"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
           },
           "content": "AI 활용 팁이 특히 유용하네요! 잘 봤습니다.",
           "like": 15
@@ -195,13 +196,13 @@
     },
     {
       "type": "brunch",
-      "title": "GPT 시대, 토큰 아끼는 사고 과정 프롬프팅 기술",
+      "title": "GPT-4o 시대, 토큰과 비용을 아끼는 프롬프팅 최적화 기술",
       "extra": {
-        "subTitle": "LLM 최적화를 위한 효율적인 추론 유도 방법",
+        "subTitle": "LLM 추론 과정 효율화를 위한 Chain-of-Thought 기법 활용",
         "align": "left"
       },
       "image": "https://images.pexels.com/photos/68507/spring-flowers-flowers-collage-floral-68507.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "content": "LLM(Large Language Model)을 활용하여 작업할 때 **토큰 소비 없이 최적의 추론 단계를 유도**하는 방식은 매우 중요합니다.\n\n이 기법은 모델에게 복잡한 내부 사고 과정을 직접 출력하도록 요구하지 않으면서도, **정확하고 논리적인 결론 중심의 결과물**을 안정적으로 얻게 합니다. 이는 모델의 효율성을 극대화하고, 불필요한 연산 비용(토큰)을 절감하는 핵심 전략입니다.\n\n특히 대규모 데이터를 처리하거나, 복잡도가 높은 비즈니스 로직에 적용할 때 **탁월한 성능과 일관된 결과 품질**을 보장합니다. 간결한 구조 덕분에 유지보수가 용이하고, 다양한 문제 해결에 범용적으로 적용 가능합니다.\n\n결론적으로, 이 **사고 과정 프롬프팅 최적화** 기법은 작업 효율성을 높이고, 비용을 절감하며, 모델의 잠재력을 최대한 끌어내는 필수적인 AI 활용 전략입니다.\n\n관련하여 심화 과정이나 실제 적용 사례에 대해 더 궁금하시면 언제든 요청해주세요.",
+      "content": "LLM(Large Language Model)을 활용하여 작업할 때 토큰 소비 없이 최적의 추론 단계를 유도하는 방식은 매우 중요합니다.\n\n이 기법은 모델에게 복잡한 내부 사고 과정을 직접 출력하도록 요구하지 않으면서도, 정확하고 논리적인 결론 중심의 결과물을 안정적으로 얻게 합니다. 이는 모델의 효율성을 극대화하고, 불필요한 연산 비용(토큰)을 절감하는 핵심 전략입니다.\n\n특히 대규모 데이터를 처리하거나, 복잡도가 높은 비즈니스 로직에 적용할 때 탁월한 성능과 일관된 결과 품질을 보장합니다. 간결한 구조 덕분에 유지보수가 용이하고, 다양한 문제 해결에 범용적으로 적용 가능합니다.\n\n결론적으로, 이 사고 과정 프롬프팅 최적화 기법은 작업 효율성을 높이고, 비용을 절감하며, 모델의 잠재력을 최대한 끌어내는 필수적인 AI 활용 전략입니다.\n\n관련하여 심화 과정이나 실제 적용 사례에 대해 더 궁금하시면 언제든 요청해주세요.",
       "views": 450,
       "user": {
         "_id": 4,
@@ -214,7 +215,7 @@
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -222,16 +223,16 @@
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "신입사원의 연말정산 업무, 성장의 기록",
+      "title": "회사 생활 첫 난관: 신입사원의 연말정산 A to Z 기록",
       "extra": {
-        "subTitle": "첫 직장 생활의 고난과 극복기",
+        "subTitle": "200명 직원 자료 심사를 맡으며 얻은 책임감과 실무 능력",
         "align": "center"
       },
       "views": 30,
@@ -239,16 +240,16 @@
       "user": {
         "_id": 6,
         "name": "축제매니아",
-        "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
+        "image": "https://cdn-icons-png.flaticon.com/512/3135/3135789.png"
       },
-      "content": "입사 한 달,\n\n잠깐 한숨 돌리려 했더니 2월은 더 혹독했습니다.\n\n약 200명에 달하는 직원들의 **연말정산 자료 심사**를 신입인 제가 맡게 되었기 때문입니다.\n\n다행히 업무 부담을 덜어주기 위해 **계약직 선생님 한 분**을 보조로 채용해 주셨고,\n\n우리 둘은 아침부터 밤늦게까지 홈택스 자료, 등본, 기부금 증명서 등을 꼼꼼하게 심사하며 **오류 없는 세금 반영**을 위해 집중했습니다. 눈이 빠질 듯한 고된 작업이었지만, 이 과정에서 **책임감과 실무 능력**을 키울 수 있었습니다.\n",
+      "content": "입사 한 달,\n\n잠깐 한숨 돌리려 했더니 2월은 더 혹독했습니다.\n\n약 200명에 달하는 직원들의 연말정산 자료 심사를 신입인 제가 맡게 되었기 때문입니다.\n\n다행히 업무 부담을 덜어주기 위해 계약직 선생님 한 분을 보조로 채용해 주셨고,\n\n우리 둘은 아침부터 밤늦게까지 홈택스 자료, 등본, 기부금 증명서 등을 꼼꼼하게 심사하며 오류 없는 세금 반영을 위해 집중했습니다. 눈이 빠질 듯한 고된 작업이었지만, 이 과정에서 책임감과 실무 능력을 키울 수 있었습니다.\n",
       "replies": [
         {
           "content": "힘든 업무 잘 이겨내셨네요, 응원합니다!",
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -256,16 +257,16 @@
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "북유럽의 겨울 간식: 허니 하트 쿠키 레시피",
+      "title": "따뜻한 덴마크의 맛: 허니 하트 쿠키 (Honninghjerter) 레시피",
       "extra": {
-        "subTitle": "따뜻한 덴마크 전통 디저트 만들기",
+        "subTitle": "끈기 있는 준비 과정이 필요한 북유럽 전통 디저트",
         "align": "right"
       },
       "image": "https://i.pinimg.com/236x/32/e8/9d/32e89d8f4eb074f99321e733d9dc10c6.jpg",
@@ -273,100 +274,100 @@
       "user": {
         "_id": 8,
         "name": "교육멘토",
-        "image": "https://cdn-icons-png.flaticon.com/512/11820/11820363.png"
+        "image": "https://cdn-icons-png.flaticon.com/512/219/219970.png"
       },
-      "content": "덴마크의 전통 겨울 간식 **'호닝헤르테(Honninghjerter)', 꿀 하트 쿠키**에 대한 이야기입니다.\n\n**취업 준비**처럼 달콤하지만 끈기 있는 과정이 필요한데요.\n\n취업을 위해 필요한 **자기소개서, 이력서, 그리고 포트폴리오** 중, 저는 최근 포트폴리오의 중요성을 깨닫고 노션 포트폴리오 만들기에 집중했습니다.\n\n5월에 경험했던 부족함을 채우고자 **'마포청년나루'의 '합격을 부르는 노션 포트폴리오 만들기'** 강좌를 수강했고, 이는 자기소개 과정에 있어 큰 도움이 되었습니다.\n\n강사님은 노션 커뮤니티 '슈크림 마을' 대표인 노슈니 님이었으며, **노션 포트폴리오의 존재조차 몰랐던 사람**도 완성도 높은 포트폴리오를 만들 수 있도록 지도해 주셨습니다. 지금부터 강의에서 얻은 핵심 인사이트 세 가지를 공유합니다.\n",
+      "content": "덴마크의 전통 겨울 간식 '호닝헤르테(Honninghjerter)', 꿀 하트 쿠키에 대한 이야기입니다.\n\n취업 준비처럼 달콤하지만 끈기 있는 과정이 필요한데요.\n\n취업을 위해 필요한 자기소개서, 이력서, 그리고 포트폴리오 중, 저는 최근 포트폴리오의 중요성을 깨닫고 노션 포트폴리오 만들기에 집중했습니다.\n\n5월에 경험했던 부족함을 채우고자 '마포청년나루'의 '합격을 부르는 노션 포트폴리오 만들기' 강좌를 수강했고, 이는 자기소개 과정에 있어 큰 도움이 되었습니다.\n\n강사님은 노션 커뮤니티 '슈크림 마을' 대표인 노슈니 님이었으며, 노션 포트폴리오의 존재조차 몰랐던 사람도 완성도 높은 포트폴리오를 만들 수 있도록 지도해 주셨습니다. 지금부터 강의에서 얻은 핵심 인사이트 세 가지를 공유합니다.\n",
       "replies": []
     },
     {
       "type": "brunch",
-      "title": "눈사람 만들기, 과학적 접근이 필요해",
+      "title": "눈사람이 녹지 않는 비결: 올라프의 과학적 접근법 분석",
       "extra": {
-        "subTitle": "애니메이션 '겨울왕국' 속 올라프의 꿀팁",
+        "subTitle": "애니메이션 '겨울왕국' 속 눈의 응집력과 온도 변화 원리",
         "align": "left"
       },
       "views": 15,
-      "image": "https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13072423&filePath=L2Rpc2sxL25ld2RhdGEvMjAxOC85OC9DTFMyLzEzMDcyNDIzX0NOVFJfV1JUMjAxODAzMzBfMzg0&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10006",
       "user": {
         "_id": 2,
         "name": "마케터K",
-        "image": "https://cdn-icons-png.flaticon.com/512/11820/11820363.png"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
-      "content": "겨울철, 하늘에서 펑펑 내리는 눈을 보면 **'커다란 눈사람'**을 만들고 싶은 충동을 느낍니다. 하지만 큰 눈덩이를 만드는 것은 생각보다 쉽지 않으며, 이를 위해서는 **눈의 과학적 성질**을 이해해야 합니다.\n\n**애니메이션 '겨울왕국'의 캐릭터 '올라프'**가 가상으로 알려주는 **'눈사람 잘 만드는 법'**을 자세히 살펴보며, 눈의 응집력과 온도에 따른 변화 등 과학 원리를 재미있게 배워봅시다.\n",
+      "image": "https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13072423&filePath=L2Rpc2sxL25ld2RhdGEvMjAxOC85OC9DTFMyLzEzMDcyNDIzX0NOVFJfV1JUMjAxODAzMzBfMzg0&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10006",
+      "content": "겨울철, 하늘에서 펑펑 내리는 눈을 보면 '커다란 눈사람'을 만들고 싶은 충동을 느낍니다. 하지만 큰 눈덩이를 만드는 것은 생각보다 쉽지 않으며, 이를 위해서는 눈의 과학적 성질을 이해해야 합니다.\n\n애니메이션 '겨울왕국'의 캐릭터 '올라프'가 가상으로 알려주는 '눈사람 잘 만드는 법'을 자세히 살펴보며, 눈의 응집력과 온도에 따른 변화 등 과학 원리를 재미있게 배워봅시다.\n",
       "replies": []
     },
     {
       "type": "brunch",
-      "title": "채우기 텍스트의 미학: 로렘 입숨(Lorem Ipsum)의 세계",
+      "title": "디자인의 미학: 로렘 입숨(Lorem Ipsum)과 '그리킹'의 역할",
       "extra": {
-        "subTitle": "디자인에서 '그리킹'이 필요한 이유",
+        "subTitle": "내용보다 레이아웃에 집중하게 만드는 표준 채우기 텍스트의 세계",
         "align": "center"
       },
       "views": 10,
-      "image": "https://cdn.crowdpic.net/detail-thumb/thumb_d_2F583E5543F7E19139C6FCFFBF9607A6.jpg",
       "user": {
         "_id": 10,
         "name": "정원지기",
-        "image": "https://cdn-icons-png.flaticon.com/512/11820/11820363.png"
+        "image": "https://cdn-icons-png.flaticon.com/128/706/706800.png"
       },
-      "content": "**로렘 입숨(Lorem Ipsum)**은 출판이나 그래픽 디자인 분야에서 **폰트, 타이포그래피, 레이아웃** 같은 시각적 요소를 보여줄 때 사용하는 **표준 채우기 텍스트**입니다. 실제 내용이 채워지기 전에 디자인 모형의 채움 글, 즉 **그리킹(greeking)**으로 이용되죠.\n\n로렘 입숨은 시각 디자인 프로젝트에서 내용의 방해 없이 **오로지 디자인과 레이아웃**에만 집중하게 해주는 중요한 도구입니다. 때로는 공간을 차지하는 **무언가를 지칭하는 용어**로도 사용됩니다.\n\n이 텍스트는 **내용의 의미를 배제**하고, 디자인 요소의 **균형과 흐름**을 평가하는 데 초점을 맞춥니다. 정부의 정책이나 법률 관련 내용(예: 농수산물 수급, 대통령 훈장 수여, 농지 소작제 금지 등)이 예시로 삽입되기도 하지만, 이는 순전히 텍스트의 길이와 형태를 채우기 위함입니다.\n",
+      "image": "https://cdn.crowdpic.net/detail-thumb/thumb_d_2F583E5543F7E19139C6FCFFBF9607A6.jpg",
+      "content": "로렘 입숨(Lorem Ipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 시각적 요소를 보여줄 때 사용하는 표준 채우기 텍스트입니다. 실제 내용이 채워지기 전에 디자인 모형의 채움 글, 즉 그리킹(greeking)으로 이용되죠.\n\n로렘 입숨은 시각 디자인 프로젝트에서 내용의 방해 없이 오로지 디자인과 레이아웃에만 집중하게 해주는 중요한 도구입니다. 때로는 공간을 차지하는 무언가를 지칭하는 용어로도 사용됩니다.\n\n이 텍스트는 내용의 의미를 배제하고, 디자인 요소의 균형과 흐름을 평가하는 데 초점을 맞춥니다. 정부의 정책이나 법률 관련 내용(예: 농수산물 수급, 대통령 훈장 수여, 농지 소작제 금지 등)이 예시로 삽입되기도 하지만, 이는 순전히 텍스트의 길이와 형태를 채우기 위함입니다.\n",
       "replies": []
     },
     {
       "type": "brunch",
-      "title": "집다운 집 만들기: 셀프 인테리어의 명과 암",
+      "title": "한남동 95년생 빌라: 셀프 인테리어 중독자의 고백",
       "extra": {
-        "subTitle": "한남동 95년생 빌라에 정착한 중독자의 고백",
+        "subTitle": "4천만 원 전셋집에 '집다운 집'을 만들려는 절박함",
         "align": "center"
       },
       "views": 15,
-      "image": "https://imagescdn.gettyimagesbank.com/500/201308/a6670583.jpg",
       "user": {
         "_id": 9,
         "name": "파이어족",
-        "image": "https://cdn-icons-png.flaticon.com/512/11820/11820363.png"
+        "image": "https://cdn-icons-png.flaticon.com/512/706/706821.png"
       },
-      "content": "직장을 그만두고 배우의 길을 걸은 지 2년, **절박함** 속에 서울살이의 높은 월세는 큰 부담이었습니다. 고정 비용을 줄이기 위해 전세 대출 한도 **6천만 원 이하**의 전셋집을 찾아 30곳 가까이 헤맸습니다.\n\n적은 돈에도 불구하고 **'방 한 칸짜리 원룸은 싫다'**는 이상한 고집이 있었고, 뜻대로 되지 않는 현실 속에서 **'집만큼은 내 뜻대로 만들고 싶다'**는 욕망이 커졌습니다. 친구들이 편히 쉴 공간, 사계절 옷을 보관할 공간 등 나의 절박함과 고집이 모여 무리수를 두게 됩니다.\n\n결국, **전세 4천만 원**짜리 한남동 언덕 끝, 나와 동갑인 **95년생 다 쓰러져가는 빌라**를 계약하게 됩니다. 이제부터 이 집을 '집다운 집'으로 만들어가는 셀프 인테리어 중독자의 고백이 시작됩니다.",
+      "image": "https://imagescdn.gettyimagesbank.com/500/201308/a6670583.jpg",
+      "content": "직장을 그만두고 배우의 길을 걸은 지 2년, 절박함 속에 서울살이의 높은 월세는 큰 부담이었습니다. 고정 비용을 줄이기 위해 전세 대출 한도 6천만 원 이하의 전셋집을 찾아 30곳 가까이 헤맸습니다.\n\n적은 돈에도 불구하고 '방 한 칸짜리 원룸은 싫다'는 이상한 고집이 있었고, 뜻대로 되지 않는 현실 속에서 '집만큼은 내 뜻대로 만들고 싶다'는 욕망이 커졌습니다. 친구들이 편히 쉴 공간, 사계절 옷을 보관할 공간 등 나의 절박함과 고집이 모여 무리수를 두게 됩니다.\n\n결국, 4천만 원 전세금에 한남동 언덕 끝, 나와 동갑인 95년생 다 쓰러져가는 빌라를 계약하게 됩니다. 이제부터 이 집을 '집다운 집'으로 만들어가는 셀프 인테리어 중독자의 고백이 시작됩니다.",
       "replies": []
     },
     {
       "type": "brunch",
-      "title": "가을, 고양이와 함께 사는 집사의 기록",
+      "title": "집사에게 가을이란: 고양이의 식욕, 우울증, 털갈이 기록",
       "extra": {
-        "subTitle": "천고마비의 계절, 고양이에게는 '천고묘비'",
+        "subTitle": "천고마비의 계절, 고양이에게는 '천고묘비'의 의미",
         "align": "center"
       },
       "views": 90,
-      "image": "https://imgnn.seoul.co.kr/img/upload/2024/08/06/SSC_20240806100040.jpg",
       "user": {
         "_id": 11,
         "name": "미식가C",
-        "image": "https://i.pinimg.com/736x/d8/a6/cb/d8a6cbb02bc2c5c27ae238db2e89425d.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/4202/4202832.png"
       },
-      "content": "찬 공기와 함께 **가을**이 성큼 다가왔습니다.\n\n**하늘은 높고 말이 살찐다는 천고마비(天高馬肥)**의 계절이지만,\n고양이를 키우는 집사에게는 **'천고묘비(天高猫肥)'**의 계절이기도 합니다.\n\n고양이에게 가을은 어떤 의미일까요?\n\n1. **식욕의 계절**: 사람과 마찬가지로 고양이에게도 식욕이 왕성해지는 시기입니다.\n2. **우울함**: 일조량이 줄어들면서 고양이도 가벼운 우울함을 느낄 수 있습니다.\n3. **털갈이**: 얇은 봄/여름 털코트를 벗고 두껍고 무거운 겨울 코트로 갈아입는 **털갈이의 절정**입니다.\n\n가을철 고양이 건강 관리에 더 신경 써야 합니다.",
+      "image": "https://imgnn.seoul.co.kr/img/upload/2024/08/06/SSC_20240806100040.jpg",
+      "content": "찬 공기와 함께 가을이 성큼 다가왔습니다.\n\n하늘은 높고 말이 살찐다는 천고마비(天高馬肥)의 계절이지만,\n고양이를 키우는 집사에게는 '천고묘비(天高猫肥)'의 계절이기도 합니다.\n\n고양이에게 가을은 어떤 의미일까요?\n\n1. 식욕의 계절: 사람과 마찬가지로 고양이에게도 식욕이 왕성해지는 시기입니다.\n2. 우울함: 일조량이 줄어들면서 고양이도 가벼운 우울함을 느낄 수 있습니다.\n3. 털갈이: 얇은 봄/여름 털코트를 벗고 두껍고 무거운 겨울 코트로 갈아입는 털갈이의 절정입니다.\n\n가을철 고양이 건강 관리에 더 신경 써야 합니다.",
       "replies": []
     },
     {
       "type": "brunch",
-      "title": "웹 디자인 필수 단위: px, em, rem 총정리",
+      "title": "웹 개발자를 위한 단위 완벽 정리: px, em, rem 실무 활용법",
       "extra": {
-        "subTitle": "절대값(px)과 상대값(em, rem)의 차이와 실무 활용법",
+        "subTitle": "절대값(px)과 상대값(em, rem)의 차이와 반응형 디자인 적용 꿀팁",
         "align": "left"
       },
       "views": 12,
-      "image": "https://cdn.dailyvet.co.kr/wp-content/uploads/2024/05/15231647/20240515ceva_experts4.jpg",
       "user": {
         "_id": 6,
         "name": "축제매니아",
-        "image": "https://cdn.imweb.me/upload/S20220518fbea59f8e9828/77d99edcb5dbf.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/3135/3135789.png"
       },
-      "content": "웹 개발 시 반드시 마주하게 될 **'단위'**에 대해 정리했습니다. **px, em, rem**의 개념 이해와 실무 적용이 어렵다면 이 글이 도움이 될 것입니다.\n\n**1. 절대값 (px: 픽셀)**\n* **개념**: 화면의 물리적 단위로, 디스플레이에서 색 정보를 표현하는 최소 단위입니다. 고정된 크기를 가집니다.\n* **장단점**: 해상도와 관계없이 일관된 크기를 유지하지만, 웹 접근성(글꼴 크기 변경) 측면에서 좋지 않습니다.\n* **활용**: 테두리 두께(border), 미디어쿼리 브레이크 포인트 등에 적합합니다.\n\n**2. 상대값 (em, rem)**\n\n* **em (Element)**: **부모 요소**의 글꼴 크기를 기준으로 하는 상대적 단위. 부모에 따라 크기가 달라지므로, 페이지 내에서 유연하지만 유지보수가 어려울 수 있습니다.\n* **rem (Root Element)**: **루트 요소(html)**의 글꼴 크기를 기준으로 하는 상대적 단위. 페이지 전체에서 동일한 기준을 가지므로 일관성 유지에 유리합니다.\n\n**⭐ rem 활용 꿀팁: 62.5% 설정**\n브라우저 기본 글꼴 크기(16px) 대신 `html { font-size: 62.5%; }`를 적용하면 1rem = 10px로 계산이 쉬워져 실무 효율이 높아집니다. \n\n디바이스가 다양해질수록 **유지보수가 쉽고 일관성 있는 rem 단위** 사용을 권장합니다.",
+      "image": "https://cdn.dailyvet.co.kr/wp-content/uploads/2024/05/15231647/20240515ceva_experts4.jpg",
+      "content": "웹 개발 시 반드시 마주하게 될 '단위'에 대해 정리했습니다. px, em, rem의 개념 이해와 실무 적용이 어렵다면 이 글이 도움이 될 것입니다.\n\n1. 절대값 (px: 픽셀)\n* 개념: 화면의 물리적 단위로, 디스플레이에서 색 정보를 표현하는 최소 단위입니다. 고정된 크기를 가집니다.\n* 장단점: 해상도와 관계없이 일관된 크기를 유지하지만, 웹 접근성(글꼴 크기 변경) 측면에서 좋지 않습니다.\n* 활용: 테두리 두께(border), 미디어쿼리 브레이크 포인트 등에 적합합니다.\n\n2. 상대값 (em, rem)\n\n* em (Element): 부모 요소의 글꼴 크기를 기준으로 하는 상대적 단위. 부모에 따라 크기가 달라지므로, 페이지 내에서 유연하지만 유지보수가 어려울 수 있습니다.\n* rem (Root Element): 루트 요소(html)의 글꼴 크기를 기준으로 하는 상대적 단위. 페이지 전체에서 동일한 기준을 가지므로 일관성 유지에 유리합니다.\n\n⭐ rem 활용 꿀팁: 62.5% 설정\n브라우저 기본 글꼴 크기(16px) 대신 `html { font-size: 62.5%; }`를 적용하면 1rem = 10px로 계산이 쉬워져 실무 효율이 높아집니다. \n\n디바이스가 다양해질수록 유지보수가 쉽고 일관성 있는 rem 단위 사용을 권장합니다.",
       "replies": [
         {
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://www.fitpetmall.com/wp-content/uploads/2023/10/shutterstock_1844153299-1024x683-1.png"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           },
           "content": "62.5% 꿀팁! 바로 적용해봐야겠어요. 감사합니다.",
           "like": 10
@@ -375,25 +376,25 @@
     },
     {
       "type": "brunch",
-      "title": "회색 공동체에서 나만의 색을 지키는 법",
+      "title": "밀크맨 독서 후기: 회색 공동체에서 나만의 색을 지키는 법",
       "extra": {
-        "subTitle": "밀크맨 독서 후기: 사회적 억압과 정체성",
+        "subTitle": "사회적 억압과 개인의 정체성을 다룬 소설의 깊은 통찰",
         "align": "right"
       },
       "views": 10,
-      "image": "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fCVFQSVCMyVBMCVFQyU5NiU5MSVFQyU5RCVCNHxlbnwwfHwwfHx8MA%3D%3D",
       "user": {
         "_id": 10,
         "name": "정원지기",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/White_Persian_Cat.jpg/250px-White_Persian_Cat.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/128/706/706800.png"
       },
-      "content": "이 소설은 **'회색 지역'**에 사는 **'회색 사람들'**의 이야기입니다. 그들은 이름 대신 보통 명사를 사용하고, 자신의 개성과 색깔을 드러내는 순간 **주변의 검열**을 받습니다. 개인의 자율성이 박탈된 이 사회에서, **결혼은 의무**이며, 온전한 **자아를 숨긴 채** 살아가야 합니다.\n\n주인공 소녀는 **성인**의 경계에 서며 자신의 색깔을 포기하고 **회색의 표준**이 되어야 한다는 압박을 받습니다. 그러나 **밀크맨**으로 상징되는 **권력과 통제**에 맞서 그녀는 자신의 색깔을 지키고자 합니다.\n\n**인사이트**: 우리 사회 역시 완벽한 이상향은 아닙니다. 나에게는 상식적인 공동체일지라도, 다른 배경을 가진 누군가에게는 **부당한 배제**가 존재할 수 있습니다. 우리는 무의식적인 배제를 살피며, **자신의 색깔**을 잃지 않으려 노력하는 주인공처럼 살아가야 합니다.",
+      "image": "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fCVFQSVCMyVBMCVFQyU5NiU5MSVFQyU5RCVCNHxlbnwwfHwwfHx8MA%3D%3D",
+      "content": "이 소설은 '회색 지역'에 사는 '회색 사람들'의 이야기입니다. 그들은 이름 대신 보통 명사를 사용하고, 자신의 개성과 색깔을 드러내는 순간 주변의 검열을 받습니다. 개인의 자율성이 박탈된 이 사회에서, 결혼은 의무이며, 온전한 자아를 숨긴 채 살아가야 합니다.\n\n주인공 소녀는 성인의 경계에 서며 자신의 색깔을 포기하고 회색의 표준이 되어야 한다는 압박을 받습니다. 그러나 밀크맨으로 상징되는 권력과 통제에 맞서 그녀는 자신의 색깔을 지키고자 합니다.\n\n인사이트: 우리 사회 역시 완벽한 이상향은 아닙니다. 나에게는 상식적인 공동체일지라도, 다른 배경을 가진 누군가에게는 부당한 배제가 존재할 수 있습니다. 우리는 무의식적인 배제를 살피며, 자신의 색깔을 잃지 않으려 노력하는 주인공처럼 살아가야 합니다.",
       "replies": [
         {
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://i.namu.wiki/i/d1A_wD4kuLHmOOFqJdVlOXVt1TWA9NfNt_HA0CS0Y_N0zayUAX8olMuv7odG2FiDLDQZIRBqbPQwBSArXfEJlQ.webp"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           },
           "content": "심도 깊은 독서 후기입니다. 우리 사회의 그림자를 돌아보게 만드네요.",
           "like": 15
@@ -402,42 +403,42 @@
     },
     {
       "type": "brunch",
-      "title": "집을 향한 절박함: 4천만 원 전셋집 계약기",
+      "title": "배우의 꿈과 현실: 4천만 원 전셋집 계약으로 서울에 정착하다",
       "extra": {
-        "subTitle": "전세대출 6천만 원 한도로 서울 구하기",
+        "subTitle": "전세대출 6천만원 한도로 서울 한남동 95년생 빌라 구하기",
         "align": "left"
       },
       "views": 25,
-      "image": "https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVCJTg1JUI5JUVDJTgzJTg5JTIwJUVDJTlFJTkwJUVDJTk3JUIwJTIwJUVCJUIwJUIwJUVBJUIyJUJEfGVufDB8fDB8fHww",
       "user": {
         "_id": 12,
         "name": "커리어코치",
-        "image": "https://m.health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997668.png"
       },
-      "content": "배우의 꿈을 위해 직장을 그만두고 상경한 지 2년, 입시와 연기 모두 뜻대로 되지 않았고, 투잡, 쓰리잡을 병행하며 **극심한 피로**에 시달렸습니다. 서울살이의 가장 큰 부담은 **월세**였습니다.\n\n**고정 비용을 줄이는 것**이 절실했고, **전세대출 한도 6천만 원 이하**의 전셋집을 찾기 위해 지역을 가리지 않고 30여 곳을 알아보았습니다.\n\n적은 대출금에도 불구하고 **방 한 칸짜리 원룸은 싫다**는 고집이 있었습니다. 뜻대로 안 되는 삶 속에서 **'내 집만큼은 내가 원하는 대로'** 만들고 싶다는 욕망 때문이었죠. 결국, **4천만 원** 전세금에 **한남동 언덕 끝의 95년생 빌라**를 계약하는 무리수를 두었습니다. 이제부터 이 집을 바꾸는 여정이 시작됩니다.",
+      "image": "https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVCJTg1JUI5JUVDJTgzJTg5JTIwJUVDJTlFJTkwJUVDJTk3JUIwJTIwJUVCJUIwJUIwJUVBJUIyJUJEfGVufDB8fDB8fHww",
+      "content": "배우의 꿈을 위해 직장을 그만두고 상경한 지 2년, 입시와 연기 모두 뜻대로 되지 않았고, 투잡, 쓰리잡을 병행하며 극심한 피로에 시달렸습니다. 서울살이의 가장 큰 부담은 월세였습니다.\n\n고정 비용을 줄이는 것이 절실했고, 전세대출 한도 6천만 원 이하의 전셋집을 찾기 위해 지역을 가리지 않고 30여 곳을 알아보았습니다.\n\n적은 대출금에도 불구하고 '방 한 칸짜리 원룸은 싫다'는 고집이 있었습니다. 뜻대로 안 되는 삶 속에서 '내 집만큼은 내가 원하는 대로' 만들고 싶다는 욕망 때문이었죠. 결국, 4천만 원 전세금에 한남동 언덕 끝의 95년생 빌라를 계약하는 무리수를 두었습니다. 이제부터 이 집을 바꾸는 여정이 시작됩니다.",
       "replies": []
     },
     {
       "type": "brunch",
-      "title": "이사 갈 집 찾기: 번거로움 속의 설렘",
+      "title": "집 구하기 번거로움 속의 설렘: 나만의 까다로운 전셋집 조건 리스트",
       "extra": {
-        "subTitle": "나만의 까다로운 전셋집 조건 리스트",
+        "subTitle": "이사 준비: 베란다, 반려동물 가능, 꼭대기 층 등 포기할 수 없는 조건들",
         "align": "center"
       },
       "views": 85,
-      "image": "https://m.health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg",
       "user": {
         "_id": 12,
         "name": "커리어코치",
-        "image": "https://m.health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997668.png"
       },
-      "content": "이주 명령이 떨어지자 마음이 바빠졌고, 내년 5월까지의 여유에도 불구하고 본격적으로 집을 알아보기 시작했습니다.\n\n**나만의 까다로운 조건 리스트:**\n\n* 전세대출 가능할 것\n* **베란다나 테라스**가 있을 것\n* **반려동물** 사육 가능\n* 창문 뷰가 답답하지 않을 것\n* 방음이 잘 되거나 **꼭대기 층**일 것 (집에서 노래 부름)\n* 산책로가 가까운 한적한 동네\n\n'밥 먹고, 일하고, 자는 시간 외에는' 부동산 앱을 뒤지는 데 모든 시간을 썼습니다. 집 구하는 일은 번거롭지만, **새 집에 대한 욕망**과 **설렘** 때문에 이 과정을 은근히 즐기고 있었습니다.",
+      "image": "https://m.health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg",
+      "content": "이주 명령이 떨어지자 마음이 바빠졌고, 내년 5월까지의 여유에도 불구하고 본격적으로 집을 알아보기 시작했습니다.\n\n나만의 까다로운 조건 리스트:\n\n* 전세대출 가능할 것\n* 베란다나 테라스가 있을 것\n* 반려동물 사육 가능\n* 창문 뷰가 답답하지 않을 것\n* 방음이 잘 되거나 꼭대기 층일 것 (집에서 노래 부름)\n* 산책로가 가까운 한적한 동네\n\n'밥 먹고, 일하고, 자는 시간 외에는' 부동산 앱을 뒤지는 데 모든 시간을 썼습니다. 집 구하는 일은 번거롭지만, 새 집에 대한 욕망과 설렘 때문에 이 과정을 은근히 즐기고 있었습니다.",
       "replies": [
         {
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://m.health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           },
           "content": "좋은 조건에 맞는 집 꼭 찾으시길 응원합니다!",
           "like": 10
@@ -446,7 +447,7 @@
           "user": {
             "_id": 4,
             "name": "프롬프트 마스터",
-            "image": "https://m.health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
           },
           "content": "조건을 명확히 하는 과정이 인상적입니다.",
           "like": 15
@@ -455,26 +456,26 @@
     },
     {
       "type": "brunch",
-      "title": "인생의 마흔 고개, 건강과 삶에 대한 고찰",
+      "title": "마흔 고개 앞에서: 암 진단 후 되돌아본 건강과 삶",
       "extra": {
-        "subTitle": "암 진단 후 되돌아본 삶의 무게",
+        "subTitle": "병원 문을 나선 후 마주한 세상의 새로운 풍경",
         "align": "left"
       },
-      "content": "병원에서 **암 진단**을 받고 나와 햇볕이 작열하며 끓어오르는 거리를 터벅터벅 걸었습니다. 그 순간, **'과연 무사히 마흔 살이 될 수 있을까'**라는 질문이 머릿속을 떠나지 않았습니다. 병원 문을 나선 후 마주한 세상의 풍경은 이전과 완전히 달랐습니다. 삶과 건강에 대한 근본적인 성찰의 시작이었습니다.",
       "views": 1100,
-      "image": "https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/g16y/image/sh_XmvOrFKBiny4-yGzB-Ky6dqs.jpg",
       "user": {
         "_id": 2,
         "name": "마케터K",
-        "image": "https://m.health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
+      "image": "https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/g16y/image/sh_XmvOrFKBiny4-yGzB-Ky6dqs.jpg",
+      "content": "병원에서 암 진단을 받고 나와 햇볕이 작열하며 끓어오르는 거리를 터벅터벅 걸었습니다. 그 순간, '과연 무사히 마흔 살이 될 수 있을까'라는 질문이 머릿속을 떠나지 않았습니다. 병원 문을 나선 후 마주한 세상의 풍경은 이전과 완전히 달랐습니다. 삶과 건강에 대한 근본적인 성찰의 시작이었습니다.",
       "replies": [
         {
           "content": "힘내세요. 건강이 최우선입니다.",
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://m.health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         },
         {
@@ -482,33 +483,33 @@
           "user": {
             "_id": 4,
             "name": "프롬프트 마스터",
-            "image": "https://m.health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "이름으로 살고 싶다: 맞벌이 엄마의 정체성 찾기",
+      "title": "이름으로 살고 싶다: 맞벌이 엄마의 정체성 균형 찾기",
       "extra": {
-        "subTitle": "누구의 '엄마'가 아닌 '나'로 살아가기",
+        "subTitle": "누구의 '엄마'가 아닌, '나' 자신으로 살아가기 위한 노력",
         "align": "left"
       },
-      "content": "**'누구의 엄마'**로 불리는 것이 익숙하지만, 그 호칭 이전에 **나의 이름**이 있다는 것을 잊지 않으려 합니다. 맞벌이와 육아를 병행하면서도 **개인으로서의 정체성**을 지키기 위한 끊임없는 노력을 기록합니다. 엄마 역할에 충실하면서도 '나' 자신을 잃지 않는 삶의 균형을 찾고자 합니다.",
       "views": 950,
-      "image": "https://img.lovepik.com/photo/60161/4490.jpg_wh860.jpg",
       "user": {
         "_id": 4,
         "name": "프롬프트 마스터",
-        "image": "https://imgnn.seoul.co.kr/img/upload/2020/05/21/SSI_20200521181947.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
       },
+      "image": "https://img.lovepik.com/photo/60161/4490.jpg_wh860.jpg",
+      "content": "'누구의 엄마'로 불리는 것이 익숙하지만, 그 호칭 이전에 나의 이름이 있다는 것을 잊지 않으려 합니다. 맞벌이와 육아를 병행하면서도 개인으로서의 정체성을 지키기 위한 끊임없는 노력을 기록합니다. 엄마 역할에 충실하면서도 '나' 자신을 잃지 않는 삶의 균형을 찾고자 합니다.",
       "replies": [
         {
           "content": "깊이 공감하는 내용입니다. 엄마이기 전에 나 자신이죠.",
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://imgnn.seoul.co.kr/img/upload/2020/05/21/SSI_20200521181947.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         },
         {
@@ -516,33 +517,33 @@
           "user": {
             "_id": 4,
             "name": "프롬프트 마스터",
-            "image": "https://imgnn.seoul.co.kr/img/upload/2020/05/21/SSI_20200521181947.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "집을 잃다: 성북동 부모님 집을 떠나며",
+      "title": "서울 독립의 서러움과 기대: 성북동 집을 떠나며",
       "extra": {
-        "subTitle": "서울 독립의 서러움과 새로운 시작",
+        "subTitle": "익숙한 보금자리를 잃고 새로운 시작을 준비하는 복잡한 감정",
         "align": "right"
       },
-      "content": "성북동 부모님 집에서 편하게 얹혀살며 학교와 직장까지 30분이 넘지 않던 시절이 있었습니다. 이제는 그 집을 떠나 **서울에서 홀로 서야 하는 상황**에 직면했습니다. 익숙했던 보금자리를 잃고 새로운 시작을 준비하는 과정에서 겪는 **현실적인 어려움과 복잡한 감정**을 기록합니다.",
       "views": 850,
-      "image": "https://previews.123rf.com/images/sudakasi/sudakasi1405/sudakasi140500174/28673467-beautiful-natural-background.jpg",
       "user": {
         "_id": 4,
         "name": "프롬프트 마스터",
-        "image": "https://octapi.lxzin.com/interior/vImgFileSeq/202210/11/8ede80a1-1d0c-4839-bcc3-97bd4f357ecd.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
       },
+      "image": "https://previews.123rf.com/images/sudakasi/sudakasi1405/sudakasi140500174/28673467-beautiful-natural-background.jpg",
+      "content": "성북동 부모님 집에서 편하게 얹혀살며 학교와 직장까지 30분이 넘지 않던 시절이 있었습니다. 이제는 그 집을 떠나 서울에서 홀로 서야 하는 상황에 직면했습니다. 익숙했던 보금자리를 잃고 새로운 시작을 준비하는 과정에서 겪는 현실적인 어려움과 복잡한 감정을 기록합니다.",
       "replies": [
         {
           "content": "독립의 과정, 힘든 만큼 값진 경험이 될 거예요.",
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://octapi.lxzin.com/interior/vImgFileSeq/202210/11/8ede80a1-1d0c-4839-bcc3-97bd4f357ecd.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -550,33 +551,33 @@
           "user": {
             "_id": 4,
             "name": "프롬프트 마스터",
-            "image": "https://octapi.lxzin.com/interior/vImgFileSeq/202210/11/8ede80a1-1d0c-4839-bcc3-97bd4f357ecd.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "감정의 늪에서 벗어나기: 우울 일기 2편",
+      "title": "감정의 늪에서 벗어나기: 심한 우울증을 앓는 이들을 위한 정신 건강 일지 2편",
       "extra": {
-        "subTitle": "무기력함과 싸우는 일상의 기록",
+        "subTitle": "무기력함과 우울감 속에서 나를 다독이는 일상의 기록",
         "align": "left"
       },
-      "content": "언제부터 시작되었는지 모를 **심한 우울증**을 앓고 있습니다. 인생이 무언가 잘 풀리지 않는다는 생각에 사로잡혀, 무기력함과 우울감의 늪에서 벗어나기 위해 매일 노력하고 있습니다. 힘든 감정을 솔직하게 기록하며 스스로를 다독이는 **정신 건강 일지**입니다.",
       "views": 750,
-      "image": "https://img.freepik.com/premium-vector/summer-landscape-green-meadow-with-blue-sky-colorful-wild-flowers-blooming-artistic-drawing-with-green-forest-natural-flora-scenic-background-outdoor-countryside-vector-illustration_345238-2211.jpg?semt=ais_incoming&w=740&q=80",
       "user": {
         "_id": 4,
         "name": "프롬프트 마스터",
-        "image": "https://octapi.lxzin.com/interior/vImgFileSeq/202210/11/8ede80a1-1d0c-4839-bcc3-97bd4f357ecd.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/706/706816.png"
       },
+      "image": "https://img.freepik.com/premium-vector/summer-landscape-green-meadow-with-blue-sky-colorful-wild-flowers-blooming-artistic-drawing-with-green-forest-natural-flora-scenic-background-outdoor-countryside-vector-illustration_345238-2211.jpg?semt=ais_incoming&w=740&q=80",
+      "content": "언제부터 시작되었는지 모를 심한 우울증을 앓고 있습니다. 인생이 무언가 잘 풀리지 않는다는 생각에 사로잡혀, 무기력함과 우울감의 늪에서 벗어나기 위해 매일 노력하고 있습니다. 힘든 감정을 솔직하게 기록하며 스스로를 다독이는 정신 건강 일지입니다.",
       "replies": [
         {
           "content": "함께 응원하며 쾌유를 바랍니다.",
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://newsimg.hankookilbo.com/2016/04/13/201604131460701467_1.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -584,33 +585,33 @@
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://newsimg.hankookilbo.com/2016/04/13/201604131460701467_1.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "쉽게 배우는 과학 이야기: 일상 속의 포카리스웨트",
+      "title": "쉽게 배우는 이온 음료의 과학: 일상 속의 포카리스웨트 원리",
       "extra": {
-        "subTitle": "알지만 놓치는 과학적 지식을 흥미롭게!",
+        "subTitle": "알지만 놓치는 과학적 지식을 흥미롭게 풀어내는 콘텐츠",
         "align": "left"
       },
-      "content": "우리의 삶 속에는 **흥미로운 과학적 지식**들이 숨어 있습니다. 알지만 지나치기 쉬운, 혹은 몰랐지만 알게 되면 유용한 과학 원리를 **포카리스웨트**처럼 청량하고 쉽게 풀어내어 전달합니다. 과학 콘텐츠를 통해 세상을 더 깊이 이해해 봅시다.",
       "views": 650,
-      "image": "https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13002262&filePath=L2Rpc2sxL25ld2RhdGEvMjAxNi8yMS9DTFM2Lzc4MzA1MWJmLWYxZGMtNGFmMS05YTcxLWYzMmFkNTZmYjMyYQ==&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10006",
       "user": {
         "_id": 2,
         "name": "마케터K",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDDEu5F7Sq7jXwsI0xJuvNZVopyG_LwuE2qA&s"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
+      "image": "https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13002262&filePath=L2Rpc2sxL25ld2RhdGEvMjAxNi8yMS9DTFM2Lzc4MzA1MWJmLWYxZGMtNGFmMS05YTcxLWYzMmFkNTZmYjMyYQ==&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10006",
+      "content": "우리의 삶 속에는 흥미로운 과학적 지식들이 숨어 있습니다. 알지만 지나치기 쉬운, 혹은 몰랐지만 알게 되면 유용한 과학 원리를 포카리스웨트처럼 청량하고 쉽게 풀어내어 전달합니다. 과학 콘텐츠를 통해 세상을 더 깊이 이해해 봅시다.",
       "replies": [
         {
           "content": "재미있는 과학 콘텐츠 기대됩니다.",
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDDEu5F7Sq7jXwsI0xJuvNZVopyG_LwuE2qA&s"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -618,33 +619,33 @@
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDDEu5F7Sq7jXwsI0xJuvNZVopyG_LwuE2qA&s"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "도심을 떠나 귀촌을 꿈꾸는 이유",
+      "title": "도심의 소음보다 자연의 고요함: 우리가 귀촌을 꿈꾸는 이유",
       "extra": {
-        "subTitle": "도시의 소음보다 자연의 고요함이 그리워",
+        "subTitle": "남편과의 로망, 조용하고 여유로운 자연 속 삶을 향한 열망",
         "align": "left"
       },
-      "content": "**원래부터 도시의 소란스러움을 싫어했습니다.** 남편과 연애 시절부터 틈만 나면 **귀촌**을 이야기했고, 이제는 그 꿈을 현실로 만들기 위해 노력하고 있습니다. 도시에서의 삶이 아닌, **자연과 더불어 사는 조용하고 여유로운 삶**에 대한 열망을 기록합니다.",
       "views": 550,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1cpTMVs6AJnc_oIRa89iSfHpeHVLRxYASkg&s",
       "user": {
         "_id": 2,
         "name": "마케터K",
-        "image": "https://marketplace.canva.com/8-1Kc/MAGoQJ8-1Kc/1/tl/canva-ginger-cat-with-paws-raised-in-air-MAGoQJ8-1Kc.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1cpTMVs6AJnc_oIRa89iSfHpeHVLRxYASkg&s",
+      "content": "원래부터 도시의 소란스러움을 싫어했습니다. 남편과 연애 시절부터 틈만 나면 귀촌을 이야기했고, 이제는 그 꿈을 현실로 만들기 위해 노력하고 있습니다. 도시에서의 삶이 아닌, 자연과 더불어 사는 조용하고 여유로운 삶에 대한 열망을 기록합니다.",
       "replies": [
         {
           "content": "귀촌에 대한 로망이 생기네요.",
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://marketplace.canva.com/8-1Kc/MAGoQJ8-1Kc/1/tl/canva-ginger-cat-with-paws-raised-in-air-MAGoQJ8-1Kc.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -652,33 +653,33 @@
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://marketplace.canva.com/8-1Kc/MAGoQJ8-1Kc/1/tl/canva-ginger-cat-with-paws-raised-in-air-MAGoQJ8-1Kc.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "주간 에세이: 수요일의 위로",
+      "title": "주간 에세이: 수요일의 위로와 쉼표",
       "extra": {
-        "subTitle": "지친 일상에 건네는 따뜻한 문장들",
+        "subTitle": "지친 일상에 건네는 따뜻한 문장, 매주 연재",
         "align": "left"
       },
-      "content": "**매주 수요일**, 독자분들의 지친 일상에 잠시 쉼표를 찍어줄 **에세이 한 편**을 배달해 드립니다. 삶의 소소한 이야기, 깊은 사색, 그리고 따뜻한 위로를 담아 매번 새로운 주제로 찾아뵙겠습니다.",
       "views": 450,
-      "image": "https://cdn.greenpostkorea.co.kr/news/photo/201811/98716_95061_4817.jpg",
       "user": {
         "_id": 2,
         "name": "마케터K",
-        "image": "https://cdn.eyesmag.com/content/uploads/posts/2025/01/22/shutterstock_2491179401-06f50759-c2c5-49cb-b10b-ba47ca6d2166.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
+      "image": "https://cdn.greenpostkorea.co.kr/news/photo/201811/98716_95061_4817.jpg",
+      "content": "매주 수요일, 독자분들의 지친 일상에 잠시 쉼표를 찍어줄 에세이 한 편을 배달해 드립니다. 삶의 소소한 이야기, 깊은 사색, 그리고 따뜻한 위로를 담아 매번 새로운 주제로 찾아뵙겠습니다.",
       "replies": [
         {
           "content": "매주 수요일이 기다려지겠어요!",
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://cdn.eyesmag.com/content/uploads/posts/2025/01/22/shutterstock_2491179401-06f50759-c2c5-49cb-b10b-ba47ca6d2166.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -686,33 +687,33 @@
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://cdn.eyesmag.com/content/uploads/posts/2025/01/22/shutterstock_2491179401-06f50759-c2c5-49cb-b10b-ba47ca6d2166.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "강북 토박이, 강남 라이프에 적응하다",
+      "title": "강북 토박이, 강남 라이프에 적응하다: 문화적 충돌과 이해",
       "extra": {
-        "subTitle": "강남 출신 아내를 만나 새로운 생활을 시작한 이야기",
+        "subTitle": "강남 출신 아내를 만나 새로운 생활을 시작한 리얼 스토리",
         "align": "left"
       },
-      "content": "**내가 강남에 살게 될 줄은 몰랐습니다.** 강북 토박이인 내가 강남 출신 아내를 만나 덜컥 집을 구하고 강남 라이프를 시작하게 된 실화극입니다. 서로 다른 지역 배경을 가진 두 사람이 어떻게 서로에게 맞춰가고 새로운 환경에 적응해 나가는지 그 과정을 유쾌하게 기록합니다.",
       "views": 350,
-      "image": "https://cdn.eyesmag.com/content/uploads/posts/2025/01/22/shutterstock_2491179401-06f50759-c2c5-49cb-b10b-ba47ca6d2166.jpg",
       "user": {
         "_id": 3,
         "name": "철학자J",
-        "image": "https://cdn.eyesmag.com/content/uploads/posts/2025/01/22/shutterstock_2491179401-06f50759-c2c5-49cb-b10b-ba47ca6d2166.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
       },
+      "image": "https://cdn.eyesmag.com/content/uploads/posts/2025/01/22/shutterstock_2491179401-06f50759-c2c5-49cb-b10b-ba47ca6d2166.jpg",
+      "content": "내가 강남에 살게 될 줄은 몰랐습니다. 강북 토박이인 내가 강남 출신 아내를 만나 덜컥 집을 구하고 강남 라이프를 시작하게 된 실화극입니다. 서로 다른 지역 배경을 가진 두 사람이 어떻게 서로에게 맞춰가고 새로운 환경에 적응해 나가는지 그 과정을 유쾌하게 기록합니다.",
       "replies": [
         {
           "content": "흥미로운 소재네요. 기대됩니다!",
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://cdn.eyesmag.com/content/uploads/posts/2025/01/22/shutterstock_2491179401-06f50759-c2c5-49cb-b10b-ba47ca6d2166.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -720,33 +721,33 @@
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://cdn.eyesmag.com/content/uploads/posts/2025/01/22/shutterstock_2491179401-06f50759-c2c5-49cb-b10b-ba47ca6d2166.jpg"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "홀로 밥상: 서울 자취생의 간단 레시피",
+      "title": "간단하면서 건강하게: 서울 자취생의 나 홀로 미식 기록",
       "extra": {
-        "subTitle": "해외 생활을 마치고 돌아온 나 홀로 미식 기록",
+        "subTitle": "해외 생활을 마치고 돌아온 나 홀로 밥상 레시피와 생활 팁",
         "align": "right"
       },
-      "content": "해외에서 2년 반을 살다가 다시 한국, 서울에 돌아왔습니다. 혼자 살면서도 건강하고 맛있는 밥상을 차리기 위한 **간단 레시피**와 **자취 생활 팁**을 공유합니다. 서울 자취생의 일상 속 소소한 미식 기록입니다.",
       "views": 250,
-      "image": "https://cdn.ardentnews.co.kr/news/photo/202406/3468_16228_350.jpg",
       "user": {
         "_id": 3,
         "name": "철학자J",
-        "image": "https://cdn.eyesmag.com/content/uploads/posts/2025/01/22/shutterstock_2491179401-06f50759-c2c5-49cb-b10b-ba47ca6d2166.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
       },
+      "image": "https://cdn.ardentnews.co.kr/news/photo/202406/3468_16228_350.jpg",
+      "content": "해외에서 2년 반을 살다가 다시 한국, 서울에 돌아왔습니다. 혼자 살면서도 건강하고 맛있는 밥상을 차리기 위한 간단 레시피와 자취 생활 팁을 공유합니다. 서울 자취생의 일상 속 소소한 미식 기록입니다.",
       "replies": [
         {
           "content": "레시피 기대할게요! 자취생 필독서.",
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFjt7FbhATGgYWeQx5e8lIrlVMug2y1Cj6NQ&s"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -754,33 +755,33 @@
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFjt7FbhATGgYWeQx5e8lIrlVMug2y1Cj6NQ&s"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         }
       ]
     },
     {
       "type": "brunch",
-      "title": "이과 남편 vs 문과 아내: 평행선 위에서 사랑하기",
+      "title": "평행선 위에서 사랑하기: 이과 남편 vs 문과 아내 결혼 생활 실화",
       "extra": {
-        "subTitle": "극과 극이 만나 맞춰가는 결혼 생활 실화",
+        "subTitle": "논리와 감성의 충돌, 극과 극이 만나 맞춰가는 유쾌한 결혼 이야기",
         "align": "center"
       },
-      "content": "결혼은 극과 극이 만나 맞춰간다고 하지만, 저희 부부는 마치 모서리와 모서리가 만나는 듯합니다. **논리와 감성, 이과와 문과**의 극명한 차이를 가진 남편과 아내가 어떻게 서로를 이해하고 사랑하며 살아가고 있는지에 대한 **유쾌하고 때로는 감동적인 실화**를 들려드립니다.",
       "views": 150,
-      "image": "https://article-image.travel.navitime.jp/img/NTJwide0048-ko/top.jpg",
       "user": {
         "_id": 3,
         "name": "철학자J",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFjt7FbhATGgYWeQx5e8lIrlVMug2y1Cj6NQ&s"
+        "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
       },
+      "image": "https://article-image.travel.navitime.jp/img/NTJwide0048-ko/top.jpg",
+      "content": "결혼은 극과 극이 만나 맞춰간다고 하지만, 저희 부부는 마치 모서리와 모서리가 만나는 듯합니다. 논리와 감성, 이과와 문과의 극명한 차이를 가진 남편과 아내가 어떻게 서로를 이해하고 사랑하며 살아가고 있는지에 대한 유쾌하고 때로는 감동적인 실화를 들려드립니다.",
       "replies": [
         {
           "content": "공감하며 읽었습니다. 저희 부부도 그래요!",
           "user": {
             "_id": 2,
             "name": "마케터K",
-            "image": "https://plus.unsplash.com/premium_photo-1667030474693-6d0632f97029?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8JUVBJUIzJUEwJUVDJTk2JTkxJUVDJTlEJUI0fGVufDB8fDB8fHww"
+            "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
           }
         },
         {
@@ -788,7 +789,7 @@
           "user": {
             "_id": 3,
             "name": "철학자J",
-            "image": "https://plus.unsplash.com/premium_photo-1667030474693-6d0632f97029?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8JUVBJUIzJUEwJUVDJTk2JTkxJUVDJTlEJUI0fGVufDB8fDB8fHww"
+            "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
           }
         }
       ]
@@ -803,7 +804,7 @@
         "_id": 2,
         "name": "마케터K",
         "email": "w1@market.com",
-        "image": "https://i.pinimg.com/736x/55/45/b9/5545b9910a0159967b28e0f8f05c488b.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
       "memo": "AI,프롬프트 기술"
     },
@@ -815,7 +816,7 @@
         "_id": 2,
         "name": "마케터K",
         "email": "w1@market.com",
-        "image": "https://mblogthumb-phinf.pstatic.net/MjAyMTA4MThfMTIw/MDAxNjI5MjgzMDM5NDg1.O_rrcxtX6clgtLBR8JPcr5gPzBBmh6okJm9sBktqb08g.xpfqUglBal4andiCwsLsqR4tmm5RilK45W657S2fysUg.PNG.kachi6292/KakaoTalk_20210818_193301885.png?type=w800"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
       "memo": "포트폴리오,노션 팁"
     },
@@ -827,7 +828,7 @@
         "_id": 2,
         "name": "마케터K",
         "email": "w1@market.com",
-        "image": "https://cafe.celebstars.co.kr/wp-content/uploads/2024/03/%EA%B3%A0%EC%9C%A4%EC%A0%95.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
       "memo": "AI 컨설턴트"
     },
@@ -839,7 +840,7 @@
         "_id": 3,
         "name": "철학자J",
         "email": "w2@market.com",
-        "image": "https://image.xportsnews.com/contents/images/upload/article/2023/0201/mb_1675208777169060.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/706/706844.png"
       },
       "memo": "마케팅 인사이트"
     },
@@ -851,7 +852,7 @@
         "_id": 2,
         "name": "마케터K",
         "email": "w1@market.com",
-        "image": "https://news.nateimg.co.kr/orgImg/my/2020/09/01/202009010949178988_1.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
       "memo": "인문학/철학 관련"
     },
@@ -863,7 +864,7 @@
         "_id": 6,
         "name": "축제매니아",
         "email": "joy@daum.net",
-        "image": "https://mblogthumb-phinf.pstatic.net/MjAyMTAxMjFfOSAg/MDAxNjExMTk1NzgxOTk0.oG4FbT6KzweGXtzaHX-5Sg17j2hAUsZS8PA1oFbF-5cg.QdAwNxuj-EymFt118lCxoVwl9-qR_aDaA0H9GpfB3ecg.JPEG.csm3732/%EB%AA%A9%ED%8F%B4%EB%9D%BC3.jpg?type=w800"
+        "image": "https://cdn-icons-png.flaticon.com/512/3135/3135789.png"
       },
       "memo": "AI 전문가"
     },
@@ -875,7 +876,7 @@
         "_id": 6,
         "name": "축제매니아",
         "email": "joy@daum.net",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk3b5v9WLotps9Oc9Jbom7p1DSLpErxJrWXw&s"
+        "image": "https://cdn-icons-png.flaticon.com/512/3135/3135789.png"
       },
       "memo": "마케팅 글 참고"
     },
@@ -887,7 +888,7 @@
         "_id": 7,
         "name": "뮤직홀릭",
         "email": "sparkle@gmail.com",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIJcHgRJqy993P6lJ2eJEpnegfDEyxNKBIGA&s"
+        "image": "https://cdn-icons-png.flaticon.com/512/706/706796.png"
       },
       "memo": "광고/홍보 레퍼런스"
     },
@@ -899,7 +900,7 @@
         "_id": 2,
         "name": "마케터K",
         "email": "w1@market.com",
-        "image": "https://i.pinimg.com/originals/e4/a8/3c/e4a83c436d524484026816a2183f66b1.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
       "memo": "교육/멘토링"
     },
@@ -911,7 +912,7 @@
         "_id": 2,
         "name": "마케터K",
         "email": "w1@market.com",
-        "image": "https://i.pinimg.com/736x/4f/c5/cc/4fc5cc3cc09df380ca5aa368eed4907a.jpg"
+        "image": "https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
       },
       "memo": "재테크/투자"
     }

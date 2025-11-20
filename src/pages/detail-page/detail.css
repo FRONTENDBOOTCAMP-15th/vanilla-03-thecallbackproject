@@ -360,6 +360,12 @@
   cursor: pointer;
 }
 
+.author-actions > .subscribe-btn.subscribed {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
 .post-actions {
   height: 55px;
   display: flex;
