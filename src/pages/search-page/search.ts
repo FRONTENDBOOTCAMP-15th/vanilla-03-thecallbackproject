@@ -209,6 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
   async function performSearch(keyword: string, type: SearchType) {
     if (!keyword) return;
 
+    currentKeyword = keyword;
+    currentType = type;
     updateSearchTitle(keyword);
     saveRecentKeyword(keyword);
 
