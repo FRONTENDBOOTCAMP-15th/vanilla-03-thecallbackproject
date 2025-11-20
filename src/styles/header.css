@@ -101,3 +101,50 @@
   object-fit: cover; /* 이미지가 안 늘어나고 꽉 차게 */
   display: block;
 }
+
+/* ---------------- 드롭 다운 영역 ---------------------- */
+.profile-dropdown-wrapper {
+  position: relative;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 0;
+  width: 120px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.profile-dropdown li {
+  list-style: none;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+}
+
+.profile-dropdown li:hover {
+  background: #f5f5f5;
+}
+
+.profile-dropdown.show {
+  display: block;
+}
+
+.logout-btn {
+  cursor: pointer;
+  color: #8d4e8e;
+}
+
+/* 클릭 전-후, active, hover 모두 색 고정 */
+.profile-dropdown a:link,
+.profile-dropdown a:visited,
+.profile-dropdown a:hover,
+.profile-dropdown a:active {
+  color: #333;
+  text-decoration: none;
+}

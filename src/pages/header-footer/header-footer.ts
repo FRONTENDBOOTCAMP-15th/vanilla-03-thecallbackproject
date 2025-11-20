@@ -106,7 +106,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     .map(
       (post: any) =>
         `
-<li>
+<li data-id="${post.user?._id}">
 <img src="${post.user?.image}" alt="${post.user?.name ?? '작가'} 이미지" 
       // onerror="this.src='/src/assets/images/top-author-grid-1.svg'"
       />
@@ -117,6 +117,16 @@ window.addEventListener('DOMContentLoaded', async () => {
 `,
     )
     .join('');
+
+  // ㄴ 탑 구독 작가 클릭 시 상세 페이지 이동 기능 추가
+  document.querySelectorAll('.top-author-grid li').forEach(li => {
+    li.addEventListener('click', () => {
+      const userId = li.getAttribute('data-id');
+      if (!userId) return;
+
+      location.href = `/src/pages/writer-home-page/writer-home.html?id=${userId}`;
+    });
+  });
 });
 
 // swiper 영역
