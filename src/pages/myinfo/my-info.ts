@@ -59,20 +59,49 @@ window.addEventListener('DOMContentLoaded', async () => {
             <figure>
               <img
                 src="${bookmark.image}"
-                alt="${bookmark.user.name}"
+                alt="${bookmark.user?.name}"
               />
               <figcaption class="bookcover-box">
                 <h3>${bookmark.title}</h3>
-                <p>${bookmark.user.name}</p>
+                <p>${bookmark.user?.name}</p>
               </figcaption>
             </figure>
           </a>
           <h3 class="book-title">${bookmark.title}</h3>
-          <p class="book-author">${bookmark.user.name}</p>
+          <p class="book-author">${bookmark.user?.name}</p>
         </li>
       `;
     })
     .join('');
 
-  // 데이터 확인용
+  //내가 쓴 글
+  async function fetchMyPosts(userId: number) {
+    const res = await axiosInstance!.get('/posts', {
+      params: {
+        type: 'brunch',
+        limit: 9,
+      },
+    });
+    const allPosts = res.data.item;
+    return allPosts.filter((post: any) => post.user?._id === userId);
+  }
+  const myPosts = await fetchMyPosts(user._id);
+  const myPostsEl = document.querySelector(
+    '.my-brunch-posts',
+  ) as HTMLElement | null;
+  if (!myPostsEl) return;
+
+  myPostsEl.innerHTML = myPosts
+    .map((post: any) => {
+      return `
+    <li class="li-item">
+          <a href="/src/pages/detail-page/detail.html?id=${post._id}">
+            <h3>${post.title}</h3>
+            <p>${post.extra?.subTitle || ''}</p>
+            <time>${post.createdAt}</time>
+          </a>
+        </li>
+    `;
+    })
+    .join('');
 });
