@@ -2,7 +2,7 @@ import { uploadImage } from '../../apis/uploadAPIs';
 
 export async function createPostRequest(
   title: string,
-  subtitle: string,
+  subTitle: string,
   content: string,
   tagsEl: string,
   getAlign: () => string,
@@ -27,7 +27,7 @@ export async function createPostRequest(
     type: 'brunch',
     title,
     extra: {
-      subtitle,
+      subTitle,
       align: getAlign(),
     },
     content,
