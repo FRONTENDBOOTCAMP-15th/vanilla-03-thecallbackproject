@@ -16,6 +16,25 @@ import {
   getMySubscriptions,
 } from '../../apis/subscribeAPIs';
 
+// 구독 목록(북마크 목록) 아이템 타입
+type SubscriptionItem = {
+  _id: number; // bookmarkId
+  user?: {
+    _id: number;
+    name?: string;
+    image?: string;
+  };
+};
+
+// 북마크(post/bookmark) 타입
+type BookmarkItem = {
+  _id: number;
+  post?: {
+    _id: number;
+    image?: string;
+    title?: string;
+  };
+};
 window.addEventListener('DOMContentLoaded', () => {
   let postCreatedAt = '';
   let isSubscribed = false;
@@ -168,14 +187,20 @@ window.addEventListener('DOMContentLoaded', () => {
     let isBookmarked = false;
     let isBookmarking = false;
 
-    const myBookmarks = await getMyBookmarks();
-    const found = myBookmarks.find(
-      b => Number(b.post?._id) === Number(post._id),
-    );
+    // ★ 로그인 여부 체크 추가
+    const authHeader = getAuthorizationHeader();
+    const isLoggedIn = authHeader && authHeader.startsWith('Bearer ');
 
-    if (found) {
-      isBookmarked = true;
-      likeBtn.classList.add('on');
+    if (isLoggedIn) {
+      const myBookmarks = (await getMyBookmarks()) as BookmarkItem[];
+      const found = myBookmarks.find(
+        b => Number(b.post?._id) === Number(post._id),
+      );
+
+      if (found) {
+        isBookmarked = true;
+        likeBtn.classList.add('on');
+      }
     }
 
     likeBtn.addEventListener('click', async () => {
@@ -196,7 +221,7 @@ window.addEventListener('DOMContentLoaded', () => {
           likeBtn.classList.add('on');
           isBookmarked = true;
         } else {
-          const bookmarks = await getMyBookmarks();
+          const bookmarks = (await getMyBookmarks()) as BookmarkItem[];
           const target = bookmarks.find(
             b => Number(b.post?._id) === Number(post._id),
           );
@@ -233,11 +258,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const authHeader = getAuthorizationHeader();
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
       btn.disabled = true;
-      btn.textContent = '로그인 필요';
+      btn.textContent = '+ 구독';
       return;
     }
 
-    const subscriptions = await getMySubscriptions();
+    const subscriptions = (await getMySubscriptions()) as SubscriptionItem[];
     const found = subscriptions.find(
       item => Number(item.user?._id) === authorId,
     );
@@ -269,9 +294,10 @@ window.addEventListener('DOMContentLoaded', () => {
           // 구독 추가
           await addSubscribe(authorId);
 
-          const refreshed = await getMySubscriptions();
+          const refreshed = (await getMySubscriptions()) as SubscriptionItem[];
+
           const newItem = refreshed.find(
-            item => Number(item.user?._id) === authorId,
+            (item: SubscriptionItem) => Number(item.user?._id) === authorId,
           );
 
           isSubscribed = true;
@@ -365,6 +391,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.comment-btn span')!.textContent = String(
       post.replies?.length ?? 0,
     );
+    updateMetaTags(post);
   }
 
   function renderComments(replies: PostDetail['replies']) {
@@ -534,6 +561,26 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.subscriber-count')!.textContent = String(
       author.bookmarkedBy?.users ?? 0,
     );
+  }
+  // SEO 메타 정보 동적 업데이트
+  function updateMetaTags(post: PostDetail) {
+    const titleTag = document.querySelector('title');
+    const metaTitle = document.querySelector('meta[name="title"]');
+    const metaDesc = document.querySelector('meta[name="description"]');
+    const metaAuthor = document.querySelector('meta[name="author"]');
+
+    const contentText = post.content.replace(/<[^>]+>/g, '').trim(); // 태그 제거
+    const shortDescription =
+      contentText.length > 100 ? contentText.slice(0, 97) + '...' : contentText;
+
+    if (titleTag) titleTag.textContent = post.title;
+    if (metaTitle) metaTitle.setAttribute('content', post.title);
+    if (metaDesc)
+      metaDesc.setAttribute(
+        'content',
+        shortDescription || post.extra.subTitle || '',
+      );
+    if (metaAuthor) metaAuthor.setAttribute('content', post.user.name);
   }
 
   initDetailPage();
