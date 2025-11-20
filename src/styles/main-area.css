@@ -42,7 +42,6 @@ li {
 }
 
 main {
-  /* max-width: 35rem; 🔥 반응형으로 수정 */
   width: 100%;
   margin: 0 auto;
 }
@@ -549,15 +548,14 @@ main {
   background-color: #111;
   color: #f8f8f8;
   width: 100%;
-
-  display: flex; /* 🔥 추가 */
-  flex-direction: column; /* 🔥 추가 */
-  align-items: center; /* 🔥 가운데 정렬 핵심 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 .award-books > * {
-  max-width: 40rem; /* 🔥 전체 텍스트 폭 제한 */
   width: 100%;
-  text-align: left; /* 🔥 시안처럼 왼쪽 정렬 유지 */
+  text-align: left;
 }
 
 .award-books a {
@@ -630,4 +628,72 @@ main {
   right: 1.5rem;
   bottom: 1.5rem;
   z-index: 999;
+}
+
+/* footer 영역 */
+
+footer {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  background-color: #333;
+  padding: 3rem 0 8rem;
+}
+
+footer a {
+  margin-right: 10px;
+  color: #959595;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.footer-link-font a {
+  color: #f8f8f8;
+}
+
+footer a:last-child {
+  margin-right: 0;
+}
+
+.sns-logo {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links ul {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  padding: 2rem 0;
+  gap: 0.2rem;
+}
+
+.footer-links li {
+  white-space: nowrap;
+  margin: 0 0.5rem 0 0;
+  flex: 0 1 auto; /* 줄어들 수 있게 */
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.sns-logo img {
+  width: 23px;
+  height: 23px;
+}
+
+.footer-logo {
+  padding: 0 0 1rem 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-inner {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
