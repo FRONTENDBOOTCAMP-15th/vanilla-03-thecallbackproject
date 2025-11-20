@@ -141,13 +141,17 @@
   color: #8d4e8e;
 }
 
-/* 클릭 전-후, active, hover 모두 색 고정 */
+/* active, hover 모두 색 고정 */
 .profile-dropdown a:link,
-.profile-dropdown a:visited,
 .profile-dropdown a:hover,
 .profile-dropdown a:active {
   color: #333;
   text-decoration: none;
+}
+
+/* 클릭 전-후 컬러 변경 */
+.profile-dropdown a:visited {
+  color: #d2d1d1;
 }
 
 /* ------ 오른쪽 버튼 3개 높이 통일 ------ */
