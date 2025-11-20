@@ -9,14 +9,16 @@
       href="./../../../fonts/pretendard/pretendardvariable.css"
     />
     <link rel="stylesheet" href="./detail.css" />
+    <link rel="stylesheet" href="./../../styles/header.css" />
     <script type="module" src="./detail.ts"></script>
+
     <title>글 제목(동적 처리)</title>
     <meta name="title" />
     <meta name="description" />
     <meta name="author" />
   </head>
   <body>
-    <!-- header -->
+    <brunch-header></brunch-header>
     <main>
       <h1 class="sr-only">글 상세 보기</h1>
       <article class="post">
@@ -102,6 +104,7 @@
           >3</span
         >
       </button>
+      <script type="module" src="/src/components/Header.ts"></script>
     </footer>
   </body>
 </html>
