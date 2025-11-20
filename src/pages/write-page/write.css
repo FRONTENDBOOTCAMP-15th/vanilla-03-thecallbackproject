@@ -121,6 +121,7 @@ main textarea:placeholder-shown {
   border-top: solid 1px #eeeeee;
   box-sizing: border-box;
   gap: 10px;
+  position: relative;
 }
 
 .image-preview.on {
@@ -137,6 +138,24 @@ main textarea:placeholder-shown {
   padding-block-end: 10px;
   font-weight: 700;
 }
+
+.remove-image-btn {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .write-tools {
   height: 84px;
   box-sizing: border-box;
@@ -157,6 +176,16 @@ main textarea:placeholder-shown {
   position: absolute;
   z-index: -1;
 }
+.file-info {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.file-info.error {
+  color: #d9534f;
+}
+
 .write-tools button {
   all: unset;
   width: 40px;
