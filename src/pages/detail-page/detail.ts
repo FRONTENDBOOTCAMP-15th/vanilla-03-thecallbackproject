@@ -21,6 +21,7 @@ import { setupPostDeleteButton } from './modules/postDeleteHandler';
 import { saveRecentPost } from './modules/recentPosts';
 
 import { getAuthorizationHeader } from '../../utils/axios';
+import defaultHeaderImage from '/images/thumnail-image.jpg';
 
 window.addEventListener('DOMContentLoaded', initDetailPage);
 
@@ -104,13 +105,14 @@ function disableCommentUI() {
 function renderPostDetail(post: PostDetail) {
   const header = document.querySelector('.post-header') as HTMLElement;
 
-  const imgUrl = post?.image?.trim?.() || null;
+  const imgUrl = post?.image?.trim?.();
 
   if (imgUrl) {
-    header.style.background = `url("${imgUrl}") center/cover no-repeat`;
+    header.style.setProperty('--header-image', `url(${imgUrl})`);
   } else {
-    header.style.background = `url("/images/thumnail-image.jpg") center/cover no-repeat`;
+    header.style.setProperty('--header-image', `url(${defaultHeaderImage})`);
   }
+
   document.querySelector('.post-title')!.textContent = post.title;
   document.querySelector('.post-author .author-name')!.textContent =
     post.user.name;

@@ -3,7 +3,6 @@ import axios from 'axios';
 const API_SERVER = 'https://fesp-api.koyeb.app/market';
 
 // axiosInstance를 외부에서도 접근할 수 있도록 선언
-export let axiosInstance: ReturnType<typeof getAxios> | null = null;
 
 export function getAxios() {
   const instance = axios.create({
