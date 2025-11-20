@@ -82,7 +82,11 @@
 
       <!-- 요즘 뜨는 브런치 영역 -->
       <section class="brunch-list">
-        <h2 class="brunch-title">요즘 뜨는 브런치</h2>
+        <div class="brunch-title-group">
+          <p class="today-pick">Today's Pick</p>
+          <h2 class="brunch-title">요즘 뜨는 브런치</h2>
+        </div>
+
         <ol>
           <li class="brunch-list-books">
             <div class="brunch-list-book">
@@ -300,12 +304,19 @@
           />
         </div>
 
-        <blockquote>
-          <h5 class="longing-bottomgap">작가가 사랑한 문장</h5>
-          <img src="./src/assets/images/quote-icon.svg" />
-          <p class="longing-uppergap">
-            "여행의 끝에서 일상으로 돌아오는 것은 몸의 기억을 되살리는 일이다."
-          </p>
+        <blockquote class="longing-quote-box">
+          <h5 class="longing-bottomgap">작가가 사랑한 문장 ——</h5>
+
+          <div class="quote-wrapper">
+            <img
+              class="quote-icon"
+              src="./src/assets/images/quote-icon.svg"
+              alt=""
+            />
+            <p class="longing-uppergap">
+              여행의 끝에서 일상으로 돌아오는 것은 몸의 기억을 되살리는 일이다.
+            </p>
+          </div>
         </blockquote>
       </section>
 
