@@ -1,5 +1,5 @@
 import { axiosInstance, getAxios } from '../../utils/axios';
-import type { FollowAuthor } from '../../types/my-info-type';
+import type { FollowAuthor, BookmarkPost } from '../../types/my-info-type';
 
 window.addEventListener('DOMContentLoaded', async () => {
   const UserItem = localStorage.getItem('item');
@@ -13,9 +13,6 @@ window.addEventListener('DOMContentLoaded', async () => {
   if (!user) {
     window.location.href = '/src/pages/login-page/login.html';
   }
-  // 관심 글
-  // const response = await axiosInstance?.get('/bookmarks/post');
-  // const list = response?.data.item;
 
   // 관심 작가
   async function fetchFollowedAuthors(): Promise<FollowAuthor[]> {
@@ -43,7 +40,39 @@ window.addEventListener('DOMContentLoaded', async () => {
     .join('');
   // 최근 본 글
 
+  // 관심 글
+  async function fetchBookmarkPosts(): Promise<BookmarkPost[]> {
+    if (!axiosInstance) throw new Error('Axios not initialized');
+    const res = await axiosInstance!.get('/bookmarks/post');
+    return res.data.item as BookmarkPost[];
+  }
+  const bookmarkList = await fetchBookmarkPosts();
+  const bookmarkEl = document.querySelector('.post-list');
+  if (!bookmarkList || !bookmarkEl) return;
+
+  bookmarkEl.innerHTML = bookmarkList
+    .map(value => {
+      const bookmark = value.post;
+      return `
+      <li>
+          <a href="/src/pages/detail-page/detail.html?id=${bookmark._id}">
+            <figure>
+              <img
+                src="${bookmark.image}"
+                alt="${bookmark.user.name}"
+              />
+              <figcaption class="bookcover-box">
+                <h3>${bookmark.title}</h3>
+                <p>${bookmark.user.name}</p>
+              </figcaption>
+            </figure>
+          </a>
+          <h3 class="book-title">${bookmark.title}</h3>
+          <p class="book-author">${bookmark.user.name}</p>
+        </li>
+      `;
+    })
+    .join('');
+
   // 데이터 확인용
-  console.log('토큰데이터1 : ', user);
-  console.log('토큰데이터2 : ', UserItem);
 });
