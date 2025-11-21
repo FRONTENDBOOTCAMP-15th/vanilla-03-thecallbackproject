@@ -1,4 +1,4 @@
-import { axiosInstance, getAxios } from '../../utils/axios';
+import { getAxios } from '../../utils/axios';
 import type { FollowAuthor, BookmarkPost } from '../../types/my-info-type';
 
 window.addEventListener('DOMContentLoaded', async () => {
