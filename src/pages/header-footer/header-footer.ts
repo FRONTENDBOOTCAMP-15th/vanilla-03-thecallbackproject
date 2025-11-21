@@ -73,7 +73,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       <div class="swiper-slide">
         <div class="slide-text">
           <h3>${post.title}</h3>
-          <h4>by ${post.user?.name || '익명'}</h4>
+          <h4><span class="by">by</span> ${post.user?.name || '익명'}</h4>
         </div>
         <img src="${post.image}" alt="${post.title}">
       </div>
@@ -94,7 +94,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         `<li class="brunch-list-books" data-id="${post._id}">
       <div class="brunch-list-book">
 <h3>${post.title}</h3>
-<h4>by ${post.user?.name || '익명'}</h4>
+<h4><span class="by-small">by</span> ${post.user?.name || '익명'}</h4>
 <p>${post.content || ''}</p>
 </div>
       <img src="${post.image}" alt="${post.title} 이미지" 
