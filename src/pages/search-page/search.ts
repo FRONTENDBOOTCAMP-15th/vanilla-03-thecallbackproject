@@ -5,12 +5,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const api = getAxios();
 
+  // 데이터
+  const POSTS = [
+    {
+      id: 1,
+      title: '딸의 정부청사 출장에 부모님이 동행하는 이유',
+      content: '법이 명시로, 감사합니다! 직장인딸의 출장길이었으므로...',
+      tags: ['출장', '가족'],
+      author: '은선',
+      thumbnail: 'image1.png',
+    },
+    {
+      id: 2,
+      title: '덴마크의 꿀 하트 쿠키, Honninghjerter',
+      content: '안녕하세요 쿠키 좋아하는 윈즈버드입니다...',
+      tags: ['쿠키', '디저트', '꿀'],
+      author: 'Windsbird',
+      thumbnail: 'image2.png',
+    },
+    {
+      id: 3,
+      title: '꿀 빠는 풍경',
+      content: '책을 보다 기다리던 것도 잊다...',
+      tags: ['꿀', '일상'],
+      author: '북쪽루씨',
+      thumbnail: 'image3.png',
+    },
+    {
+      id: 4,
+      title: '373) 사진만 봐도 꿀팁 윤기가 좌르르, 구움과자',
+      content: '홍대에서 여행지처럼 시장, 크로플과 휘낭시에...',
+      tags: ['디저트', '꿀팁', '구움과자'],
+      author: '빵덕 설리언케익',
+      thumbnail: 'image4.png',
+    },
+  ];
+
+  const AUTHORS = [
+    {
+      id: 1,
+      name: '꿀아빠',
+      desc: '두 아이 아빠 기록남기기 좋아하는 아빠입니다.',
+      tags: ['여행'],
+      thumbnail: 'Link1.png',
+    },
+    {
+      id: 2,
+      name: '꿀별',
+      desc: '글 쓰고 디자인 하는 사람. 마음이 담긴 일을 해요.',
+      tags: ['콘텐츠', '만화', '여행'],
+      thumbnail: 'Link2.png',
+    },
+    {
+      id: 3,
+      name: '개발자 꿀',
+      desc: '느리게 흘러가는 소프트플로에서 사는 개발자입니다! 🐝',
+      tags: ['IT', '개발자'],
+      thumbnail: 'Link3.png',
+    },
+    {
+      id: 4,
+      name: '꿀갱',
+      desc: '제 일상에 대한 꿀입니다.',
+      tags: ['여행', 'CEO'],
+      thumbnail: 'Link4.png',
+    },
+  ];
+
   // DOM 요소
+
   const screens = document.querySelectorAll<HTMLDivElement>('.screen');
   const searchInput = document.querySelector<HTMLInputElement>('.search-input');
 
   const postList = document.querySelector<HTMLUListElement>('.post-list')!;
-  const postCount = document.querySelector<HTMLParagraphElement>('.post-count');
+  const postCount =
+    document.querySelector<HTMLParagraphElement>('.post-count')!;
 
   const authorList = document.querySelector<HTMLUListElement>('.author-list')!;
 
@@ -23,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll<HTMLButtonElement>('.tab');
   const sortButtons = document.querySelectorAll<HTMLButtonElement>('.sort');
 
-  //화면 전환
   function showScreen(index: number) {
     screens.forEach((screen, i) => {
       screen.style.display = i === index ? 'block' : 'none';
@@ -36,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .forEach(el => (el.textContent = keyword));
   }
 
-  //최근 검색어 관리
+  // 최근 검색어
 
   function saveRecentKeyword(keyword: string) {
     let list = JSON.parse(localStorage.getItem('recentKeywords') || '[]');
@@ -80,197 +148,139 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  //하드코딩된 글 결과
-
-  function renderHardcodedPosts() {
-    postList.innerHTML = `
+  function renderPosts(results: any[]) {
+    postList.innerHTML = results
+      .map(
+        post => `
       <li class="post-item">
         <a href="#">
           <div class="text-content">
-            <h3 class="title">딸의 정부청사 출장에 부모님이 동행하는 이유</h3>
-            <p class="desc">법이 명시로, 감사합니다! 직장인딸의 출장길이었으므로....</p>
-            <p class="meta">Apr 19. 2024 · <span class="author">by 은선</span></p>
+            <h3 class="title">${post.title}</h3>
+            <p class="desc">${post.content.slice(0, 50)}...</p>
+            <p class="meta">by ${post.author}</p>
           </div>
-          <div class="thumbnail"><img src="./../../assets/images/image1.png"></div>
+          <div class="thumbnail">
+            <img src="./../../assets/images/${post.thumbnail}">
+          </div>
         </a>
       </li>
+    `,
+      )
+      .join('');
 
-      <li class="post-item">
-        <a href="#">
-          <div class="text-content">
-            <h3 class="title">덴마크의 ‘꿀 하트’ 쿠키, Honninghjerter</h3>
-            <p class="desc">안녕하세요 쿠키 좋아하는 윈즈버드입니다. 데니쉬 여왕의 마음쿠키...</p>
-            <p class="meta">Nov 16. 2023 · <span class="author">by Windsbird</span></p>
-          </div>
-          <div class="thumbnail"><img src="./../../assets/images/image2.png"></div>
-        </a>
-      </li>
-
-      <li class="post-item">
-        <a href="#">
-          <div class="text-content">
-            <h3 class="title">꿀 빠는 풍경</h3>
-            <p class="desc">책을 보다 기다리던 것도 잊다. 책을 끌어안는 그 순간의 행복...</p>
-            <p class="meta">Jan 25. 2024 · <span class="author">by 북쪽루씨</span></p>
-          </div>
-          <div class="thumbnail"><img src="./../../assets/images/image3.png"></div>
-        </a>
-      </li>
-
-      <li class="post-item">
-        <a href="#">
-          <div class="text-content">
-            <h3 class="title">373) 사진만 봐도 꿀팁 윤기가 좌르르, 구움과자</h3>
-            <p class="desc">홍대에서 여행지 시장, 크로플과 휘낭시에 향연...</p>
-            <p class="meta">Mar 28. 2023 · <span class="author">by 빵덕 설리언케익</span></p>
-          </div>
-          <div class="thumbnail"><img src="./../../assets/images/image4.png"></div>
-        </a>
-      </li>
-    `;
+    postCount.textContent = `글 검색 결과 ${results.length}건`;
   }
 
-  //하드코딩된 작가 결과
-
-  function renderHardcodedAuthors() {
-    authorList.innerHTML = `
+  function renderAuthors(results: any[]) {
+    authorList.innerHTML = results
+      .map(
+        a => `
       <li class="author-item">
         <a href="#">
           <div class="profile-thumb">
-            <img src="./../../assets/images/Link1.png" />
+            <img src="./../../assets/images/${a.thumbnail}" />
           </div>
           <div class="author-info">
-            <h3 class="name">꿀아빠</h3>
-            <p class="desc">두 아이 아빠 기록남기기 좋아하는 아빠입니다.</p>
+            <h3 class="name">${a.name}</h3>
+            <p class="desc">${a.desc}</p>
             <ul class="tags">
-              <li><span class="tag">여행</span></li>
+              ${a.tags
+                .map((t: string) => `<li><span class="tag">${t}</span></li>`)
+                .join('')}
             </ul>
           </div>
         </a>
       </li>
-
-      <li class="author-item">
-        <a href="#">
-          <div class="profile-thumb">
-            <img src="./../../assets/images/Link2.png" />
-          </div>
-          <div class="author-info">
-            <h3 class="name">꿀별</h3>
-            <p class="desc">글 쓰고 디자인 하는 사람. 마음이 담긴 일을 해요.</p>
-            <ul class="tags">
-              <li><span class="tag">콘텐츠</span></li>
-              <li><span class="tag">만화</span></li>
-              <li><span class="tag">여행</span></li>
-              <li><span class="tag">크리에이터</span></li>
-            </ul>
-          </div>
-        </a>
-      </li>
-
-      <li class="author-item">
-        <a href="#">
-          <div class="profile-thumb">
-            <img src="./../../assets/images/Link3.png" />
-          </div>
-          <div class="author-info">
-            <h3 class="name">개발자 꿀</h3>
-            <p class="desc">느리게 흘러가는 소프트플로에서 사는 개발자입니다! 🐝</p>
-            <ul class="tags">
-              <li><span class="tag">해외생활</span></li>
-              <li><span class="tag">IT</span></li>
-              <li><span class="tag">개발자</span></li>
-            </ul>
-          </div>
-        </a>
-      </li>
-
-      <li class="author-item">
-        <a href="#">
-          <div class="profile-thumb">
-            <img src="./../../assets/images/Link4.png" />
-          </div>
-          <div class="author-info">
-            <h3 class="name">꿀갱</h3>
-            <p class="desc">제 일상에 대한 꿀입니다.</p>
-            <ul class="tags">
-              <li><span class="tag">여행</span></li>
-              <li><span class="tag">CEO</span></li>
-            </ul>
-          </div>
-        </a>
-      </li>
-    `;
+    `,
+      )
+      .join('');
   }
 
-  // API 검색 실행
+  // 검색 실행
+
   async function performSearch(keyword: string, type: SearchType) {
     if (!keyword) return;
 
     updateSearchTitle(keyword);
     saveRecentKeyword(keyword);
 
-    try {
-      const res = await api.get('/posts', {
-        params: { keyword },
-      });
+    let results: any[] = [];
 
-      const items = res.data?.item || [];
+    // 글 검색
 
-      /* 🔥 다른 키워드는 "검색결과 없음" + 글 탭 active 고정 */
-      if (keyword !== '꿀') {
-        // 검색결과 없음 화면으로 이동
+    if (type === 'post') {
+      const localResults = POSTS.filter(
+        post =>
+          post.title.includes(keyword) ||
+          post.content.includes(keyword) ||
+          post.tags.some((t: string) => t.includes(keyword)),
+      );
+
+      let apiResults: any[] = [];
+      try {
+        const res = await api.get('/posts', { params: { keyword } });
+        apiResults = res.data?.item || [];
+      } catch {}
+
+      results = [...localResults, ...apiResults];
+
+      if (!results.length) {
         showScreen(3);
 
         const emptyTabs =
           screens[3].querySelectorAll<HTMLButtonElement>('.tab');
-
-        emptyTabs.forEach(t => t.classList.remove('active'));
-
-        if (type === 'post') {
-          emptyTabs[0].classList.add('active'); // 글
-        } else {
-          emptyTabs[1].classList.add('active'); // 작가
-        }
+        emptyTabs.forEach((t: HTMLButtonElement) =>
+          t.classList.remove('active'),
+        );
+        emptyTabs[0].classList.add('active');
 
         return;
       }
 
-      if (!items.length) {
+      renderPosts(results);
+
+      const tabs = screens[1].querySelectorAll<HTMLButtonElement>('.tab');
+      tabs.forEach((t: HTMLButtonElement) => t.classList.remove('active'));
+      tabs[0].classList.add('active');
+
+      showScreen(1);
+      return;
+    } else {
+      // 작가 검색 = AUTHORS ONLY
+
+      results = AUTHORS.filter(
+        a =>
+          a.name.includes(keyword) ||
+          a.desc.includes(keyword) ||
+          a.tags.some((t: string) => t.includes(keyword)),
+      );
+
+      if (!results.length) {
         showScreen(3);
+
+        const emptyTabs =
+          screens[3].querySelectorAll<HTMLButtonElement>('.tab');
+        emptyTabs.forEach((t: HTMLButtonElement) =>
+          t.classList.remove('active'),
+        );
+        emptyTabs[1].classList.add('active');
+
         return;
       }
 
-      /* 글 검색 */
-      if (type === 'post') {
-        renderHardcodedPosts();
-        postCount!.textContent = `글 검색 결과 ${items.length}건`;
+      renderAuthors(results);
 
-        const tabs = screens[1].querySelectorAll<HTMLButtonElement>('.tab');
-        tabs.forEach(t => t.classList.remove('active'));
-        tabs[0].classList.add('active');
+      const tabs = screens[2].querySelectorAll<HTMLButtonElement>('.tab');
+      tabs.forEach((t: HTMLButtonElement) => t.classList.remove('active'));
+      tabs[1].classList.add('active');
 
-        showScreen(1);
-        return;
-      }
-
-      /* 작가 검색 */
-      if (type === 'author') {
-        renderHardcodedAuthors();
-
-        const tabs = screens[2].querySelectorAll<HTMLButtonElement>('.tab');
-        tabs.forEach(t => t.classList.remove('active'));
-        tabs[1].classList.add('active');
-
-        showScreen(2);
-        return;
-      }
-    } catch (err) {
-      console.error(err);
-      showScreen(3);
+      showScreen(2);
+      return;
     }
   }
 
-  // 이벤트
+  //이벤트
+
   searchInput?.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
       performSearch(searchInput.value.trim(), 'post');
@@ -289,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!currentScreen) return;
 
       const tabs = currentScreen.querySelectorAll<HTMLButtonElement>('.tab');
-      tabs.forEach(t => t.classList.remove('active'));
+      tabs.forEach((t: HTMLButtonElement) => t.classList.remove('active'));
       tab.classList.add('active');
 
       const keyword = searchInput!.value.trim();
