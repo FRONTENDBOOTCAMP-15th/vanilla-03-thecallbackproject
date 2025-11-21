@@ -88,6 +88,7 @@ body {
       border: 1px solid #00c6be;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
     }
   }
 }

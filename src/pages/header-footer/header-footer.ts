@@ -32,7 +32,24 @@ async function fetchBrunchPosts() {
   return res.data.item;
 }
 
-// 3. '탑 구독 작가' 영역 데이터
+// 3. '오늘의 작가' 영역 데이터
+async function fetchTodayAuthor() {
+  // 전체 브런치 글 목록
+  const posts = await fetchBrunchPosts();
+
+  // 1) 랜덤 post 오늘의 작가 선정
+  const randomPost = posts[Math.floor(Math.random() * posts.length)];
+  const author = randomPost.user;
+
+  // 2) 작가가 쓴 글 2개 고르기
+  const authorPosts = posts
+    .filter((p: any) => p.user?.email === author.email)
+    .slice(0, 2);
+
+  return { author, authorPosts };
+}
+
+// 4. '탑 구독 작가' 영역 데이터
 async function fetchtopAuthorLists() {
   const res = await api.get('/posts', {
     params: {
@@ -56,7 +73,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       <div class="swiper-slide">
         <div class="slide-text">
           <h3>${post.title}</h3>
-          <h4>by ${post.user?.name || '익명'}</h4>
+          <h4><span class="by">by</span> ${post.user?.name || '익명'}</h4>
         </div>
         <img src="${post.image}" alt="${post.title}">
       </div>
@@ -77,7 +94,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         `<li class="brunch-list-books" data-id="${post._id}">
       <div class="brunch-list-book">
 <h3>${post.title}</h3>
-<h4>by ${post.user?.name || '익명'}</h4>
+<h4><span class="by-small">by</span> ${post.user?.name || '익명'}</h4>
 <p>${post.content || ''}</p>
 </div>
       <img src="${post.image}" alt="${post.title} 이미지" 
@@ -96,7 +113,56 @@ window.addEventListener('DOMContentLoaded', async () => {
     });
   });
 
-  // 3. 탑 구독 작가
+  // 3. 오늘의 작가
+  const todayAuthorData = await fetchTodayAuthor();
+  const { author, authorPosts } = todayAuthorData;
+
+  const todayAuthorRoot = document.querySelector('.today-author');
+  const recentBooksRoot = document.querySelector('.recent-books');
+
+  todayAuthorRoot!.innerHTML = `
+  <div class="today-author-top">
+  <div class="today-author-info">
+  <h3>오늘의 작가</h3>
+  <h4>${author.name}</h4>
+  <p class="today-author-job">${author.extra?.job ?? '비공개'}</p>
+  </div>
+
+      <img 
+      class="today-author-img"
+      src="${author.image}"
+      alt="${author.name} 사진"
+      onerror="this.src='/src/assets/images/today-author-img.svg'"
+    />
+  </div>
+
+  <p class="today-author-desc">
+    ${author.extra?.biography ?? ''}
+  </p>
+  `;
+
+  // 2) 아래 “최근 글 2개”
+  recentBooksRoot!.innerHTML = authorPosts
+    .map(
+      (post: any) => `
+      <li class="recent-book">
+        <div class="recent-book-flex">
+          <img 
+            src="${post.image}" 
+            alt="${post.title} 표지" 
+            onerror="this.src='/src/assets/images/recent-book-cover-1.svg'"
+          />
+          <div class="recent-book-info">
+            <h4>${post.title}</h4>
+            <p>${post.content}</p>
+          </div>
+        </div>
+      </li>
+    `,
+    )
+    .join('');
+
+  // 4. 탑 구독 작가
   const topAuthorLists = await fetchtopAuthorLists();
   const topAuthorEl = document.querySelector(
     '.top-author-list .top-author-grid ul',

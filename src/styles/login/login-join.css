@@ -3,20 +3,20 @@
 
 body {
   .login-join {
-    .head-container{
+    .head-container {
       margin-top: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      
-    h1 {
-      margin-top: 14px;
-      text-align: center;
-      font-weight: 600;
-      line-height: 22px;
-      margin-bottom: 44px;
-    }
+
+      h1 {
+        margin-top: 14px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 22px;
+        margin-bottom: 44px;
+      }
     }
     fieldset {
       display: flex;
@@ -88,7 +88,7 @@ body {
         height: 17.5px;
         width: 220px;
       }
-      #passwordCheck {
+      #password-Check {
         display: flex;
         border: none;
         flex-direction: column;
@@ -108,5 +108,17 @@ body {
     color: #fff;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn-join.active {
+    width: 320px;
+    display: block;
+    margin: 0 auto;
+    padding: 13.75px 0 13.25px 0;
+    background-color: #00c6be;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
 }

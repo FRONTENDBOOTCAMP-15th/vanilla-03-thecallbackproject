@@ -71,6 +71,7 @@
               type="text"
               name="tags"
               placeholder="태그를 입력해주세요. (예시: #태그1 #태그2 / 최대 5개)"
+              autocomplete="off"
             />
           </div>
         </fieldset>
@@ -81,10 +82,12 @@
           class="preview-image"
           alt="첨부 이미지 미리보기"
         />
+        <button type="button" class="remove-image-btn">✕</button>
         <p>
           IMAGE PREVIEW
           <span class="sr-only">첨부한 이미지의 미리보기 영역입니다.</span>
         </p>
+        <p class="file-info"></p>
       </div>
     </main>
     <div class="write-tools" role="toolbar">

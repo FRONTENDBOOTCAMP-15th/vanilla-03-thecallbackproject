@@ -138,16 +138,28 @@
 
 .logout-btn {
   cursor: pointer;
-  color: #8d4e8e;
+  color: #333;
 }
 
-/* 클릭 전-후, active, hover 모두 색 고정 */
-.profile-dropdown a:link,
-.profile-dropdown a:visited,
-.profile-dropdown a:hover,
-.profile-dropdown a:active {
+/* 드롭다운 링크 컬러 */
+
+.profile-dropdown a {
   color: #333;
   text-decoration: none;
+}
+.profile-dropdown a:link,
+.profile-dropdown a:hover,
+.profile-dropdown a:active {
+  color: #d2d1d1;
+}
+
+.logout-btn:visited {
+  color: #333;
+}
+
+.logout-btn:hover,
+.logout-btn:active {
+  color: #d2d1d1;
 }
 
 /* ------ 오른쪽 버튼 3개 높이 통일 ------ */

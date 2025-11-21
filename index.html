@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./fonts/pretendard/pretendardvariable.css" />
     <link rel="stylesheet" href="./src/styles/main-area.css" />
     <link rel="stylesheet" href="./src/styles/header.css" />
-
     <link rel="stylesheet" href="./src/pages/tab-bar/nav-tab.css" />
     <script type="module" src="./src/pages/tab-bar/nav-tab.ts"></script>
     <title>vanilla-03-thecallbackproject</title>
@@ -82,10 +81,13 @@
 
       <!-- 요즘 뜨는 브런치 영역 -->
       <section class="brunch-list">
-        <h2 class="brunch-title">요즘 뜨는 브런치</h2>
+        <div class="brunch-title-group">
+          <p class="today-pick">Today's Pick</p>
+          <h2 class="brunch-title">요즘 뜨는 브런치</h2>
+        </div>
+
         <ol>
           <li class="brunch-list-books">
-            <img src="./src/assets/images/brunch-list-num1.svg" />
             <div class="brunch-list-book">
               <h3>제목</h3>
               <h4>by 작가명</h4>
@@ -228,41 +230,6 @@
         </ol>
       </section>
 
-      <!-- 브런치북 원작 베스트셀러 -->
-      <section class="best-seller">
-        <h3 class="best-seller-nomi">브런치북 원작 베스트셀러</h3>
-
-        <div class="best-seller-book">
-          <div class="best-seller-book-info">
-            <h4>여자야구입문기</h4>
-            <p class="best-seller-author">김입문</p>
-          </div>
-          <img
-            src="./src/assets/images/best-seller.svg"
-            alt="여자야구입문기 책 표지"
-          />
-        </div>
-
-        <blockquote>
-          <h5 class="blockquote-bottomgap">작가가 사랑한 문장</h5>
-          <img src="./src/assets/images/quote-icon.svg" />
-          <p class="blockquote-uppergap">
-            "최선을 다해서 응원해주는 이가 내 뒤에 있다. 그들을 뒤에 두고
-            있으면, 나는 앞을 볼 수 밖에 없다."
-          </p>
-        </blockquote>
-
-        <p class="best-seller-link">
-          <a href="#" class="best-seller-button">
-            원작 브런치북 보기
-            <!-- <img
-              src="./src/assets/images/arrow-icon.svg"
-              alt="오른쪽 화살표 아이콘"
-            /> -->
-          </a>
-        </p>
-      </section>
-
       <!-- 오늘의 작가 -->
       <section class="today-author-list">
         <article>
@@ -336,12 +303,19 @@
           />
         </div>
 
-        <blockquote>
-          <h5 class="longing-bottomgap">작가가 사랑한 문장</h5>
-          <img src="./src/assets/images/quote-icon.svg" />
-          <p class="longing-uppergap">
-            "여행의 끝에서 일상으로 돌아오는 것은 몸의 기억을 되살리는 일이다."
-          </p>
+        <blockquote class="longing-quote-box">
+          <h5 class="longing-bottomgap">작가가 사랑한 문장 ——</h5>
+
+          <div class="quote-wrapper">
+            <img
+              class="quote-icon"
+              src="./src/assets/images/quote-icon.svg"
+              alt=""
+            />
+            <p class="longing-uppergap">
+              여행의 끝에서 일상으로 돌아오는 것은 몸의 기억을 되살리는 일이다.
+            </p>
+          </div>
         </blockquote>
       </section>
 
@@ -438,10 +412,59 @@
           </a>
         </p>
       </section>
-      <a href="#" class="scroll-top"
+      <a href="https://thecallbackproject.netlify.app" class="scroll-top"
         ><img src="./src/assets/images/up-icon.svg" alt="맨 위로 이동"
       /></a>
     </main>
+    <footer>
+      <div class="footer-inner">
+        <!-- 카카오톡, 페이스북, X 클릭 링크 -->
+        <div class="sns-logo">
+          <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk"
+            ><img src="./src/assets/images/sns-kakao-icon.svg" alt="카카오톡"
+          /></a>
+          <a href="https://www.facebook.com/"
+            ><img src="./src/assets/images/sns-fb-icon.svg" alt="페이스북"
+          /></a>
+          <a href="https://x.com/"
+            ><img src="./src/assets/images/sns-x-icon.svg" alt="X"
+          /></a>
+        </div>
+        <!-- 이용약관 li 링크 모음 -->
+        <div class="footer-links">
+          <ul>
+            <li>
+              <a href="https://thecallbackproject.netlify.app/">이용약관</a>
+            </li>
+            <li>
+              <a href="https://thecallbackproject.netlify.app/"
+                >이전 이용약관</a
+              >
+            </li>
+            <li>
+              <a href="https://thecallbackproject.netlify.app/"
+                >카카오 유료서비스 이용약관</a
+              >
+            </li>
+            <li class="footer-link-font">
+              <a href="https://thecallbackproject.netlify.app/"
+                >카카오 개인정보 처리방침</a
+              >
+            </li>
+            <li>
+              <a href="https://thecallbackproject.netlify.app/"
+                >청소년 보호정책</a
+              >
+            </li>
+            <li>
+              <a href="https://thecallbackproject.netlify.app/">운영정책</a>
+            </li>
+          </ul>
+        </div>
+        <!-- footer 로고 -->
+        <img src="./src/assets/images/logo-footer.svg" class="footer-logo" />
+      </div>
+    </footer>
     <script type="module" src="/src/components/Header.ts"></script>
     <script
       type="module"
