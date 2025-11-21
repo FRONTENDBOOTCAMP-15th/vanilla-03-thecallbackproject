@@ -2,8 +2,6 @@ import axios from 'axios';
 
 const API_SERVER = 'https://fesp-api.koyeb.app/market';
 
-// axiosInstance를 외부에서도 접근할 수 있도록 선언
-
 export function getAxios() {
   const instance = axios.create({
     baseURL: API_SERVER, // 기본 URL
@@ -15,9 +13,6 @@ export function getAxios() {
       Authorization: `Bearer`, // 초기에는 비워둠 (인터셉터에서 채워짐)
     },
   });
-
-  // 생성된 instance 저장
-  axiosInstance = instance;
 
   // 요청 인터셉터: 토큰 자동 추가
   instance.interceptors.request.use(

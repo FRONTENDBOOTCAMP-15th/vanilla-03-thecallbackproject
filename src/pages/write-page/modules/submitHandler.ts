@@ -1,5 +1,5 @@
 import { addPost } from '../../../apis/postAPIs';
-import { createPostRequest } from '../createPostRequest';
+import { createPostRequest } from './createPostRequest';
 import {
   validateForm,
   createToastMessage,
