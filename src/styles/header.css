@@ -50,6 +50,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: auto;
+  height: auto;
 }
 
 .header a {
@@ -139,6 +141,16 @@
 .logout-btn {
   cursor: pointer;
   color: #333;
+}
+
+.profile-dropdown li:nth-child(1) {
+  /* 내 서랍 */
+  padding-left: 1.1rem;
+}
+
+.profile-dropdown li:nth-child(2) {
+  /* 글쓰기 */
+  padding-left: 1rem;
 }
 
 /* 드롭다운 링크 컬러 */
