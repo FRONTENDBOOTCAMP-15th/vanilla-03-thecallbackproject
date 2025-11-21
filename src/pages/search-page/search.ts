@@ -5,82 +5,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const api = getAxios();
 
-  /* =========================================
-     🔸 하드코딩 데이터 (상세페이지 이동 가능하도록 _id 추가)
-  ========================================== */
-  const POSTS = [
-    {
-      _id: 1001,
-      id: 1,
-      title: '딸의 정부청사 출장에 부모님이 동행하는 이유',
-      content: '법이 명시로, 감사합니다! 직장인딸의 출장길이었으므로...',
-      tags: ['출장', '가족'],
-      author: '은선',
-      thumbnail: './../../assets/images/image1.png',
-    },
-    {
-      _id: 1002,
-      id: 2,
-      title: '덴마크의 꿀 하트 쿠키, Honninghjerter',
-      content: '안녕하세요 쿠키 좋아하는 윈즈버드입니다...',
-      tags: ['쿠키', '디저트', '꿀'],
-      author: 'Windsbird',
-      thumbnail: './../../assets/images/image2.png',
-    },
-    {
-      _id: 1003,
-      id: 3,
-      title: '꿀 빠는 풍경',
-      content: '책을 보다 기다리던 것도 잊다...',
-      tags: ['꿀', '일상'],
-      author: '북쪽루씨',
-      thumbnail: './../../assets/images/image3.png',
-    },
-    {
-      _id: 1004,
-      id: 4,
-      title: '373) 사진만 봐도 꿀팁 윤기가 좌르르, 구움과자',
-      content: '홍대에서 여행지처럼 시장, 크로플과 휘낭시에...',
-      tags: ['디저트', '꿀팁', '구움과자'],
-      author: '빵덕 설리언케익',
-      thumbnail: './../../assets/images/image4.png',
-    },
-  ];
-
-  const AUTHORS = [
-    {
-      _id: 201,
-      id: 1,
-      name: '꿀아빠',
-      desc: '두 아이 아빠 기록남기기 좋아하는 아빠입니다.',
-      tags: ['여행'],
-      thumbnail: './../../assets/images/Link1.png',
-    },
-    {
-      _id: 202,
-      id: 2,
-      name: '꿀별',
-      desc: '글 쓰고 디자인 하는 사람. 마음이 담긴 일을 해요.',
-      tags: ['콘텐츠', '만화', '여행'],
-      thumbnail: './../../assets/images/Link2.png',
-    },
-    {
-      _id: 203,
-      id: 3,
-      name: '개발자 꿀',
-      desc: '느리게 흘러가는 소프트플로에서 사는 개발자입니다! 🐝',
-      tags: ['IT', '개발자'],
-      thumbnail: './../../assets/images/Link3.png',
-    },
-    {
-      _id: 204,
-      id: 4,
-      name: '꿀갱',
-      desc: '제 일상에 대한 꿀입니다.',
-      tags: ['여행', 'CEO'],
-      thumbnail: './../../assets/images/Link4.png',
-    },
-  ];
+  // /* =========================================
+  //    🔸 하드코딩 데이터 (상세페이지 이동 가능하도록 _id 추가)
+  // ========================================== */
+  // const POSTS = [
+  //   {
+  //     _id: 1001,
+  //     id: 1,
+  //     title: '딸의 정부청사 출장에 부모님이 동행하는 이유',
+  //     content: '법이 명시로, 감사합니다! 직장인딸의 출장길이었으므로...',
+  //     tags: ['출장', '가족'],
+  //     author: '은선',
+  //     thumbnail: './../../assets/images/image1.png',
+  //   },
+  //   {
+  //     _id: 1002,
+  //     id: 2,
+  //     title: '덴마크의 꿀 하트 쿠키, Honninghjerter',
+  //     content: '안녕하세요 쿠키 좋아하는 윈즈버드입니다...',
+  //     tags: ['쿠키', '디저트', '꿀'],
+  //     author: 'Windsbird',
+  //     thumbnail: './../../assets/images/image2.png',
+  //   },
+  //   {
+  //     _id: 1003,
+  //     id: 3,
+  //     title: '꿀 빠는 풍경',
+  //     content: '책을 보다 기다리던 것도 잊다...',
+  //     tags: ['꿀', '일상'],
+  //     author: '북쪽루씨',
+  //     thumbnail: './../../assets/images/image3.png',
+  //   },
+  //   {
+  //     _id: 1004,
+  //     id: 4,
+  //     title: '373) 사진만 봐도 꿀팁 윤기가 좌르르, 구움과자',
+  //     content: '홍대에서 여행지처럼 시장, 크로플과 휘낭시에...',
+  //     tags: ['디저트', '꿀팁', '구움과자'],
+  //     author: '빵덕 설리언케익',
+  //     thumbnail: './../../assets/images/image4.png',
+  //   },
+  // ];
 
   /* =========================================
      DOM
@@ -192,14 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
       <li class="author-item">
         <a href="../../pages/writer-home-page/writer-home.html?id=${a._id}">
           <div class="profile-thumb">
-            <img src="${a.thumbnail}">
+            <img src="${a.image ?? a.thumbnail}">
           </div>
           <div class="author-info">
             <h3 class="name">${a.name}</h3>
-            <p class="desc">${a.desc}</p>
-            <ul class="tags">
-              ${a.tags.map((t: string) => `<li><span class="tag">${t}</span></li>`).join('')}
-            </ul>
+            <p class="desc">${a.desc ?? ''}</p>
           </div>
         </a>
       </li>`,
@@ -216,35 +178,28 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSearchTitle(keyword);
     saveRecentKeyword(keyword);
 
-    let results: any[] = [];
-
-    /* -------- 🔸 글 검색 -------- */
+    /* -------- 🔥 글 검색 -------- */
     if (type === 'post') {
-      const localResults = POSTS.filter(
-        post =>
-          post.title.includes(keyword) ||
-          post.content.includes(keyword) ||
-          post.tags.some(t => t.includes(keyword)),
-      );
+      let posts: any[] = [];
 
-      let apiResults: any[] = [];
       try {
         const res = await api.get('/posts', { params: { keyword } });
-        apiResults = Array.isArray(res.data?.item) ? res.data.item : [];
-      } catch {}
+        posts = Array.isArray(res.data?.item) ? res.data.item : [];
+      } catch (_) {
+        posts = [];
+      }
 
-      results = [...localResults, ...apiResults];
-
-      if (!results.length) {
+      if (!posts.length) {
         showScreen(3);
 
         const tabs = screens[3].querySelectorAll<HTMLButtonElement>('.tab');
         tabs.forEach(t => t.classList.remove('active'));
         tabs[0].classList.add('active');
+
         return;
       }
 
-      renderPosts(results);
+      renderPosts(posts);
 
       const tabs = screens[1].querySelectorAll<HTMLButtonElement>('.tab');
       tabs.forEach(t => t.classList.remove('active'));
@@ -254,30 +209,41 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    /* -------- 🔸 작가 검색 -------- */
-    results = AUTHORS.filter(
-      a =>
-        a.name.includes(keyword) ||
-        a.desc.includes(keyword) ||
-        a.tags.some(t => t.includes(keyword)),
-    );
+    /* -------- 🔥 작가 검색 -------- */
+    if (type === 'author') {
+      let authors: any[] = [];
 
-    if (!results.length) {
-      showScreen(3);
+      try {
+        const res = await api.get('/users'); // 전체 작가 가져오기
+        authors = Array.isArray(res.data?.item) ? res.data.item : [];
+      } catch (_) {
+        authors = [];
+      }
 
-      const tabs = screens[3].querySelectorAll<HTMLButtonElement>('.tab');
+      // 🔥 프론트에서 직접 필터링
+      const filtered = authors.filter(a =>
+        a.name.toLowerCase().includes(keyword.toLowerCase()),
+      );
+
+      if (!filtered.length) {
+        showScreen(3);
+
+        const tabs = screens[3].querySelectorAll<HTMLButtonElement>('.tab');
+        tabs.forEach(t => t.classList.remove('active'));
+        tabs[1].classList.add('active');
+
+        return;
+      }
+
+      renderAuthors(filtered);
+
+      const tabs = screens[2].querySelectorAll<HTMLButtonElement>('.tab');
       tabs.forEach(t => t.classList.remove('active'));
       tabs[1].classList.add('active');
+
+      showScreen(2);
       return;
     }
-
-    renderAuthors(results);
-
-    const tabs = screens[2].querySelectorAll<HTMLButtonElement>('.tab');
-    tabs.forEach(t => t.classList.remove('active'));
-    tabs[1].classList.add('active');
-
-    showScreen(2);
   }
 
   /* =========================================
