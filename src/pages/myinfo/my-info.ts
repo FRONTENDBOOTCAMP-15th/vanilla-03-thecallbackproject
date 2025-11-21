@@ -39,36 +39,36 @@ window.addEventListener('DOMContentLoaded', async () => {
     .join('');
   // 최근 본 글
   function fetchRecentPosts() {
-    const recentListEl = document.querySelector(
-      '.recent-list',
-    ) as HTMLElement | null;
-    if (!recentListEl) return;
-
-    const stored = localStorage.getItem('recentPosts');
+    const key = `recentPosts_${user._id}`;
+    const stored = localStorage.getItem(key);
     const recentPosts = stored ? JSON.parse(stored) : [];
 
-    if (recentPosts.length === 0) {
-      recentListEl.innerHTML = `<p class="empty-text">최근 본 글이 없습니다.</p>`;
+    const cleaned = recentPosts.filter((item: any) => item && item.id);
+
+    const listRoot = document.querySelector('.recent-list') as HTMLElement;
+    if (cleaned.length === 0) {
+      listRoot.innerHTML = `<p class="no-recent">최근 본 글이 없습니다.</p>`;
       return;
     }
-    recentListEl.innerHTML = recentPosts
-      .map((item: any) => {
-        return `
+
+    listRoot.innerHTML = cleaned
+      .map(
+        (item: any) => `
       <li>
-          <a href="/src/pages/detail-page/detail.html?id=${item.id}">
-            <figure>
-              <img src="${item.image || '/images/default.png'}" alt="${item.title}" />
-              <figcaption class="bookcover-box">
-                <h3>${item.title}</h3>
-                <p>${item.author}</p>
-              </figcaption>
-            </figure>
-          </a>
-          <h3 class="book-title">${item.title}</h3>
-          <p class="book-author">${item.author}</p>
-        </li>
-      `;
-      })
+        <a href="/src/pages/detail-page/detail.html?id=${item.id}">
+          <figure>
+            <img src="${item.image || '/images/default.png'}" alt="${item.title}" />
+            <figcaption class="bookcover-box">
+              <h3>${item.title}</h3>
+              <p>${item.author}</p>
+            </figcaption>
+          </figure>
+        </a>
+        <h3 class="book-title">${item.title}</h3>
+        <p class="book-author">${item.author}</p>
+      </li>
+    `,
+      )
       .join('');
   }
   // 관심 글
