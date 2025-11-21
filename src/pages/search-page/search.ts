@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const api = getAxios();
 
   // DOM 요소
-
   const screens = document.querySelectorAll<HTMLDivElement>('.screen');
   const searchInput = document.querySelector<HTMLInputElement>('.search-input');
 
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const sortButtons = document.querySelectorAll<HTMLButtonElement>('.sort');
 
   //화면 전환
-
   function showScreen(index: number) {
     screens.forEach((screen, i) => {
       screen.style.display = i === index ? 'block' : 'none';
@@ -204,13 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  //API 검색 실행
-
+  // API 검색 실행
   async function performSearch(keyword: string, type: SearchType) {
     if (!keyword) return;
 
-    currentKeyword = keyword;
-    currentType = type;
     updateSearchTitle(keyword);
     saveRecentKeyword(keyword);
 
@@ -221,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const items = res.data?.item || [];
 
+      /* 🔥 다른 키워드는 "검색결과 없음" + 글 탭 active 고정 */
       if (keyword !== '꿀') {
         // 검색결과 없음 화면으로 이동
         showScreen(3);
@@ -236,6 +232,11 @@ document.addEventListener('DOMContentLoaded', () => {
           emptyTabs[1].classList.add('active'); // 작가
         }
 
+        return;
+      }
+
+      if (!items.length) {
+        showScreen(3);
         return;
       }
 
