@@ -412,6 +412,18 @@
   height: 20px;
 }
 
+.like-btn .heart-on {
+  display: none;
+}
+
+.like-btn.on .heart-on {
+  display: inline;
+}
+
+.like-btn.on .heart-off {
+  display: none;
+}
+
 .like-btn span {
   font-size: 16px;
   line-height: 24px;
