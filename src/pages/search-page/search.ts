@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const api = getAxios();
 
-  /* ======================================================
-      DOM 요소
-  ====================================================== */
+  // DOM 요소
   const screens = document.querySelectorAll<HTMLDivElement>('.screen');
   const searchInput = document.querySelector<HTMLInputElement>('.search-input');
 
@@ -25,9 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll<HTMLButtonElement>('.tab');
   const sortButtons = document.querySelectorAll<HTMLButtonElement>('.sort');
 
-  /* ======================================================
-      화면 전환
-  ====================================================== */
+  //화면 전환
   function showScreen(index: number) {
     screens.forEach((screen, i) => {
       screen.style.display = i === index ? 'block' : 'none';
@@ -40,9 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .forEach(el => (el.textContent = keyword));
   }
 
-  /* ======================================================
-      최근 검색어 관리
-  ====================================================== */
+  //최근 검색어 관리
+
   function saveRecentKeyword(keyword: string) {
     let list = JSON.parse(localStorage.getItem('recentKeywords') || '[]');
     list = list.filter((v: string) => v !== keyword);
@@ -85,9 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ======================================================
-      하드코딩된 글 결과
-  ====================================================== */
+  //하드코딩된 글 결과
+
   function renderHardcodedPosts() {
     postList.innerHTML = `
       <li class="post-item">
@@ -136,9 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  /* ======================================================
-      하드코딩된 작가 결과
-  ====================================================== */
+  //하드코딩된 작가 결과
+
   function renderHardcodedAuthors() {
     authorList.innerHTML = `
       <li class="author-item">
@@ -209,9 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  /* ======================================================
-      API 검색 실행
-  ====================================================== */
+  // API 검색 실행
   async function performSearch(keyword: string, type: SearchType) {
     if (!keyword) return;
 
@@ -230,13 +221,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // 검색결과 없음 화면으로 이동
         showScreen(3);
 
-        // 현재 화면(3번)의 탭 상태를 keyword와 type에 따라 설정
         const emptyTabs =
           screens[3].querySelectorAll<HTMLButtonElement>('.tab');
 
         emptyTabs.forEach(t => t.classList.remove('active'));
 
-        // type 에 따라 active 설정
         if (type === 'post') {
           emptyTabs[0].classList.add('active'); // 글
         } else {
@@ -281,9 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* ======================================================
-      이벤트
-  ====================================================== */
+  // 이벤트
   searchInput?.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
       performSearch(searchInput.value.trim(), 'post');
@@ -294,7 +281,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => showScreen(0));
   });
 
-  /* ⭐ 탭 클릭 시, 현재 화면 안의 탭만 active 토글되도록 수정 */
   tabButtons.forEach(tab => {
     tab.addEventListener('click', () => {
       const currentScreen = Array.from(screens).find(
