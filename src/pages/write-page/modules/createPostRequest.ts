@@ -1,4 +1,4 @@
-import { uploadImage } from '../../apis/uploadAPIs';
+import { uploadImage } from './../../../apis/uploadAPIs';
 
 export async function createPostRequest(
   title: string,
