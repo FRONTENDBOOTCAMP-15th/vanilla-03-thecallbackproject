@@ -1,14 +1,13 @@
 import { getAxios } from '../../utils/axios';
 import type { FollowAuthor, BookmarkPost } from '../../types/my-info-type';
-
+import { formatDate } from '../detail-page/modules/dateFormatter';
 window.addEventListener('DOMContentLoaded', async () => {
   const UserItem = localStorage.getItem('item');
   const user = UserItem ? JSON.parse(UserItem) : null;
 
   //이것때문에 오류났음. -> 인스턴스만 부르고 Axios안에 데이터를 가져와서 초기화해주지 않아서
-  if (!axiosInstance) {
-    getAxios();
-  }
+  const axiosInstance = getAxios();
+
   //로그인 여부 확인
   if (!user) {
     window.location.href = '/src/pages/login-page/login.html';
@@ -39,7 +38,39 @@ window.addEventListener('DOMContentLoaded', async () => {
     })
     .join('');
   // 최근 본 글
+  function fetchRecentPosts() {
+    const recentListEl = document.querySelector(
+      '.recent-list',
+    ) as HTMLElement | null;
+    if (!recentListEl) return;
 
+    const stored = localStorage.getItem('recentPosts');
+    const recentPosts = stored ? JSON.parse(stored) : [];
+
+    if (recentPosts.length === 0) {
+      recentListEl.innerHTML = `<p class="empty-text">최근 본 글이 없습니다.</p>`;
+      return;
+    }
+    recentListEl.innerHTML = recentPosts
+      .map((item: any) => {
+        return `
+      <li>
+          <a href="/src/pages/detail-page/detail.html?id=${item.id}">
+            <figure>
+              <img src="${item.image || '/images/default.png'}" alt="${item.title}" />
+              <figcaption class="bookcover-box">
+                <h3>${item.title}</h3>
+                <p>${item.author}</p>
+              </figcaption>
+            </figure>
+          </a>
+          <h3 class="book-title">${item.title}</h3>
+          <p class="book-author">${item.author}</p>
+        </li>
+      `;
+      })
+      .join('');
+  }
   // 관심 글
   async function fetchBookmarkPosts(): Promise<BookmarkPost[]> {
     if (!axiosInstance) throw new Error('Axios not initialized');
@@ -98,10 +129,12 @@ window.addEventListener('DOMContentLoaded', async () => {
           <a href="/src/pages/detail-page/detail.html?id=${post._id}">
             <h3>${post.title}</h3>
             <p>${post.extra?.subTitle || ''}</p>
-            <time>${post.createdAt}</time>
+            <time>${formatDate(post.createdAt)}</time>
           </a>
         </li>
     `;
     })
     .join('');
+
+  fetchRecentPosts();
 });
