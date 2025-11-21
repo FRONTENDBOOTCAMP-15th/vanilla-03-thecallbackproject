@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const api = getAxios();
 
-  // /* =========================================
-  //    🔸 하드코딩 데이터 (상세페이지 이동 가능하도록 _id 추가)
-  // ========================================== */
   // const POSTS = [
   //   {
   //     _id: 1001,
@@ -47,9 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
   //   },
   // ];
 
-  /* =========================================
-     DOM
-  ========================================== */
+  // DOM
+
   const screens = document.querySelectorAll<HTMLDivElement>('.screen');
   const searchInput = document.querySelector<HTMLInputElement>('.search-input');
 
@@ -66,9 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll<HTMLButtonElement>('.tab');
   const sortButtons = document.querySelectorAll<HTMLButtonElement>('.sort');
 
-  /* =========================================
-     화면 전환
-  ========================================== */
+  // 화면 전환
   function showScreen(index: number) {
     screens.forEach((screen, i) => {
       screen.style.display = i === index ? 'block' : 'none';
@@ -81,9 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* =========================================
-     최근 검색어
-  ========================================== */
+  // 최근 검색어
+
   function saveRecentKeyword(keyword: string) {
     let list = JSON.parse(localStorage.getItem('recentKeywords') || '[]');
     list = list.filter((v: string) => v !== keyword);
@@ -125,9 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* =========================================
-     렌더링
-  ========================================== */
+  // 렌더링
   function renderPosts(results: any[]) {
     postList.innerHTML = results
       .map(
@@ -169,16 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
       .join('');
   }
 
-  /* =========================================
-     🔥 검색 기능 (로컬 + API)
-  ========================================== */
+  // 검색 기능
   async function performSearch(keyword: string, type: SearchType) {
     if (!keyword) return;
 
     updateSearchTitle(keyword);
     saveRecentKeyword(keyword);
 
-    /* -------- 🔥 글 검색 -------- */
+    /* -------- 글 검색 -------- */
     if (type === 'post') {
       let posts: any[] = [];
 
@@ -209,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    /* -------- 🔥 작가 검색 -------- */
+    /* -------- 작가 검색 -------- */
     if (type === 'author') {
       let authors: any[] = [];
 
@@ -246,9 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* =========================================
-     이벤트
-  ========================================== */
+  // 이벤트
   searchInput?.addEventListener('keydown', e => {
     if (e.key === 'Enter') performSearch(searchInput.value.trim(), 'post');
   });
