@@ -141,16 +141,20 @@
   color: #8d4e8e;
 }
 
-/* active, hover 모두 색 고정 */
-.profile-dropdown a:link,
-.profile-dropdown a:hover,
-.profile-dropdown a:active {
+/* 드롭다운 링크 컬러 */
+
+.profile-dropdown a {
   color: #333;
   text-decoration: none;
 }
+.profile-dropdown a:link,
+.profile-dropdown a:hover,
+.profile-dropdown a:active {
+  color: #d2d1d1;
+}
 
-/* 클릭 전-후 컬러 변경 */
-.profile-dropdown a:visited {
+.logout-btn:hover,
+.logout-btn:active {
   color: #d2d1d1;
 }
 
