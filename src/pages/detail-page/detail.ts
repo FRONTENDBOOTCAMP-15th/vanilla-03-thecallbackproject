@@ -1,5 +1,6 @@
 import { fetchPostDetail, fetchAuthorDetail } from '../../apis/fetchAPIs';
 import type { PostDetail } from '../../types/post-detail';
+// import type { PostDetail } from '../../types/post-detail';
 
 import { formatDate } from './modules/dateFormatter';
 import { getProfileImage } from './modules/profile';
@@ -59,9 +60,6 @@ async function initDetailPage() {
 
     setPostCreatedAt(post.createdAt);
 
-    // 최근 본 글 저장
-    saveRecentPost(Number(post._id));
-
     // 화면 렌더링
     renderPostDetail(post);
     setupPostDeleteButton(post);
@@ -70,6 +68,8 @@ async function initDetailPage() {
     renderAuthorDetail(author);
     renderCommentWriterInfo();
 
+    // 최근 본 글 저장
+    saveRecentPost(post);
     const loginUserId = getLoginUserId();
 
     setupCommentForm(postId, loginUserId);
