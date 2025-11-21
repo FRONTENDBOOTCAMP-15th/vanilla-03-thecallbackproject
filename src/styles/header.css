@@ -153,6 +153,10 @@
   color: #d2d1d1;
 }
 
+.logout-btn:visited {
+  color: #333;
+}
+
 .logout-btn:hover,
 .logout-btn:active {
   color: #d2d1d1;
