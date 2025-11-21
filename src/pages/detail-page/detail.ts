@@ -106,44 +106,61 @@ function renderPostDetail(post: PostDetail) {
   const header = document.querySelector('.post-header') as HTMLElement;
 
   const imgUrl = post?.image?.trim?.();
-
   if (imgUrl) {
     header.style.setProperty('--header-image', `url(${imgUrl})`);
   } else {
     header.style.setProperty('--header-image', `url(${defaultHeaderImage})`);
   }
 
-  document.querySelector('.post-title')!.textContent = post.title;
-  document.querySelector('.post-author .author-name')!.textContent =
-    post.user.name;
+  // 제목 + aria-label
+  const titleEl = document.querySelector('.post-title')!;
+  titleEl.textContent = post.title;
+  titleEl.setAttribute('aria-label', `글 제목 ${post.title}`);
 
+  // 작성자명 + aria-label
+  const authorNameEl = document.querySelector('.post-author .author-name')!;
+  authorNameEl.textContent = post.user.name;
+  authorNameEl.setAttribute('aria-label', `작성자 ${post.user.name}`);
+
+  // 프로필 이미지 alt 설정
   const authorImg = document.querySelector(
     '.post-author img',
   ) as HTMLImageElement;
   authorImg.src = getProfileImage(post.user.image);
+  authorImg.alt = `${post.user.name}의 프로필 이미지`;
 
-  document.querySelector('.post-author time')!.textContent = formatDate(
-    post.createdAt,
-  );
+  // 작성일 + aria-label
+  const timeEl = document.querySelector('.post-author time')!;
+  timeEl.textContent = formatDate(post.createdAt);
+  timeEl.setAttribute('aria-label', `작성일 ${formatDate(post.createdAt)}`);
 
-  document.querySelector('.post-subtitle')!.textContent =
-    post.extra.subTitle || '';
+  // 소제목 + aria-label
+  const subtitleEl = document.querySelector('.post-subtitle')!;
+  subtitleEl.textContent = post.extra.subTitle || '';
+  subtitleEl.setAttribute('aria-label', `소제목 ${post.extra.subTitle || ''}`);
 
+  // 본문 이미지
   const postImage = document.querySelector('.post-image') as HTMLImageElement;
   if (post.image && post.image.trim() !== '') {
     postImage.src = post.image;
     postImage.style.display = '';
+    postImage.alt = `${post.title} 관련 이미지`;
+    postImage.setAttribute('aria-label', `${post.title} 관련 이미지`);
   } else {
     postImage.style.display = 'none';
   }
 
+  // 본문 내용
   const contentEl = document.querySelector('.post-content p')!;
   contentEl.innerHTML = post.content.trimStart().replace(/\n/g, '<br/>');
+  contentEl.setAttribute('aria-label', '본문 내용');
 
+  // 정렬
   const wrapper = document.querySelector('.post-content') as HTMLElement;
   wrapper.classList.remove('left', 'center', 'right');
   wrapper.classList.add(post.extra.align || 'left');
 
+  // 태그 + aria-label
   const tagsUl = document.querySelector('.post-tags') as HTMLUListElement;
   tagsUl.innerHTML = '';
 
@@ -154,17 +171,26 @@ function renderPostDetail(post: PostDetail) {
       .forEach(tag => {
         const li = document.createElement('li');
         li.textContent = tag;
+        li.setAttribute('aria-label', `태그 ${tag}`);
         tagsUl.appendChild(li);
       });
   }
+
+  // 좋아요 수 + aria-label
+  const likeSpan = document.querySelector('.like-btn span')!;
+  const likeCount = post.bookmarks ?? 0;
+  likeSpan.textContent = String(likeCount);
+  likeSpan.setAttribute('aria-label', `좋아요 ${likeCount}개`);
 
   // 댓글 렌더링
   const loginUserId = getLoginUserId();
   renderComments(post.replies ?? [], loginUserId);
 
-  document.querySelector('.comment-btn span')!.textContent = String(
-    post.replies?.length ?? 0,
-  );
+  // 댓글 개수 + aria-label
+  const commentSpan = document.querySelector('.comment-btn span')!;
+  const replyCount = post.replies?.length ?? 0;
+  commentSpan.textContent = String(replyCount);
+  commentSpan.setAttribute('aria-label', `댓글 ${replyCount}개`);
 
   // SEO
   updateMetaTags(post);
