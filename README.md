@@ -121,8 +121,10 @@
 ### 🏠 홈 화면
 <table>
   <tr>
+
     <!-- 왼쪽 표 -->
     <td valign="top">
+
       <table>
         <tr>
           <td>
@@ -145,10 +147,12 @@
           </td>
         </tr>
       </table>
+
     </td>
 
     <!-- 오른쪽 표 -->
     <td valign="top">
+
       <table>
         <tr>
           <td>
@@ -163,7 +167,7 @@
         <tr>
           <td>
             <img 
-              src="https://github.com/user-attachments/assets/cf964f9f-0cd2-45cc-8cc0-7fe494315e51"
+              src="httpsgithub.com/user-attachments/assets/cf964f9f-0cd2-45cc-8cc0-7fe494315e51"
               width="420"
               height="350"
               style="object-fit: cover;"
@@ -171,7 +175,9 @@
           </td>
         </tr>
       </table>
+
     </td>
+
   </tr>
 </table>
 
