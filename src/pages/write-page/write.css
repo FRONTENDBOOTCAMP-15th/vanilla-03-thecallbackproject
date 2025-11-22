@@ -131,12 +131,14 @@ main textarea:placeholder-shown {
   display: block;
   width: 50px;
   height: 50px;
-  background-color: black;
+  background-color: white;
+  object-fit: contain;
+  border: solid 2px #eeeeee;
 }
 .image-preview p {
   align-self: end;
   padding-block-end: 10px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .remove-image-btn {
