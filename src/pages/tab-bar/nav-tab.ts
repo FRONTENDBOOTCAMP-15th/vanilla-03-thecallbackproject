@@ -44,14 +44,10 @@ customElements.define('tab-nav', TabNav);
 
 const goToMyInfo = document.querySelector('#myinfo-tab');
 const goToWrite = document.querySelector('#write-tab');
-if (location.pathname.includes('index.html') || location.pathname === '/') {
-  localStorage.removeItem('myinfoPage');
-  localStorage.removeItem('writePage');
-}
 
 goToMyInfo?.addEventListener('click', () => {
-  localStorage.setItem('myinfoPage', '/src/pages/myinfo/my-info.html');
+  localStorage.setItem('redirectPath', '/src/pages/myinfo/my-info.html');
 });
 goToWrite?.addEventListener('click', () => {
-  localStorage.setItem('writePage', '/src/pages/write-page/write.html');
+  localStorage.setItem('redirectPath', '/src/pages/write-page/write.html');
 });

@@ -7,7 +7,6 @@ export function checkAuthAndBackButton() {
     window.location.href = '/src/pages/login-page/login.html';
     return;
   }
-  localStorage.removeItem('writePage');
 
   const backBtn = document.querySelector('.back-btn') as HTMLAnchorElement;
   backBtn?.addEventListener('click', () => {
