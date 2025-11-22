@@ -128,7 +128,9 @@
       <sub>글쓰기 화면</sub>
     </td>
     <td>
-      <img src="https://github.com/user-attachments/assets/7fb31bb2-5192-4340-ac92-7bb895cf8329" width="260"><br>
+      <div style="width:260px;">
+        <img src="https://github.com/user-attachments/assets/7fb31bb2-5192-4340-ac92-7bb895cf8329"><br>
+      </div>
       <sub>입력 동작 데모 (GIF)</sub>
     </td>
   </tr>
