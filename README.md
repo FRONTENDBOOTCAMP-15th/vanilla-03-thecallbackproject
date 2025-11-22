@@ -121,39 +121,20 @@
 ### 🏠 홈 화면
 <table>
   <tr>
-
-    <!-- 왼쪽 칸 -->
     <td valign="top">
-      <img 
-        src="https://github.com/user-attachments/assets/d5124767-a424-4f0b-90b3-3706d1cc9865"
-        width="420"
-        height="350"
-      >
+      <img src="https://github.com/user-attachments/assets/d5124767-a424-4f0b-90b3-3706d1cc9865" width="420" height="350">
       <br><br>
-      <img 
-        src="https://github.com/user-attachments/assets/5dc0c47d-14b9-4ed6-b0bf-01481fb4f02e"
-        width="420"
-        height="350"
-      >
+      <img src="https://github.com/user-attachments/assets/5dc0c47d-14b9-4ed6-b0bf-01481fb4f02e" width="420" height="350">
     </td>
 
-    <!-- 오른쪽 칸 -->
     <td valign="top" style="padding-left:20px;">
-      <img 
-        src="https://github.com/user-attachments/assets/dff85b72-06ad-45ba-a75d-8e0b289de72b"
-        width="420"
-        height="350"
-      >
+      <img src="https://github.com/user-attachments/assets/dff85b72-06ad-45ba-a75d-8e0b289de72b" width="420" height="350">
       <br><br>
-      <img 
-        src="https://github.com/user-attachments/assets/cf964f9f-0cd2-45cc-8cc0-7fe494315e51"
-        width="420"
-        height="350"
-      >
+      <img src="https://github.com/user-attachments/assets/cf964f9f-0cd2-45cc-8cc0-7fe494315e51" width="420" height="350">
     </td>
-
   </tr>
 </table>
+
 
 
 - 라이브러리 **Swiper**를 이용해 브런치 리스트 이미지 슬라이드 제공
