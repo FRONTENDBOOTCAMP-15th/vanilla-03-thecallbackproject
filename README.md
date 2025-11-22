@@ -145,6 +145,18 @@
 - <b>가상 키보드</b> ➜  툴바 위치 이동 및 키보드 숨김 기능
 
 ### 🖋️ 상세 페이지
+<table>
+  <tr>
+    <td>
+      <img 
+        src="https://github.com/user-attachments/assets/5ee2fe72-a42c-4ce7-8c3c-5e7037e0705a"
+        width="405"
+        height="426"
+      >
+    </td>
+  </tr>
+</table>
+
 - <b>작성자 정보 조회 ➜  이름, 직업, 자기소개, 프로필 이미지
 - <b>작성일 표시
 - <b>좋아요(북마트) 토글 기능
