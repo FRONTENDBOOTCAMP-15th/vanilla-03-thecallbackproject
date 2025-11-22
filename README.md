@@ -124,21 +124,12 @@
 <table>
   <tr>
     <td>
-      <img 
-        src="https://github.com/user-attachments/assets/bcd260ae-46ba-4710-9e97-4494ff160443"
-        height="406"
-        style="object-fit: cover;"
-      >
-    </td>
-
-    <td>
       <video
         src="https://github.com/user-attachments/assets/5489d5a8-633c-4e93-82d9-a4817779bcc2"
-        height="406"
-        muted
+        width="260"
         controls
+        muted
         playsinline
-        style="object-fit: cover;"
       ></video>
     </td>
   </tr>
