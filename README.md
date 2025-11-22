@@ -124,14 +124,21 @@
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/bcd260ae-46ba-4710-9e97-4494ff160443" width="260"><br>
-      <sub>글쓰기 화면</sub>
+      <img 
+        src="https://github.com/user-attachments/assets/bcd260ae-46ba-4710-9e97-4494ff160443"
+        width="188"
+        height="406"
+      >
     </td>
     <td>
-      <div style="width:260px;">
-        <img src="https://github.com/user-attachments/assets/7fb31bb2-5192-4340-ac92-7bb895cf8329"><br>
-      </div>
-      <sub>입력 동작 데모 (GIF)</sub>
+      <video 
+        src="https://github.com/user-attachments/assets/5489d5a8-633c-4e93-82d9-a4817779bcc2"
+        width="188"
+        height="406"
+        controls
+        muted
+        playsinline
+      ></video>
     </td>
   </tr>
 </table>
