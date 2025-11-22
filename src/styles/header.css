@@ -43,7 +43,8 @@
 .header nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;
+  max-width: 100%;
 }
 
 .header nav a {
