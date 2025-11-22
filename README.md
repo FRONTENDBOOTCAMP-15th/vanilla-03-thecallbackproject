@@ -121,21 +121,21 @@
 ### 🏠 홈 화면
 
 
-<table>
-  <tr>
-    <td valign="top">
-      <img src="https://github.com/user-attachments/assets/d5124767-a424-4f0b-90b3-3706d1cc9865" width="420" height="350">
-      <br><br>
-      <img src="https://github.com/user-attachments/assets/5dc0c47d-14b9-4ed6-b0bf-01481fb4f02e" width="420" height="350">
-    </td>
+<div style="display: flex; gap: 20px;">
 
-    <td valign="top" style="padding-left:20px;">
-      <img src="https://github.com/user-attachments/assets/dff85b72-06ad-45ba-a75d-8e0b289de72b" width="420" height="350">
-      <br><br>
-      <img src="https://github.com/user-attachments/assets/cf964f9f-0cd2-45cc-8cc0-7fe494315e51" width="420" height="350">
-    </td>
-  </tr>
-</table>
+  <div style="display: inline-block; vertical-align: top;">
+    <img src="https://github.com/user-attachments/assets/d5124767-a424-4f0b-90b3-3706d1cc9865" width="420">
+    <br><br>
+    <img src="https://github.com/user-attachments/assets/5dc0c47d-14b9-4ed6-b0bf-01481fb4f02e" width="420">
+  </div>
+
+  <div style="display: inline-block; vertical-align: top;">
+    <img src="https://github.com/user-attachments/assets/dff85b72-06ad-45ba-a75d-8e0b289de72b" width="420">
+    <br><br>
+    <img src="https://github.com/user-attachments/assets/cf964f9f-0cd2-45cc-8cc0-7fe494315e51" width="420">
+  </div>
+
+</div>
 
 
 
