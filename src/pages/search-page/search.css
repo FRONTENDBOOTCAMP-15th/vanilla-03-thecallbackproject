@@ -13,15 +13,25 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif;
 }
 
-/* 360px 모바일 화면 */
 .screen {
   display: none;
-  width: 360px;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+
   height: calc(100vh - 90px);
   overflow-y: auto;
   background: #fff;
   padding: 0 24px;
   flex-shrink: 0;
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 검색 입력 화면 */
