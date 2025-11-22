@@ -71,4 +71,7 @@
   <td><b>개발 환경</b></td>
   <td>
     <img src="https://img.shields.io/badge/GitHub-1a1a1a?style=flat-square&logo=github&logoColor=FFFFFF" height="32">
-    <img src="https://img.shields.io/badge/Git-1a1a1a?style=flat-square&logo=git&logoColor=F05032" height="3
+    <img src="https://img.shields.io/badge/Git-1a1a1a?style=flat-square&logo=git&logoColor=F05032" height="32">
+  </td>
+</tr>
+</table>
