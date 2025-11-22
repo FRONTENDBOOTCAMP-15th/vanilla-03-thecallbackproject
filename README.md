@@ -130,7 +130,7 @@
     </td>
     <td>
       <img 
-        src="https://github.com/user-attachments/assets/ce302785-b583-4ef5-b663-f331292af824"
+        src="https://github.com/user-attachments/assets/e2db91c8-f9f9-4e4c-878e-cd1eaaf14ddc"
         width="420"
       >
     </td>
