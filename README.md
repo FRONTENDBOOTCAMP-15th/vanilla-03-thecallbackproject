@@ -121,48 +121,56 @@
 ### 🏠 홈 화면
 <table>
   <tr>
-    <td>
-      <img 
-        src="https://github.com/user-attachments/assets/d5124767-a424-4f0b-90b3-3706d1cc9865"
-        width="420"
-        height="350"
-        style="object-fit: cover;"
-      >
+    <!-- 왼쪽 표 -->
+    <td valign="top">
+      <table>
+        <tr>
+          <td>
+            <img 
+              src="https://github.com/user-attachments/assets/d5124767-a424-4f0b-90b3-3706d1cc9865"
+              width="420"
+              height="350"
+              style="object-fit: cover;"
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img 
+              src="https://github.com/user-attachments/assets/5dc0c47d-14b9-4ed6-b0bf-01481fb4f02e"
+              width="420"
+              height="350"
+              style="object-fit: cover;"
+            >
+          </td>
+        </tr>
+      </table>
     </td>
-  </tr>
-  <tr>
-    <td>
-      <img 
-        src="https://github.com/user-attachments/assets/5dc0c47d-14b9-4ed6-b0bf-01481fb4f02e"
-        width="420"
-        height="350"
-        style="object-fit: cover;"
-      >
-    </td>
-  </tr>
-</table>
 
-<br>
-
-<table>
-  <tr>
-    <td>
-      <img 
-        src="https://github.com/user-attachments/assets/dff85b72-06ad-45ba-a75d-8e0b289de72b"
-        width="420"
-        height="350"
-        style="object-fit: cover;"
-      >
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img 
-        src="https://github.com/user-attachments/assets/cf964f9f-0cd2-45cc-8cc0-7fe494315e51"
-        width="420"
-        height="350"
-        style="object-fit: cover;"
-      >
+    <!-- 오른쪽 표 -->
+    <td valign="top">
+      <table>
+        <tr>
+          <td>
+            <img 
+              src="https://github.com/user-attachments/assets/dff85b72-06ad-45ba-a75d-8e0b289de72b"
+              width="420"
+              height="350"
+              style="object-fit: cover;"
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img 
+              src="https://github.com/user-attachments/assets/cf964f9f-0cd2-45cc-8cc0-7fe494315e51"
+              width="420"
+              height="350"
+              style="object-fit: cover;"
+            >
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
 </table>
