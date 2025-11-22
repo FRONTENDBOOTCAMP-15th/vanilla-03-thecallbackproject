@@ -83,16 +83,10 @@
 </tr>
 
 <tr>
-  <td><b>개발 환경</b></td>
+  <td><b>버전 관리 및 협업 툴</b></td>
   <td>
     <img src="https://img.shields.io/badge/GitHub-1a1a1a?style=flat-square&logo=github&logoColor=FFFFFF" height="32">
     <img src="https://img.shields.io/badge/Git-1a1a1a?style=flat-square&logo=git&logoColor=F05032" height="32">
-  </td>
-</tr>
-
-<tr>
-  <td><b>커뮤니케이션</b></td>
-  <td>
     <img src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=5865F2" height="32">
     <img src="https://img.shields.io/badge/Notion-1a1a1a?style=flat-square&logo=notion&logoColor=FFFFFF" height="32">
   </td>
