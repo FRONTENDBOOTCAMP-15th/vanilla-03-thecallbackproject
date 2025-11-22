@@ -1,3 +1,6 @@
+/* reset, 웹접근성 연결, 전역 폰트 적용 */
+@import './../../styles/base.css';
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +12,6 @@ body {
 
 .page {
   width: 100%;
-  max-width: 360px;
   margin: 0 auto;
   background: #ffffff;
   min-height: 100vh;
@@ -102,7 +104,7 @@ body {
   font-size: 12px;
   color: #666;
   margin: 0;
-  padding-top: 36px;
+  padding-top: 57px;
 }
 
 .counts b {
@@ -181,4 +183,21 @@ body {
   margin: 0;
   font-size: 12px;
   color: #999;
+}
+
+/* 헤더 컴포넌트의 "시작하기" */
+.start-btn {
+  width: auto !important;
+  height: auto !important;
+  padding: 6px 16px !important;
+  border-radius: 999px !important;
+  font-size: 14px !important;
+  white-space: nowrap !important;
+}
+.counts {
+  align-items: center !important;
+}
+
+.profile {
+  align-items: center !important;
 }
