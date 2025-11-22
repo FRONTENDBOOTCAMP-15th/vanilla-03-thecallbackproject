@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   if (!user) {
     window.location.href = '/src/pages/login-page/login.html';
   }
-
+  localStorage.removeItem('myinfoPage');
   // 관심 작가
   async function fetchFollowedAuthors(): Promise<FollowAuthor[]> {
     if (!axiosInstance) throw new Error('Axios not initialized');

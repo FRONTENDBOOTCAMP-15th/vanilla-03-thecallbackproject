@@ -4,7 +4,7 @@ class TabNav extends HTMLElement {
       <nav class="tab-nav" aria-label="하단 메뉴">
         <ul class="tab-list">
           <li class="home-li">
-            <a href="/index.html" class="tab-item">
+            <a href="/index.html" class="tab-item" id="main-tab">
               <img src="./../../../icons/home.png" class="off" alt="" aria-hidden="true" />
               <img src="./../../../icons/home-on.png" class="on" alt="" aria-hidden="true" />
               <span>홈</span>
@@ -20,7 +20,7 @@ class TabNav extends HTMLElement {
           </li>
 
           <li class="write-li">
-            <a href="/src/pages/write-page/write.html" class="tab-item">
+            <a href="/src/pages/write-page/write.html" class="tab-item" id="write-tab">
               <img src="./../../../icons/write.png" class="off" alt="" aria-hidden="true" />
               <img src="./../../../icons/write-click.png" class="click" alt="" aria-hidden="true" />
               <span>글쓰기</span>
@@ -28,7 +28,7 @@ class TabNav extends HTMLElement {
           </li>
 
           <li class="myinfo-li">
-            <a href="/src/pages/myinfo/my-info.html" class="tab-item">
+            <a href="/src/pages/myinfo/my-info.html" class="tab-item" id="myinfo-tab">
               <img src="./../../../icons/myinfo.png" class="off" alt="" aria-hidden="true" />
               <img src="./../../../icons/myinfo-on.png" class="on" alt="" aria-hidden="true" />
               <span>내 서랍</span>
@@ -41,3 +41,17 @@ class TabNav extends HTMLElement {
 }
 
 customElements.define('tab-nav', TabNav);
+
+const goToMyInfo = document.querySelector('#myinfo-tab');
+const goToWrite = document.querySelector('#write-tab');
+if (location.pathname.includes('index.html')) {
+  localStorage.removeItem('myinfoPage');
+  localStorage.removeItem('writePage');
+}
+
+goToMyInfo?.addEventListener('click', () => {
+  localStorage.setItem('myinfoPage', '/src/pages/myinfo/my-info.html');
+});
+goToWrite?.addEventListener('click', () => {
+  localStorage.setItem('writePage', '/src/pages/write-page/write.html');
+});
