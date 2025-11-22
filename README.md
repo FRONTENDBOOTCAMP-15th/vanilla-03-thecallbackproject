@@ -1,7 +1,7 @@
 # [비동기들 : The Callback Project](https://thecallbackproject.netlify.app/)
 <br><br>
 
-## 프로젝트 개요
+## 📑 프로젝트 개요
 <br>
 
 ## 🎬 프로젝트 기간
