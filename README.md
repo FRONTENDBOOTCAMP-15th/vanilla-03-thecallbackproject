@@ -126,16 +126,19 @@
     <td>
       <img 
         src="https://github.com/user-attachments/assets/bcd260ae-46ba-4710-9e97-4494ff160443"
-        width="188"
+        height="406"
+        style="object-fit: cover;"
       >
     </td>
+
     <td>
-      <video 
+      <video
         src="https://github.com/user-attachments/assets/5489d5a8-633c-4e93-82d9-a4817779bcc2"
-        width="188"
-        controls
+        height="406"
         muted
+        controls
         playsinline
+        style="object-fit: cover;"
       ></video>
     </td>
   </tr>
