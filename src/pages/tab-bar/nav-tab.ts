@@ -44,7 +44,7 @@ customElements.define('tab-nav', TabNav);
 
 const goToMyInfo = document.querySelector('#myinfo-tab');
 const goToWrite = document.querySelector('#write-tab');
-if (location.pathname.includes('index.html')) {
+if (location.pathname.includes('index.html') || location.pathname === '/') {
   localStorage.removeItem('myinfoPage');
   localStorage.removeItem('writePage');
 }

@@ -1,6 +1,7 @@
 import { getAxios } from '../../utils/axios';
 import type { FollowAuthor, BookmarkPost } from '../../types/my-info-type';
 import { formatDate } from '../detail-page/modules/dateFormatter';
+
 window.addEventListener('DOMContentLoaded', async () => {
   const UserItem = localStorage.getItem('item');
   const user = UserItem ? JSON.parse(UserItem) : null;
@@ -11,8 +12,9 @@ window.addEventListener('DOMContentLoaded', async () => {
   //로그인 여부 확인
   if (!user) {
     window.location.href = '/src/pages/login-page/login.html';
+  } else {
+    localStorage.removeItem('myinfoPage');
   }
-  localStorage.removeItem('myinfoPage');
   // 관심 작가
   async function fetchFollowedAuthors(): Promise<FollowAuthor[]> {
     if (!axiosInstance) throw new Error('Axios not initialized');
