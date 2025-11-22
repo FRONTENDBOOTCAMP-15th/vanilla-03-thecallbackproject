@@ -59,17 +59,22 @@ async function loginButtonClick(e: Event) {
 
   try {
     const result = await loginAPI(userEmailValue, userPasswordValue);
-    console.log('로그인', result);
+
     if (!result.item.token) {
       throw new Error('토큰 반환 실패');
     }
-    // localStorage.setItem('token', result.token);
-    localStorage.setItem('item', JSON.stringify(result.item));
-    //페이지 이동 액션
 
-    window.location.href = '/';
+    localStorage.setItem('item', JSON.stringify(result.item));
+
+    //페이지 이동 액션
+    const redirect = localStorage.getItem('redirectPath');
+    if (redirect) {
+      localStorage.removeItem('redirectPath');
+      window.location.href = redirect;
+    } else {
+      window.location.href = '/';
+    }
   } catch (error) {
-    // console.error(error);
     alert('아이디 또는 비밀번호가 올바르지 않습니다.');
   }
 }
