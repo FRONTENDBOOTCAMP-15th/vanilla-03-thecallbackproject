@@ -1,4 +1,4 @@
-<span style="
+<a href="https://thecallbackproject.netlify.app/" style="
   display: inline-block;
   background: #6C3C6D;
   color: white !important;
@@ -6,15 +6,13 @@
   font-weight: 700;
   padding: 20px 40px;
   border-radius: 20px;
+  text-decoration: none !important;
 ">
-  <a href="https://thecallbackproject.netlify.app/" style="
-    color: white !important;
-    text-decoration: none !important;
-  ">
-    비동기들: The Callback Project
-  </a>
-</span>
+  비동기들: The Callback Project
+</a>
+
 <br><br>
+
 
 ## 📑 프로젝트 개요
 기본 웹 기능을 제대로 익히고 구현하는 데 집중하기 위해 ‘브런치’ 시안을 선택했습니다.  
