@@ -1,16 +1,16 @@
 # [비동기들 : The Callback Project](https://thecallbackproject.netlify.app/)
 
-<br />
-<br />
+<br>
+<br>
 
 ## 프로젝트 개요
 
-<br/>
+<br>
 
 ## 🎬 프로젝트 기간
 > 2025.11.10 ~ 2025.11.24
 
-<br/>
+<br>
 
 ## 👥 팀원소개
 <table>
@@ -45,7 +45,7 @@
   </tr>
 </table>
 
-<br/>
+<br>
 
 ## 🛠 기술 스택
 <table>
@@ -90,4 +90,4 @@
 </tr>
 </table>
 
-<br/>
+<br>
