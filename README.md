@@ -1,4 +1,17 @@
-# [비동기들 : The Callback Project](https://thecallbackproject.netlify.app/)
+<div align="center">
+  <a href="https://thecallbackproject.netlify.app/" style="
+    display: inline-block;
+    background: #6C3C6D;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 20px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+  ">
+    비동기들: The Callback Project
+  </a>
+</div>
 <br><br>
 
 ## 📑 프로젝트 개요
