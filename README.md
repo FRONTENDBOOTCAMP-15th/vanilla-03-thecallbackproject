@@ -9,38 +9,58 @@
 <br>
 
 ## 👥 팀원소개
-<table><tr>
+## 👥 팀원소개
 
-<td align="center">
-  <img src="https://github.com/user-attachments/assets/a3fbea78-e10c-43a3-8758-a62a913e9402" width="140"><br><br>
-  <a href="https://github.com/sohyerim-dev"><b>소혜림</b></a><br>
-  PL<br><br>
-  글쓰기, 상세 페이지
-</td>
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/a3fbea78-e10c-43a3-8758-a62a913e9402" width="140">
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/fe76942f-7096-47f4-88f4-2d94e36222a6" width="140">
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/88332276-54c9-4122-8693-b430c18cb3ab" width="140">
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/2b76367e-e5b5-4627-9e8d-def93e1a6770" width="140">
+    </td>
+  </tr>
 
-<td align="center">
-  <img src="https://github.com/user-attachments/assets/fe76942f-7096-47f4-88f4-2d94e36222a6" width="140"><br><br>
-  <a href="https://github.com/park-yeseul423"><b>박한섭</b></a><br>
-  팀장 · PM<br><br>
-  시작하기, 내 서랍
-</td>
+  <!-- 이름 행 -->
+  <tr>
+    <td align="center">
+      <a href="https://github.com/sohyerim-dev"><b>소혜림</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/park-yeseul423"><b>박한섭</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Jia-Oh"><b>오지아</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/park-yeseul423"><b>박예슬</b></a>
+    </td>
+  </tr>
 
-<td align="center">
-  <img src="https://github.com/user-attachments/assets/88332276-54c9-4122-8693-b430c18cb3ab" width="140"><br><br>
-  <a href="https://github.com/Jia-Oh"><b>오지아</b></a><br>
-  팀원<br><br>
-  홈
-</td>
+  <!-- 직책 행 -->
+  <tr>
+    <td align="center">PL</td>
+    <td align="center">팀장 · PM</td>
+    <td align="center">팀원</td>
+    <td align="center">팀원</td>
+  </tr>
 
-<td align="center">
-  <img src="https://github.com/user-attachments/assets/2b76367e-e5b5-4627-9e8d-def93e1a6770" width="140"><br><br>
-  <a href="https://github.com/park-yeseul423"><b>박예슬</b></a><br>
-  팀원<br><br>
-  발견, 작가홈
-</td>
-
-</tr></table>
+  <!-- 담당 영역 행 -->
+  <tr>
+    <td align="center">글쓰기, 상세 페이지</td>
+    <td align="center">시작하기, 내 서랍</td>
+    <td align="center">홈</td>
+    <td align="center">발견, 작가홈</td>
+  </tr>
+</table>
 <br>
+
 
 ## 🛠 기술 스택
 <table>
