@@ -122,6 +122,52 @@
 - 
 -
 
+## 🟣 데일리 스크럼
+
+### 2025년 11월
+
+<table style="border-collapse: collapse; width: 60%;">
+  <tr>
+    <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+  </tr>
+
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td>1</td>
+  </tr>
+
+  <tr>
+    <td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+  </tr>
+
+  <tr>
+    <td>9</td>
+    <td><a href="#">10</a></td>
+    <td><a href="#">11</a></td>
+    <td><a href="#">12</a></td>
+    <td><a href="#">13</a></td>
+    <td><a href="#">14</a></td>
+    <td>15</td>
+  </tr>
+
+  <tr>
+    <td>16</td>
+    <td><a href="#">17</a></td>
+    <td><a href="#">18</a></td>
+    <td><a href="#">19</a></td>
+    <td><a href="#">20</a></td>
+    <td><a href="#">21</a></td>
+    <td>22</td>
+  </tr>
+
+  <tr>
+    <td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+  </tr>
+
+  <tr>
+    <td>30</td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+</table>
+
 ### 🧭 발견, 작가 홈 페이지
 -
 -
