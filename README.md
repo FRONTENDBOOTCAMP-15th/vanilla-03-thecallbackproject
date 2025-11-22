@@ -120,6 +120,20 @@
 - 로그인 시 생성되는 프로필 버튼 또는 하단 툴바를 통해 **발견·글쓰기·내 서랍**으로 이동
 
 ### 🖋️ 글 쓰기 페이지
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/bcd260ae-46ba-4710-9e97-4494ff160443" width="260"><br>
+      <sub>글쓰기 화면</sub>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/7fb31bb2-5192-4340-ac92-7bb895cf8329" width="260"><br>
+      <sub>입력 동작 데모 (GIF)</sub>
+    </td>
+  </tr>
+</table>
+
 - <b>네비게이션 탭 바</b> ➜  독립된 화면처럼 보이도록 네비게이션 탭 바 미노출
 - <b>페이지 접속 시 로그인 여부 검사</b> ➜  로컬스토리지의 유저 정보(토큰 유무) 확인
 - <b>입력 필드 유효성 검사</b> ➜  토스트 메시지로 안내
