@@ -120,19 +120,22 @@
 
 ### 🏠 홈 화면
 
-<div style="display: flex; gap: 20px;">
-
-  <img 
-    src="https://github.com/user-attachments/assets/27f11ff1-54d2-43e5-b012-41a84e7875fe"
-    width="450"
-  >
-
-  <img 
-    src="https://github.com/user-attachments/assets/ce302785-b583-4ef5-b663-f331292af824"
-    width="450"
-  >
-
-</div>
+<table>
+  <tr>
+    <td>
+      <img 
+        src="https://github.com/user-attachments/assets/27f11ff1-54d2-43e5-b012-41a84e7875fe"
+        width="420"
+      >
+    </td>
+    <td>
+      <img 
+        src="https://github.com/user-attachments/assets/ce302785-b583-4ef5-b663-f331292af824"
+        width="420"
+      >
+    </td>
+  </tr>
+</table>
 
 
 - 라이브러리 **Swiper**를 이용해 브런치 리스트 이미지 슬라이드 제공
