@@ -1,1 +1,19 @@
-멋쟁이 사자처럼 프론트엔드 부트캠프 15기, 3팀 비동기들의 <The Callback Project> 프로젝트 레포지토리입니다.
+# [비동기들 : The Callback Project](https://thecallbackproject.netlify.app/)
+
+<br />
+<br />
+
+## 프로젝트 개요
+
+<br/>
+
+## 프로젝트 기간
+> 2025.11.10 ~ 2025.11.24
+<br/>
+
+## 팀원소개
+<br/>
+
+## 기술 스택
+
+
