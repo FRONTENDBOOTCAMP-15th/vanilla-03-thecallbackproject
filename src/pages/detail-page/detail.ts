@@ -56,8 +56,11 @@ async function initDetailPage() {
 
   try {
     const post = await fetchPostDetail(postId);
+    console.log('=== fetchPostDetail 전체 ===', post);
+    console.log('post.user =', post.user);
+    console.log('==== 상세페이지 post.user 확인 ====');
+    console.log('post.user =', post.user);
     const author = await fetchAuthorDetail(Number(post.user._id));
-
     setPostCreatedAt(post.createdAt);
 
     // 화면 렌더링

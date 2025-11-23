@@ -53,17 +53,17 @@ export function getAxios() {
     },
   );
 
-  instance.interceptors.response.use(
-    response => {
-      console.log('정상 응답 인터셉터 호출', response);
-      return response;
-    },
-    error => {
-      console.error('에러 응답 인터셉터 호출', error);
+  instance.interceptors.request.use(config => {
+    const token = safeGetLocalUser()?.token?.accessToken;
 
-      return Promise.reject(new Error('잠시 후 다시 이용해 주시기 바랍니다.'));
-    },
-  );
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    } else {
+      delete config.headers.Authorization;
+    }
+
+    return config;
+  });
 
   return instance;
 }
