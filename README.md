@@ -154,7 +154,7 @@
   <tr>
     <td>
       <video
-        src="https://github.com/user-attachments/assets/5489d5a8-633c-4e93-82d9-a4817779bcc2"
+        src="https://github.com/user-attachments/assets/58870fbd-8a72-4246-a8d2-ab9f854dbfcb"
         width="260"
         controls
         muted
