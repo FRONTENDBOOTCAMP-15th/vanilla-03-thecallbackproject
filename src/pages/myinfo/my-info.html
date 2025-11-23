@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./../../styles/my-info/my-info.css" />
-    <title>Document</title>
+    <title>내 서랍</title>
     <link rel="stylesheet" href="./../tab-bar/nav-tab.css" />
     <script type="module" src="./../tab-bar/nav-tab.ts"></script>
+    <script type="module" src="/src/components/Header.ts"></script>
+    <link rel="stylesheet" href="/src/styles/header.css" />
     <script type="module" src="./my-info.ts"></script>
+
+    <link rel="icon" type="image/x-icon" href="./../../../icons/logo.svg" />
   </head>
   <body class="myinfo">
+    <!-- 헤더 컴포넌트 추가 -->
+    <brunch-header></brunch-header>
     <h1 class="sr-only">내 서랍(마이페이지)</h1>
     <!-- 관심 작가 -->
     <section aria-labelledby="favorite-authors">
