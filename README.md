@@ -197,6 +197,18 @@
 <br>
 
 ### 🧭 발견 페이지
+<table>
+  <tr>
+    <td>
+      <img 
+        src="https://github.com/user-attachments/assets/41ae5a6c-b8bd-47b0-83a6-fc5f956ce812"
+        width="406"
+        height="458"
+      >
+    </td>
+  </tr>
+</table>
+
 - <b>추천 키워드</b> ➜&nbsp;&nbsp;추천 키워드 클릭 시, 즉시 검색 실행
 - <b>검색 결과 분류</b> ➜&nbsp;&nbsp;글 / 작가 두 개의 탭으로 나뉘어 결과 표시
 - <b>검색 기록 유지 및 삭제 기능</b> ➜&nbsp;&nbsp;선택 삭제 및 전체 삭제 기능 제공
@@ -204,6 +216,18 @@
 <br>
 
 ### 🧭 작가 홈 페이지
+<table>
+  <tr>
+    <td>
+      <img 
+        src="https://github.com/user-attachments/assets/8fae6731-a9e5-4a5e-85d9-e61a3b926946"
+        width="215"
+        height="458"
+      >
+    </td>
+  </tr>
+</table>
+
 - <b>작가 홈 상단에 작가 정보 표시</b>
 - <b>구독중 버튼 활성화</b> ➜&nbsp;&nbsp;구독 중일 경우, 구독중 버튼 활성화
 - <b>구독자 수 실시간 반영</b> ➜&nbsp;&nbsp;‘구독하기 ↔ 구독 중’ 버튼 클릭 시 실시간 반영
