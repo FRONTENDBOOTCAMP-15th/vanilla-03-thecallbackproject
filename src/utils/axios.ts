@@ -2,32 +2,46 @@ import axios from 'axios';
 
 const API_SERVER = 'https://fesp-api.koyeb.app/market';
 
+function safeGetLocalUser() {
+  try {
+    const raw = localStorage.getItem('item');
+    if (!raw) return null;
+
+    const parsed = JSON.parse(raw);
+
+    if (parsed?.token?.accessToken) return parsed;
+
+    return null;
+  } catch {
+    localStorage.removeItem('item');
+    return null;
+  }
+}
+
 export function getAxios() {
   const instance = axios.create({
-    baseURL: API_SERVER, // 기본 URL
+    baseURL: API_SERVER,
     timeout: 1000 * 7,
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
       'Client-Id': 'febc15-vanilla03-ecad',
-      Authorization: `Bearer`, // 초기에는 비워둠 (인터셉터에서 채워짐)
     },
   });
 
-  // 요청 인터셉터: 토큰 자동 추가
   instance.interceptors.request.use(
     config => {
       console.log('요청 인터셉터 호출', config);
 
-      // localStorage에서 토큰 가져오기
-      const token = JSON.parse(localStorage.getItem('item') || '{}')?.token
-        ?.accessToken;
+      const user = safeGetLocalUser();
+      const token = user?.token?.accessToken;
 
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;
+      } else {
+        delete config.headers.Authorization;
       }
 
-      // 기존 params 유지
       config.params = {
         ...config.params,
       };
@@ -39,7 +53,6 @@ export function getAxios() {
     },
   );
 
-  // 응답 인터셉터
   instance.interceptors.response.use(
     response => {
       console.log('정상 응답 인터셉터 호출', response);
@@ -47,6 +60,7 @@ export function getAxios() {
     },
     error => {
       console.error('에러 응답 인터셉터 호출', error);
+
       return Promise.reject(new Error('잠시 후 다시 이용해 주시기 바랍니다.'));
     },
   );
@@ -54,16 +68,9 @@ export function getAxios() {
   return instance;
 }
 
-// 현재 Authorization 헤더 값을 가져오는 함수
 export function getAuthorizationHeader(): string {
-  const item = localStorage.getItem('item');
-  if (!item) return '';
+  const user = safeGetLocalUser();
+  const token = user?.token?.accessToken;
 
-  try {
-    const parsed = JSON.parse(item);
-    const token = parsed?.token?.accessToken;
-    return token ? `Bearer ${token}` : '';
-  } catch {
-    return '';
-  }
+  return token ? `Bearer ${token}` : '';
 }
