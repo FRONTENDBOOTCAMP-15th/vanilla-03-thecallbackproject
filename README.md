@@ -446,6 +446,7 @@
 │   │   │   │     └─ subscribeHandler.ts
 │   │   │   ├── detail-page.html
 │   │   │   └── detail-page.ts
+│   │   │   └── detail.css
 │   │   │
 │   │   ├── 🧩 header-footer/
 │   │   │   ├── header-footer.ts
