@@ -55,7 +55,7 @@ async function fetchtopAuthorLists() {
     params: {
       type: 'brunch',
       limit: 4,
-      sort: JSON.stringify({ likes: -1 }),
+      sort: JSON.stringify({ bookmarks: -1 }),
     },
   });
   return res.data.item;
