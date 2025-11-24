@@ -5,6 +5,7 @@ const axiosInstance = getAxios();
 
 export async function addPost(postData: PostContent) {
   try {
+    console.log('보내는 데이터', postData);
     const { data } = await axiosInstance.post('/posts', postData);
     console.log('성공 응답:', data);
     return data;

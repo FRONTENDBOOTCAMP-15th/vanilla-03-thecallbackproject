@@ -1,6 +1,7 @@
-import { getAxios } from '../../utils/axios';
+import { getAxios, getAuthorizationHeader } from '../../utils/axios';
 import type { FollowAuthor, BookmarkPost } from '../../types/my-info-type';
 import { formatDate } from '../detail-page/modules/dateFormatter';
+
 window.addEventListener('DOMContentLoaded', async () => {
   const UserItem = localStorage.getItem('item');
   const user = UserItem ? JSON.parse(UserItem) : null;
@@ -9,10 +10,12 @@ window.addEventListener('DOMContentLoaded', async () => {
   const axiosInstance = getAxios();
 
   //로그인 여부 확인
-  if (!user) {
+  const auth = getAuthorizationHeader();
+  if (!auth || !auth.startsWith('Bearer ')) {
     window.location.href = '/src/pages/login-page/login.html';
+    return;
   }
-
+  localStorage.removeItem('redirectPath');
   // 관심 작가
   async function fetchFollowedAuthors(): Promise<FollowAuthor[]> {
     if (!axiosInstance) throw new Error('Axios not initialized');
@@ -27,8 +30,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     .map(value => {
       const author = value.user;
       return `
-            <li>
-            <a href="/src/pages/writer-home-page/writer-home.html?id=${author._id}">
+            <li class="li-item">
+            <a class="a-font" href="/src/pages/writer-home-page/writer-home.html?id=${author._id}">
             <figure>
             <img src="${author.image}" alt="${author.name}}" />
             <figcaption>${author.name}</figcaption>
@@ -37,6 +40,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             </li>`;
     })
     .join('');
+
   // 최근 본 글
   function fetchRecentPosts() {
     const key = `recentPosts_${user._id}`;
@@ -54,12 +58,12 @@ window.addEventListener('DOMContentLoaded', async () => {
     listRoot.innerHTML = cleaned
       .map(
         (item: any) => `
-      <li>
-        <a href="/src/pages/detail-page/detail.html?id=${item.id}">
+      <li class="li-item">
+        <a class="a-font" href="/src/pages/detail-page/detail.html?id=${item.id}">
           <figure>
             <img src="${item.image || '/images/default.png'}" alt="${item.title}" />
             <figcaption class="bookcover-box">
-              <h3>${item.title}</h3>
+              <h3 class="little-title">${item.title}</h3>
               <p>${item.author}</p>
             </figcaption>
           </figure>
@@ -71,6 +75,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       )
       .join('');
   }
+
   // 관심 글
   async function fetchBookmarkPosts(): Promise<BookmarkPost[]> {
     if (!axiosInstance) throw new Error('Axios not initialized');
@@ -85,15 +90,15 @@ window.addEventListener('DOMContentLoaded', async () => {
     .map(value => {
       const bookmark = value.post;
       return `
-      <li>
-          <a href="/src/pages/detail-page/detail.html?id=${bookmark._id}">
+      <li class="li-item">
+          <a class="a-font" href="/src/pages/detail-page/detail.html?id=${bookmark._id}">
             <figure>
               <img
                 src="${bookmark.image}"
                 alt="${bookmark.user?.name}"
               />
               <figcaption class="bookcover-box">
-                <h3>${bookmark.title}</h3>
+                <h3 class="little-title">${bookmark.title}</h3>
                 <p>${bookmark.user?.name}</p>
               </figcaption>
             </figure>
@@ -126,8 +131,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     .map((post: any) => {
       return `
     <li class="li-item">
-          <a href="/src/pages/detail-page/detail.html?id=${post._id}">
-            <h3>${post.title}</h3>
+          <a class="a-font" href="/src/pages/detail-page/detail.html?id=${post._id}">
+            <h3 class="little-title">${post.title}</h3>
             <p>${post.extra?.subTitle || ''}</p>
             <time>${formatDate(post.createdAt)}</time>
           </a>

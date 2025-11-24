@@ -48,7 +48,7 @@
         <ul class="comment-list"></ul>
         <form class="comment-form">
           <div class="now-comment-author">
-            <img src="./../../../icons/logo.svg" />
+            <img src="./../../../icons/logo.svg" alt="프로필 사진" />
             <strong class="now-comment-author-name">댓글 작성자</strong>
           </div>
           <label for="commentInput" class="sr-only">댓글 입력</label>
@@ -66,7 +66,7 @@
           <a href="/src/pages/writer-home-page/writer-home.html">
             <h3 class="author-name">Sunny</h3>
             <h4 class="author-job">회사원</h4>
-            <img src="./../../../icons/logo.svg" />
+            <img src="./../../../icons/logo.svg" alt="프로필 사진" />
           </a>
         </div>
 
@@ -93,10 +93,17 @@
     </main>
     <footer class="post-actions">
       <button class="like-btn" aria-label="좋아요">
-        <img src="./../../assets/images/icon-like.png" alt="" /><span
-          aria-label="좋아요 0"
-          >0</span
-        >
+        <img
+          src="./../../assets/images/icon-like.png"
+          class="heart-on"
+          alt=""
+        />
+        <img
+          src="./../../assets/images/icon-unlike.png"
+          class="heart-off"
+          alt=""
+        />
+        <span aria-label="좋아요 0">0</span>
       </button>
       <button class="comment-btn" aria-label="댓글">
         <img src="./../../assets/images/icon-comment.png" alt="" /><span

@@ -50,6 +50,7 @@ export function initSubmitHandler(getAlign: () => string) {
     );
 
     try {
+      console.log('fetchPostDetail post.user = ', postData.user);
       const result = await addPost(postData);
       const newPostId = result.item._id;
 

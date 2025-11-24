@@ -59,20 +59,34 @@ async function loginButtonClick(e: Event) {
 
   try {
     const result = await loginAPI(userEmailValue, userPasswordValue);
-    console.log('로그인', result);
+
     if (!result.item.token) {
       throw new Error('토큰 반환 실패');
     }
-    // localStorage.setItem('token', result.token);
-    localStorage.setItem('item', JSON.stringify(result.item));
-    //페이지 이동 액션
 
-    window.location.href = '/';
+    localStorage.setItem('item', JSON.stringify(result.item));
+
+    //페이지 이동 액션
+    const redirect = localStorage.getItem('redirectPath');
+    if (redirect) {
+      localStorage.removeItem('redirectPath');
+      window.location.href = redirect;
+    } else {
+      window.location.href = '/';
+    }
   } catch (error) {
-    // console.error(error);
     alert('아이디 또는 비밀번호가 올바르지 않습니다.');
   }
 }
+function handleEnterKey(e: KeyboardEvent) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    loginButtonClick(e); // 로그인 함수 호출
+  }
+}
+
+emailInput?.addEventListener('keydown', handleEnterKey);
+passwordInput?.addEventListener('keydown', handleEnterKey);
 
 if (loginButton) {
   loginButton.addEventListener('click', loginButtonClick);
@@ -103,3 +117,22 @@ if (loginCheckBtn) {
     isChecked = !isChecked;
   });
 }
+
+function setDefaultLoginValues() {
+  if (!emailInput || !passwordInput) return;
+
+  const defaultEmail = 'team-async@likelion.com';
+  const defaultPassword = '11111111';
+
+  emailInput.value = defaultEmail;
+  passwordInput.value = defaultPassword;
+
+  userEmailValue = defaultEmail;
+  userPasswordValue = defaultPassword;
+
+  // 버튼 활성화 로직 실행
+  updateLoginButtonState();
+}
+
+// 페이지 로드 시 자동 실행
+setDefaultLoginValues();
