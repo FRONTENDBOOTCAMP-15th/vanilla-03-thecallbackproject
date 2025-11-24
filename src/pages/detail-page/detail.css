@@ -361,6 +361,16 @@
   cursor: pointer;
 }
 
+.author-actions > .on {
+  all: unset;
+  color: white;
+  background-color: #00c6be;
+  border-radius: 30px;
+  padding-inline: 15px;
+  font-size: 14px;
+  line-height: 36px;
+  cursor: pointer;
+}
 .author-actions > .subscribe-btn.disabled-subscribe {
   background: #dcdcdc;
   color: #8d8d8d;

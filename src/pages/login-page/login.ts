@@ -108,3 +108,22 @@ if (loginCheckBtn) {
     isChecked = !isChecked;
   });
 }
+
+function setDefaultLoginValues() {
+  if (!emailInput || !passwordInput) return;
+
+  const defaultEmail = 'team-async@likelion.com';
+  const defaultPassword = '11111111';
+
+  emailInput.value = defaultEmail;
+  passwordInput.value = defaultPassword;
+
+  userEmailValue = defaultEmail;
+  userPasswordValue = defaultPassword;
+
+  // 버튼 활성화 로직 실행
+  updateLoginButtonState();
+}
+
+// 페이지 로드 시 자동 실행
+setDefaultLoginValues();

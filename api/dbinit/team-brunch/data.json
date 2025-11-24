@@ -155,6 +155,19 @@
         "biography": "개인의 잠재력 분석을 통해 최적의 커리어 로드맵을 제시하고, 성공적인 이직 및 취업을 돕습니다.",
         "keyword": ["취업", "커리어코칭", "헤드헌팅", "면접"]
       }
+    },
+    {
+      "email": "team-async@likelion.com",
+      "password": "$2b$10$S.8GNMDyvUF0xzujPtHBu.j5gtS19.OhRmYbpJBnCHg2S83WLx1T2",
+      "name": "개발천재",
+      "type": "user",
+      "loginType": "email",
+      "image": "https://img.freepik.com/free-vector/cute-lion-sitting-cartoon-vector-icon-illustration-animal-nature-icon-isolated-flat-vector_138676-12749.jpg",
+      "extra": {
+        "job": "웹 프론트엔드 개발자",
+        "biography": "사용자 경험을 고민하며 더 나은 화면을 만드는 프론트엔드 개발자입니다.",
+        "keyword": ["웹개발", "프로그래밍", "UXUI", "IT"]
+      }
     }
   ],
   "post": [
