@@ -368,21 +368,21 @@
 
   <tr>
     <td>9</td>
-    <td><a href="#">10</a></td>
-    <td><a href="#">11</a></td>
-    <td><a href="#">12</a></td>
-    <td><a href="#">13</a></td>
-    <td><a href="#">14</a></td>
-    <td>15</td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.10-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">10</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.11-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">11</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.12-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">12</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.13-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">13</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.14-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">14</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.15-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">15</a></td>
   </tr>
 
   <tr>
-    <td>16</td>
-    <td><a href="#">17</a></td>
-    <td><a href="#">18</a></td>
-    <td><a href="#">19</a></td>
-    <td><a href="#">20</a></td>
-    <td><a href="#">21</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.16-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">16</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.17-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">17</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.18-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">18</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.19-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">19</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.20-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">20</a></td>
+    <td><a href="https://github.com/FRONTENDBOOTCAMP-15th/vanilla-03-thecallbackproject/wiki/2025.11.21-%EB%8D%B0%EC%9D%BC%EB%A6%AC-%EC%8A%A4%ED%81%AC%EB%9F%BC">21</a></td>
     <td>22</td>
   </tr>
 
@@ -532,3 +532,10 @@
 <br>특히 모듈화와 UI 컴포넌트화를 제대로 적용하지 못한 아쉬움이 컸고, 그 중요성을 직접 체감할 수 있었다. 비동기 처리나 로컬스토리지 같은 기능들도 구현하면서 점차 자연스러워졌지만, API와 비동기 로직은 더 많이 다루고 싶다는 욕심이 생겼다.
 <br>아직 구현 능력과 이해도가 부족해 미완성된 기능들이 남았지만, 이번 경험 덕분에 앞으로 어떤 방향으로 학습해야 하는지 더 분명하게 알게 되었다.
 <br>완벽하진 않았지만 여러 기능을 직접 구현하며 이해가 깊어진 부분들도 있었고, 그 과정이 즐거웠다는 점에서 의미 있는 시간이었다.
+
+### 🪻 박예슬
+
+이번 프로젝트를 진행하면서 이건 이해했지 하고 넘겼던 부분들에 어려움을 겪는 내 자신을 보고 개념만 배우는 것과 직접 구현 해본다는 게 얼마나 큰 차이인지 알게되었다.
+<br>마크업 부분에서도 분명 더 좋은 코드들이 있었는데 기억을 해내지 못하고, 더 꼼꼼하게 봤어야 하는 부분들을 챙기지 못 한 것에 대해 매우 아쉬운 것 같다.
+<br>아직 이해도와 능력치가 부족해서 시안과 똑같이 구현하진 못했지만 이번 프로젝트를 통해 어느 부분이 부족했고, 어느 부분을 더 공부해야 하는 지 확실하게 깨달은 것 같다.
+<br>다음 프로젝트 땐 같은 실수를 반복하지 않기 위해 이번 경험을 머릿속에 넣고 잊지 않을 것이다.
