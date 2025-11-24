@@ -78,6 +78,15 @@ async function loginButtonClick(e: Event) {
     alert('아이디 또는 비밀번호가 올바르지 않습니다.');
   }
 }
+function handleEnterKey(e: KeyboardEvent) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    loginButtonClick(e); // 로그인 함수 호출
+  }
+}
+
+emailInput?.addEventListener('keydown', handleEnterKey);
+passwordInput?.addEventListener('keydown', handleEnterKey);
 
 if (loginButton) {
   loginButton.addEventListener('click', loginButtonClick);

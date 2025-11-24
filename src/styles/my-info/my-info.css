@@ -1,5 +1,6 @@
 @import '/src/styles/base.css';
 @import '/src/styles/reset.css';
+
 body {
   display: flex;
   flex-direction: column;
@@ -14,7 +15,7 @@ body {
       font-size: 19px;
       font-weight: 600;
     }
-    a {
+    .a-font {
       /* 밑줄 없애기 */
       font-size: 22px;
       text-decoration: none !important;
@@ -61,7 +62,7 @@ body {
   section[aria-labelledby='favorite-posts'] {
     margin: 25px;
   }
-  a {
+  .a-font {
     /* 밑줄 없애기 */
     font-size: 19px;
     line-height: 22px;
@@ -103,7 +104,7 @@ body {
         flex-direction: column;
         padding-bottom: 10px;
 
-        h3 {
+        .little-title {
           display: -webkit-box;
           padding: 10px 14px 0 9px;
           font-size: 10px;
@@ -156,7 +157,7 @@ body {
         flex-direction: column;
         padding-bottom: 10px;
 
-        h3 {
+        .little-title {
           display: -webkit-box;
           padding: 10px 14px 0 9px;
           font-size: 10px;
@@ -178,7 +179,7 @@ body {
   /*  */
   section[aria-labelledby='my-brunch'] {
     margin: 25px;
-    a {
+    .a-font {
       /* 밑줄 없애기 */
       font-size: 19px;
       line-height: 22px;
@@ -191,7 +192,7 @@ body {
       border-top: 1px solid #eee;
       margin-top: 14px;
     }
-    h3 {
+    .little-title {
       color: #959595;
       font-size: 17px;
       color: #111;
