@@ -434,6 +434,16 @@
 │   ├── 📄 pages/              # 페이지 단위 화면
 │   │   │
 │   │   ├── 🏷 detail-page/
+│   │   │   ├── modules/
+│   │   │   │     ├─ authorRenderer.ts
+│   │   │   │     ├─ bookmarkHandler.ts
+│   │   │   │     ├─ commentHandler.ts
+│   │   │   │     ├─ dateFormatter.ts
+│   │   │   │     ├─ metaUpdater.ts
+│   │   │   │     ├─ postDeleteHandler.ts
+│   │   │   │     ├─ profile.ts
+│   │   │   │     ├─ recentPosts.ts
+│   │   │   │     └─ subscribeHandler.ts
 │   │   │   ├── detail-page.html
 │   │   │   └── detail-page.ts
 │   │   │
